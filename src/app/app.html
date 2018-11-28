@@ -1,1 +1,24 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" persistent="true" class="menu" type="overlay" [swipeEnabled]="false">
+
+  <ion-content class="menu-left">
+    <ion-list>
+      <ion-list-header>
+        <div class="user_profile_card" padding>
+          <img src="assets/imgs/default.jpg" />
+          <span id="pf_name">Syed Faizunnabi</span>
+          <span id="pf_location">Al Dhafrah,Abu Dhabi</span>
+        </div>
+      </ion-list-header>
+      <button ion-item detail-none no-lines><ion-icon name="home" item-start></ion-icon> Home</button>
+      <button ion-item detail-none no-lines><ion-icon name="flame" item-start></ion-icon> Hot Deals</button>
+      <button ion-item detail-none no-lines><ion-icon name="pricetags" item-start></ion-icon> Products</button>
+      <button ion-item detail-none no-lines><ion-icon name="aperture" item-start></ion-icon> Shops</button>
+      <button ion-item detail-none no-lines><ion-icon name="locate" item-start></ion-icon> Locate Store</button>
+      <button ion-item detail-none no-lines><ion-icon name="contact" item-start></ion-icon> Profile</button>
+      <button ion-item detail-none no-lines menuClose (click)="logout()"><ion-icon name="log-out" item-start></ion-icon> LogOut</button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false">
+</ion-nav>

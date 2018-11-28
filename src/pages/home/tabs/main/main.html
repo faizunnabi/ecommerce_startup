@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <span style="display: block;text-align: center;color:#fff;">Welcome, Faizunnabi !</span>
+  </ion-navbar>
+  <ion-searchbar
+    placeholder="Search Products here"
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+</ion-header>
+<ion-content padding-bottom>
+  <ion-grid>
+    <ion-row>
+
+        <ion-slides autoplay="3000" loop="true" speed="1500">
+          <ion-slide>
+            <img src="assets/imgs/sl1.jpg" />
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/sl2.jpg" />
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/sl3.jpg" />
+          </ion-slide>
+        </ion-slides>
+
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding class="pr2">
+        <div class="category_grid">
+          <img src="assets/imgs/grains.jpg" />
+          <span>Grains</span>
+        </div>
+      </ion-col>
+      <ion-col no-padding class="pl2">
+        <div class="category_grid">
+          <img src="assets/imgs/veg.jpg" />
+          <span>Veggies</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding class="pr2">
+        <div class="category_grid">
+          <img src="assets/imgs/drinks.jpg" />
+          <span>Drinks</span>
+        </div>
+      </ion-col>
+      <ion-col no-padding class="pl2">
+        <div class="category_grid">
+          <img src="assets/imgs/eggs.jpg" />
+          <span>Poultry</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
