@@ -1,0 +1,113 @@
+page-login {
+  .bg-img{
+    background: url(../assets/imgs/shopping-cart.jpg) no-repeat top left;
+    background-size: cover;
+  }
+  .socialLogin {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  .facebook{
+    background-color: #3b5998;;
+  }
+  .google{
+    background-color: #d13d35;
+  }
+  .github{
+    background-color: #000000;
+  }
+  .twitter{
+    background-color: #728fdb;
+  }
+  .container-logo {
+    display: inline-block;
+    width: 100%;
+    margin: -20px 0 10px 0;
+    img {
+      max-width: 220px;
+    }
+  }
+  .main-content {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    min-height: 100%;
+  }
+  ion-list{
+    border:none !important;
+    outline: none;
+  }
+  ion-item{
+    background: rgba(255,255,255,0.3) !important;
+    border:none !important;
+    outline: none;
+  }
+
+  ion-input{
+    background: none !important;
+    border-bottom: 1px #fff solid;
+  }
+  .container-bottom {
+    @include inline-flex;
+    @include flex-wrap(wrap);
+    @include align-self(flex-end);
+  }
+  .item-inner{
+    border-bottom: 0px !important;
+  }
+  .list-md, .list-ios {
+    margin:0 !important;
+  }
+  .list {
+    padding:0 !important;
+  }
+  form {
+    .button-md,
+    .button-ios {
+      margin: 0px !important;
+      background-color: #000;
+      padding: 26px !important;
+    }
+  }
+  .form-bottom-text label,
+  a {
+    color: #fff;
+  }
+  .error-input{
+    border-color: #ff2400;
+  }
+
+  .sepretor-or {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  .sepretor-or p {
+    color: #fff  ;
+    font-size: 16px;
+    text-transform: lowercase;
+  }
+  .sepretor-or p::before,
+  .sepretor-or p::after {
+    float: left;
+    width: -webkit-calc(48% - 10px);
+    width: -moz-calc(48% - 10px);
+    width: calc(48% - 10px);
+    display: inline-block;
+    height: 1px;
+    margin-top: 8px;
+    background-image: url('../assets/imgs/seprator.png');
+    background-repeat: repeat;
+    content: '';
+  }
+  .sepretor-or p::after {
+    float: right;
+  }
+  .eye-icon-btn{
+    position: absolute;
+    right:0px;
+    background-color: transparent !important;
+    color: #000;
+    font-size: 2.2rem !important;
+  }
+}

@@ -1,0 +1,55 @@
+
+.ios, .md {
+
+  page-splash {
+
+    .scroll-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #logo {
+      height: 100%;
+      #logo_desi {
+        opacity: 0;
+        transform: rotate3d(1, 1, 0, 50deg);
+        animation: 1s 0.2s ease fadeInAndSpin;
+        animation-fill-mode: forwards;
+      }
+
+      #comp_name {
+        opacity: 0;
+        animation: 1s 0.8s ease fadeIn;
+        animation-fill-mode: forwards;
+      }
+
+      #comp_tag {
+        opacity: 0;
+        animation: 2s 1.5s linear fadeIn;
+        animation-fill-mode: forwards;
+      }
+
+    }
+
+  }
+
+}
+
+@keyframes fadeInAndSpin {
+
+  100% {
+    opacity: 1;
+    transform: rotate3d(1, 1, 0, 0deg);
+  }
+
+}
+
+@keyframes fadeIn {
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
