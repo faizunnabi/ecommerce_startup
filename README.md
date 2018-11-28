@@ -1,1 +1,1 @@
-"# ecommerce_startup" 
+## Startup Template for E-Commerce Application
