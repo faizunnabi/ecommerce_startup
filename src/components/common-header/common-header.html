@@ -1,0 +1,17 @@
+<ion-navbar color="dark">
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div *ngIf="title.length==0" class="header_text">
+      <span class="main_head">Welcome, Faizunnabi !</span>
+      <span class="sub_head">
+      <ion-icon name="pin"></ion-icon> 15 Street,Al Dhafrah,Abu Dhabi
+    </span>
+    </div>
+    <div *ngIf="title.length" class="header_text">
+      <span class="main_head">{{title}}</span>
+    </div>
+</ion-navbar>
+
