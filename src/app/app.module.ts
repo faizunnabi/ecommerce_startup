@@ -12,6 +12,8 @@ import {MainPage} from "../pages/home/tabs/main/main";
 import {ShopPage} from "../pages/home/tabs/shop/shop";
 import {ProductPage} from "../pages/home/tabs/product/product";
 import {DealsPage} from "../pages/home/tabs/deals/deals";
+import {CartPage} from "../pages/home/tabs/cart/cart";
+import {ComponentsModule} from "../components/components.module";
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import {DealsPage} from "../pages/home/tabs/deals/deals";
     MainPage,
     ShopPage,
     ProductPage,
-    DealsPage
+    DealsPage,
+    CartPage,
   ],
   imports: [
+    ComponentsModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,7 +41,8 @@ import {DealsPage} from "../pages/home/tabs/deals/deals";
     MainPage,
     ShopPage,
     ProductPage,
-    DealsPage
+    DealsPage,
+    CartPage,
   ],
   providers: [
     StatusBar,

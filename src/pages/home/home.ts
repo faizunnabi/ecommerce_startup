@@ -4,6 +4,7 @@ import {MainPage} from "./tabs/main/main";
 import {ProductPage} from "./tabs/product/product";
 import {ShopPage} from "./tabs/shop/shop";
 import {DealsPage} from "./tabs/deals/deals";
+import {CartPage} from "./tabs/cart/cart";
 
 @Component({
   selector: 'page-home',
@@ -15,6 +16,7 @@ export class HomePage {
   tab2Root: any = ProductPage;
   tab3Root: any = ShopPage;
   tab4Root: any = DealsPage;
+  tab5Root: any = CartPage;
   myIndex: number;
 
   constructor(navParams: NavParams) {

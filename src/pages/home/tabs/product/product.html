@@ -1,8 +1,20 @@
 <ion-header>
-  <div class="sub_head">
-    <ion-toolbar>
-      <ion-title text-center>Products</ion-title>
-    </ion-toolbar>
-  </div>
+  <common-header title="Search Products"></common-header>
+  <ion-toolbar color="dark">
+    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
-<ion-content></ion-content>
+<ion-content>
+<ion-list no-lines>
+  <ion-list-header>
+    Recent Searches
+    <button ion-button outline color="primary" item-end>Clear</button>
+  </ion-list-header>
+  <ion-item style="color:#3e76ff">Oval Eggs</ion-item>
+  <ion-item style="color:#3e76ff">Lakme Facewash</ion-item>
+  <ion-item style="color:#3e76ff">Al Rawabi Curd</ion-item>
+  <ion-item style="color:#3e76ff">Comb</ion-item>
+  <ion-item style="color:#3e76ff">Orange Juice</ion-item>
+  <ion-item style="color:#3e76ff">Cadbury Silk</ion-item>
+</ion-list>
+</ion-content>
