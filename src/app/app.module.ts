@@ -14,6 +14,9 @@ import {ProductPage} from "../pages/home/tabs/product/product";
 import {DealsPage} from "../pages/home/tabs/deals/deals";
 import {CartPage} from "../pages/home/tabs/cart/cart";
 import {ComponentsModule} from "../components/components.module";
+import {ProductListPage} from "../pages/product-list/product-list";
+import { ProductServiceProvider } from '../providers/product-service/product-service';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import {ComponentsModule} from "../components/components.module";
     ProductPage,
     DealsPage,
     CartPage,
+    ProductListPage,
   ],
   imports: [
     ComponentsModule,
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -43,11 +48,14 @@ import {ComponentsModule} from "../components/components.module";
     ProductPage,
     DealsPage,
     CartPage,
+    ProductListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+
+    ProductServiceProvider
   ]
 })
 export class AppModule {}

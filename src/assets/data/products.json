@@ -1,0 +1,213 @@
+{
+  "products": [{
+    "id": "1",
+    "name": "Autonomous Oxygen Generator",
+    "picture": "products/oxygen_generator.png",
+    "tags": ["oxygen", "generator", "container", "ground support"],
+    "category": "1"
+  },
+    {
+      "id": "2",
+      "name": "GENA 20",
+      "picture": "products/gena.png",
+      "tags": ["nitrogen", "generator", "container", "ground support", "gaseous"],
+      "category": "1"
+    },
+    {
+      "id": "3",
+      "name": "GMAG",
+      "picture": "products/gmag.png",
+      "tags": ["nitrogen", "generator", "container", "ground support", "mobile", "gaseous"],
+      "category": "1"
+    },
+    {
+      "id": "4",
+      "name": "GPV",
+      "picture": "products/gpv.png",
+      "tags": ["gaseous", "vaporization", "pressurised", "nitrogen", "oxygen"],
+      "category": "1"
+    },
+    {
+      "id": "5",
+      "name": "Surface Vessel",
+      "picture": "products/vessel.png",
+      "tags": ["cargo ship", "submarines"],
+      "category": "1"
+    },
+    {
+      "id": "6",
+      "name": "Tripod Jacks",
+      "picture": "products/tripod.png",
+      "tags": ["jacks", "hydraulic", "digital"],
+      "category": "2"
+    },
+    {
+      "id": "7",
+      "name": "Tow Bar",
+      "picture": "products/tow.png",
+      "tags": ["tow", "bar", "aeronautics", "multi", "hydraulic"],
+      "category": "2"
+    },
+    {
+      "id": "8",
+      "name": "Nato Box",
+      "picture": "products/nato.png",
+      "tags": ["skydrol", "nitrogen", "mineral oil"],
+      "category": "2"
+    },
+    {
+      "id": "9",
+      "name": "IAE V2500",
+      "picture": "products/craddle.png",
+      "tags": ["craddle", "engine"],
+      "category": "2"
+    },
+    {
+      "id": "10",
+      "name": "Axle Jack",
+      "picture": "products/axle.png",
+      "tags": ["jack", "axle"],
+      "category": "2"
+    },
+    {
+      "id": "11",
+      "name": "Wing Gates",
+      "picture": "products/wing.png",
+      "tags": ["gates", "wing", "security"],
+      "category": "3"
+    },
+    {
+      "id": "12",
+      "name": "Vehicle Barriers",
+      "picture": "products/barrier.png",
+      "tags": ["Access barriers", "Parking barriers", "Toll barriers", "Special barriers"],
+      "category": "3"
+    },
+    {
+      "id": "13",
+      "name": "Turnstile",
+      "picture": "products/turnstile.png",
+      "tags": ["stainless steel", "barrier", "coin validator"],
+      "category": "3"
+    },
+    {
+      "id": "14",
+      "name": "Retractable gates",
+      "picture": "products/retractable.png",
+      "tags": ["gate", "retractable", "automatic"],
+      "category": "3"
+    },
+    {
+      "id": "15",
+      "name": "Swing gates",
+      "picture": "products/swing.png",
+      "tags": ["gate", "swing", "automatic"],
+      "category": "3"
+    },
+    {
+      "id": "16",
+      "name": "Crystal Glass dome",
+      "picture": "products/crystal.png",
+      "tags": ["hall light", "solar", "crystal", "dome"],
+      "category": "4"
+    },
+    {
+      "id": "17",
+      "name": "Lightway Galaxy 1200",
+      "picture": "products/galaxy.png",
+      "tags": ["collector", "sunlight", "roof", "solar"],
+      "category": "4"
+    },
+    {
+      "id": "18",
+      "name": "Lightway F400",
+      "picture": "products/f400.png",
+      "tags": ["collector", "sunlight", "wall", "side wall", "solar"],
+      "category": "4"
+    },
+    {
+      "id": "19",
+      "name": "Lightway Black Star",
+      "picture": "products/star.png",
+      "tags": ["diffuser", "solar", "ceiling", "side wall", "crystal"],
+      "category": "4"
+    },
+    {
+      "id": "20",
+      "name": "Lightway Concorde",
+      "picture": "products/concorde.png",
+      "tags": ["diffuser", "solar", "ceiling", "side wall", "crystal", "stalactites", "hang"],
+      "category": "4"
+    },
+    {
+      "id": "21",
+      "name": "CM 150A",
+      "picture": "products/cm_150.png",
+      "tags": ["343", "mechanical", "tools"],
+      "category": "5"
+    },
+    {
+      "id": "22",
+      "name": "JET7 M150A",
+      "picture": "products/jet7.png",
+      "tags": ["343", "mechanical", "tools", "jet", "roller", "drawer"],
+      "category": "5"
+    },
+    {
+      "id": "23",
+      "name": "2000 BBM150A",
+      "picture": "products/bbm.png",
+      "tags": ["343", "mechanical", "tools", "cabinet", "workbench"],
+      "category": "5"
+    },
+    {
+      "id": "24",
+      "name": "CM 140A",
+      "picture": "products/cm_140.png",
+      "tags": ["202", "mechanical", "tools"],
+      "category": "5"
+    },
+    {
+      "id": "25",
+      "name": "2074 M140A",
+      "picture": "products/m140.png",
+      "tags": ["drawer", "chest", "202", "mechanical", "tools"],
+      "category": "5"
+    },
+    {
+      "id": "26",
+      "name": "615 BPR",
+      "picture": "products/bpr.png",
+      "tags": ["hydraulic", "barrier", "automatic"],
+      "category": "6"
+    },
+    {
+      "id": "27",
+      "name": "Bollards",
+      "picture": "products/bollard.png",
+      "tags": ["automatic", "retractable", "traffic", "vehicle"],
+      "category": "6"
+    },
+    {
+      "id": "28",
+      "name": "620 RAPID",
+      "picture": "products/620.png",
+      "tags": ["hydraulic", "barrier", "automatic"],
+      "category": "6"
+    },
+    {
+      "id": "29",
+      "name": "640 Automatic Barrier",
+      "picture": "products/640.png",
+      "tags": ["hydraulic", "barrier", "automatic"],
+      "category": "6"
+    },
+    {
+      "id": "30",
+      "name": "615 Automatic Barrier",
+      "picture": "products/615.png",
+      "tags": ["hydraulic", "barrier", "automatic"],
+      "category": "6"
+    }
+  ]
+}
