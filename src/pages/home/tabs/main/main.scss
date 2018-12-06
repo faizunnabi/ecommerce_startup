@@ -31,14 +31,14 @@ page-main{
       transition-timing-function: linear;
     }
 
-    span:hover{
+    span:hover,span:focus{
       width:100%;
       height:100%;
       top:0px;
       left:0px;
       background:rgba(0,0,0,0.8);
       border:none;
-      transition-duration:0.1s ;
+      transition-duration:0.3s ;
       transition-timing-function: ease-out;
     }
   }
