@@ -1,7 +1,7 @@
 {
   "products": [{
     "id": "1",
-    "name": "Autonomous Oxygen Generator",
+    "name": "Generator",
     "picture": "products/oxygen_generator.png",
     "tags": ["oxygen", "generator", "container", "ground support"],
     "category": "1"
@@ -113,7 +113,7 @@
     },
     {
       "id": "17",
-      "name": "Lightway Galaxy 1200",
+      "name": "Lightway Galaxy",
       "picture": "products/galaxy.png",
       "tags": ["collector", "sunlight", "roof", "solar"],
       "category": "4"
@@ -127,7 +127,7 @@
     },
     {
       "id": "19",
-      "name": "Lightway Black Star",
+      "name": "Black Star",
       "picture": "products/star.png",
       "tags": ["diffuser", "solar", "ceiling", "side wall", "crystal"],
       "category": "4"
@@ -197,14 +197,14 @@
     },
     {
       "id": "29",
-      "name": "640 Automatic Barrier",
+      "name": "640 Barrier",
       "picture": "products/640.png",
       "tags": ["hydraulic", "barrier", "automatic"],
       "category": "6"
     },
     {
       "id": "30",
-      "name": "615 Automatic Barrier",
+      "name": "615 Barrier",
       "picture": "products/615.png",
       "tags": ["hydraulic", "barrier", "automatic"],
       "category": "6"

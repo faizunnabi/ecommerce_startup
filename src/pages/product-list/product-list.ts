@@ -15,8 +15,7 @@ export class ProductListPage {
     this.category_title = navParams.get('item');
     this.productService.fetchProducts().subscribe(
       res=>{
-        this.products = res;
-        console.log(this.products);
+        this.products = res['products'];
       },
       err=>{
         console.log("error");

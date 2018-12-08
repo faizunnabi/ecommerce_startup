@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import "rxjs/add/operator/map";
 
 /*
   Generated class for the ProductServiceProvider provider.
