@@ -1,213 +1,327 @@
 {
-  "products": [{
-    "id": "1",
-    "name": "Generator",
-    "picture": "products/oxygen_generator.png",
-    "tags": ["oxygen", "generator", "container", "ground support"],
-    "category": "1"
-  },
-    {
-      "id": "2",
-      "name": "GENA 20",
-      "picture": "products/gena.png",
-      "tags": ["nitrogen", "generator", "container", "ground support", "gaseous"],
-      "category": "1"
-    },
-    {
-      "id": "3",
-      "name": "GMAG",
-      "picture": "products/gmag.png",
-      "tags": ["nitrogen", "generator", "container", "ground support", "mobile", "gaseous"],
-      "category": "1"
-    },
-    {
-      "id": "4",
-      "name": "GPV",
-      "picture": "products/gpv.png",
-      "tags": ["gaseous", "vaporization", "pressurised", "nitrogen", "oxygen"],
-      "category": "1"
-    },
-    {
-      "id": "5",
-      "name": "Surface Vessel",
-      "picture": "products/vessel.png",
-      "tags": ["cargo ship", "submarines"],
-      "category": "1"
-    },
-    {
-      "id": "6",
-      "name": "Tripod Jacks",
-      "picture": "products/tripod.png",
-      "tags": ["jacks", "hydraulic", "digital"],
-      "category": "2"
-    },
-    {
-      "id": "7",
-      "name": "Tow Bar",
-      "picture": "products/tow.png",
-      "tags": ["tow", "bar", "aeronautics", "multi", "hydraulic"],
-      "category": "2"
-    },
-    {
-      "id": "8",
-      "name": "Nato Box",
-      "picture": "products/nato.png",
-      "tags": ["skydrol", "nitrogen", "mineral oil"],
-      "category": "2"
-    },
-    {
-      "id": "9",
-      "name": "IAE V2500",
-      "picture": "products/craddle.png",
-      "tags": ["craddle", "engine"],
-      "category": "2"
-    },
-    {
-      "id": "10",
-      "name": "Axle Jack",
-      "picture": "products/axle.png",
-      "tags": ["jack", "axle"],
-      "category": "2"
-    },
-    {
-      "id": "11",
-      "name": "Wing Gates",
-      "picture": "products/wing.png",
-      "tags": ["gates", "wing", "security"],
-      "category": "3"
-    },
-    {
-      "id": "12",
-      "name": "Vehicle Barriers",
-      "picture": "products/barrier.png",
-      "tags": ["Access barriers", "Parking barriers", "Toll barriers", "Special barriers"],
-      "category": "3"
-    },
-    {
-      "id": "13",
-      "name": "Turnstile",
-      "picture": "products/turnstile.png",
-      "tags": ["stainless steel", "barrier", "coin validator"],
-      "category": "3"
-    },
-    {
-      "id": "14",
-      "name": "Retractable gates",
-      "picture": "products/retractable.png",
-      "tags": ["gate", "retractable", "automatic"],
-      "category": "3"
-    },
-    {
-      "id": "15",
-      "name": "Swing gates",
-      "picture": "products/swing.png",
-      "tags": ["gate", "swing", "automatic"],
-      "category": "3"
-    },
-    {
-      "id": "16",
-      "name": "Crystal Glass dome",
-      "picture": "products/crystal.png",
-      "tags": ["hall light", "solar", "crystal", "dome"],
-      "category": "4"
-    },
-    {
-      "id": "17",
-      "name": "Lightway Galaxy",
-      "picture": "products/galaxy.png",
-      "tags": ["collector", "sunlight", "roof", "solar"],
-      "category": "4"
-    },
-    {
-      "id": "18",
-      "name": "Lightway F400",
-      "picture": "products/f400.png",
-      "tags": ["collector", "sunlight", "wall", "side wall", "solar"],
-      "category": "4"
-    },
-    {
-      "id": "19",
-      "name": "Black Star",
-      "picture": "products/star.png",
-      "tags": ["diffuser", "solar", "ceiling", "side wall", "crystal"],
-      "category": "4"
-    },
-    {
-      "id": "20",
-      "name": "Lightway Concorde",
-      "picture": "products/concorde.png",
-      "tags": ["diffuser", "solar", "ceiling", "side wall", "crystal", "stalactites", "hang"],
-      "category": "4"
-    },
-    {
-      "id": "21",
-      "name": "CM 150A",
-      "picture": "products/cm_150.png",
-      "tags": ["343", "mechanical", "tools"],
-      "category": "5"
-    },
-    {
-      "id": "22",
-      "name": "JET7 M150A",
-      "picture": "products/jet7.png",
-      "tags": ["343", "mechanical", "tools", "jet", "roller", "drawer"],
-      "category": "5"
-    },
-    {
-      "id": "23",
-      "name": "2000 BBM150A",
-      "picture": "products/bbm.png",
-      "tags": ["343", "mechanical", "tools", "cabinet", "workbench"],
-      "category": "5"
-    },
-    {
-      "id": "24",
-      "name": "CM 140A",
-      "picture": "products/cm_140.png",
-      "tags": ["202", "mechanical", "tools"],
-      "category": "5"
-    },
-    {
-      "id": "25",
-      "name": "2074 M140A",
-      "picture": "products/m140.png",
-      "tags": ["drawer", "chest", "202", "mechanical", "tools"],
-      "category": "5"
-    },
-    {
-      "id": "26",
-      "name": "615 BPR",
-      "picture": "products/bpr.png",
-      "tags": ["hydraulic", "barrier", "automatic"],
-      "category": "6"
-    },
-    {
-      "id": "27",
-      "name": "Bollards",
-      "picture": "products/bollard.png",
-      "tags": ["automatic", "retractable", "traffic", "vehicle"],
-      "category": "6"
-    },
-    {
-      "id": "28",
-      "name": "620 RAPID",
-      "picture": "products/620.png",
-      "tags": ["hydraulic", "barrier", "automatic"],
-      "category": "6"
-    },
-    {
-      "id": "29",
-      "name": "640 Barrier",
-      "picture": "products/640.png",
-      "tags": ["hydraulic", "barrier", "automatic"],
-      "category": "6"
-    },
-    {
-      "id": "30",
-      "name": "615 Barrier",
-      "picture": "products/615.png",
-      "tags": ["hydraulic", "barrier", "automatic"],
-      "category": "6"
-    }
-  ]
+    "products": [{
+            "id": "1",
+            "name": "Potatoes",
+            "price": "2.5",
+            "quantity": "1Kg",
+            "picture": "products/p1.jpg",
+            "tags": ["vegetables"],
+            "category": "veggies"
+        },
+        {
+            "id": "2",
+            "name": "Onions",
+            "price": "1.98",
+            "quantity": "1Kg",
+            "picture": "products/p2.jpg",
+            "tags": ["vegetables"],
+            "category": "veggies"
+        },
+        {
+            "id": "3",
+            "name": "Brinjal",
+            "price": "4.5",
+            "quantity": "500gm",
+            "picture": "products/p3.jpg",
+            "tags": ["vegetables"],
+            "category": "veggies"
+        },
+        {
+            "id": "4",
+            "name": "Apple",
+            "price": "8",
+            "quantity": "1Kg",
+            "picture": "products/p4.jpg",
+            "tags": [
+                "fruits"
+            ],
+            "category": "veggies"
+        },
+        {
+            "id": "5",
+            "name": "Kiwi",
+            "price": "12",
+            "quantity": "1Kg",
+            "picture": "products/p5.jpg",
+            "tags": [
+                "fruits"
+            ],
+            "category": "veggies"
+        },
+        {
+            "id": "6",
+            "name": "Lusine Bread",
+            "price": "7.8",
+            "quantity": "1Pkt",
+            "picture": "products/p6.jpg",
+            "tags": [
+                "bread"
+            ],
+            "category": "bakery"
+        },
+        {
+            "id": "7",
+            "name": "Burger Buns",
+            "price": "3",
+            "quantity": "1Pkt",
+            "picture": "products/p7.jpg",
+            "tags": [
+                "buns"
+            ],
+            "category": "bakery"
+        },
+        {
+            "id": "8",
+            "name": "Almarai Milk",
+            "price": "14",
+            "quantity": "1Ltr",
+            "picture": "products/p8.jpg",
+            "tags": [
+                "milk"
+            ],
+            "category": "dairy&eggs"
+        },
+        {
+            "id": "9",
+            "name": "AlmaraI Cheese",
+            "price": "12",
+            "quantity": "1Pkt",
+            "picture": "products/p9.jpg",
+            "tags": [
+                "cheese"
+            ],
+            "category": "dairy&eggs"
+        },
+        {
+            "id": "10",
+            "name": "Al Ain Zero",
+            "price": "20",
+            "quantity": "1Pkt.",
+            "picture": "products/p10.jpg",
+            "tags": [
+                "water"
+            ],
+            "category": "drinks"
+        },
+        {
+            "id": "11",
+            "name": "Thumbs Up",
+            "price": "2.25",
+            "quantity": "1Pc.",
+            "picture": "products/p11.jpg",
+            "tags": [
+                "cold-drink"
+            ],
+            "category": "drinks"
+        },
+        {
+            "id": "12",
+            "name": "Al Ain Eggs",
+            "price": "1.98",
+            "quantity": "1Pkt.",
+            "picture": "products/p12.jpg",
+            "tags": [
+                "eggs"
+            ],
+            "category": "dairy&eggs"
+        },
+        {
+            "id": "13",
+            "name": "India Gate",
+            "price": "65",
+            "quantity": "5Kg",
+            "picture": "products/p13.jpg",
+            "tags": [
+                "rice"
+            ],
+            "category": "grains"
+        },
+        {
+            "id": "14",
+            "name": "Chana Daal",
+            "price": "5",
+            "quantity": "500gm",
+            "picture": "products/p14.jpg",
+            "tags": [
+                "daal"
+            ],
+            "category": "grains"
+        },
+        {
+            "id": "15",
+            "name": "AlBaker atta",
+            "price": "6",
+            "quantity": "2Kg",
+            "picture": "products/p15.jpg",
+            "tags": [
+                "atta"
+            ],
+            "category": "grains"
+        },
+        {
+            "id": "16",
+            "name": "AlKhazna Chicken",
+            "price": "14",
+            "quantity": "900gm",
+            "picture": "products/p16.jpg",
+            "tags": [
+                "chicken"
+            ],
+            "category": "meat"
+        },
+        {
+            "id": "17",
+            "name": "Rohu Fish",
+            "price": "15",
+            "quantity": "1Kg.",
+            "picture": "products/p17.jpg",
+            "tags": [
+                "fish"
+            ],
+            "category": "meat"
+        },
+        {
+            "id": "18",
+            "name": "Chicken Nuggets",
+            "price": "11",
+            "quantity": "1Pkt.",
+            "picture": "products/p18.jpg",
+            "tags": [
+                "chicken-nuggets"
+            ],
+            "category": "frozen"
+        },
+        {
+            "id": "19",
+            "name": "Spring Roll",
+            "price": "8",
+            "quantity": "1Pkt.",
+            "picture": "products/p19.jpg",
+            "tags": [
+                "spring-roll"
+            ],
+            "category": "frozen"
+        },
+        {
+            "id": "20",
+            "name": "Baked beans",
+            "price": "4.5",
+            "quantity": "1Pkt.",
+            "picture": "products/p20.jpg",
+            "tags": [
+                "beans"
+            ],
+            "category": "cans&jars"
+        },
+        {
+            "id": "21",
+            "name": "Sweet Corn",
+            "price": "10",
+            "quantity": "1Pkt.",
+            "picture": "products/p21.jpg",
+            "tags": [
+                "sweet-corn"
+            ],
+            "category": "cans&jars"
+        },
+        {
+            "id": "22",
+            "name": "Ferrero Rocher",
+            "price": "24",
+            "quantity": "12 Pcs.",
+            "picture": "products/p22.jpg",
+            "tags": [
+                "chocolates"
+            ],
+            "category": "snacks"
+        },
+        {
+            "id": "23",
+            "name": "Jewels",
+            "price": "18",
+            "quantity": "1Pkt.",
+            "picture": "products/p23.jpg",
+            "tags": [
+                "chocolates"
+            ],
+            "category": "snacks"
+        },
+        {
+            "id": "24",
+            "name": "Oman Chips",
+            "price": "1.98",
+            "quantity": "1Pkt.",
+            "picture": "products/p24.jpg",
+            "tags": [
+                "chips"
+            ],
+            "category": "snacks"
+        },
+        {
+            "id": "25",
+            "name": "Harpic",
+            "price": "12",
+            "quantity": "500ml",
+            "picture": "products/p25.jpg",
+            "tags": [
+                "toilet-cleaner"
+            ],
+            "category": "Cleaning"
+        },
+        {
+            "id": "26",
+            "name": "Lux Sunlight",
+            "price": "7",
+            "quantity": "400ml",
+            "picture": "products/p26.jpg",
+            "tags": [
+                "dishwash"
+            ],
+            "category": "cleaning"
+        },
+        {
+            "id": "27",
+            "name": "Dettol",
+            "price": "16",
+            "quantity": "400ml",
+            "picture": "products/p27.jpg",
+            "tags": [
+                "dettol"
+            ],
+            "category": "cleaning"
+        },
+        {
+            "id": "28",
+            "name": "Bambi Diapers",
+            "price": "34",
+            "quantity": "1Pkt.",
+            "picture": "products/p28.jpg",
+            "tags": [
+                "diapers"
+            ],
+            "category": "baby"
+        },
+        {
+            "id": "29",
+            "name": "Bebelac",
+            "price": "22",
+            "quantity": "1Kg",
+            "picture": "products/p29.jpg",
+            "tags": [
+                "milk-powder"
+            ],
+            "category": "baby"
+        },
+        {
+            "id": "30",
+            "name": "Cerelac",
+            "price": "28",
+            "quantity": "1Kg",
+            "picture": "products/p30.jpg",
+            "tags": [
+                "cerelac"
+            ],
+            "category": "baby"
+        }
+    ]
 }

@@ -10,6 +10,7 @@ import {ProductServiceProvider} from "../../providers/product-service/product-se
 export class ProductListPage {
 
   category_title: string;
+  sub_cat:string='all';
   products :any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public productService:ProductServiceProvider) {
     this.category_title = navParams.get('item');

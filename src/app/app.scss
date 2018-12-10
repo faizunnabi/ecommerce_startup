@@ -36,12 +36,15 @@
       margin-top:15px;
       font-size: 15px;
     }
-
   }
 
   button{
     background: transparent;
     color:#000;
+  }
+
+  ion-content{
+    background: #efefef !important;
   }
 
 }

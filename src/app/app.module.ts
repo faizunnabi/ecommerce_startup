@@ -17,6 +17,7 @@ import {ComponentsModule} from "../components/components.module";
 import {ProductListPage} from "../pages/product-list/product-list";
 import { ProductServiceProvider } from '../providers/product-service/product-service';
 import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     ComponentsModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],

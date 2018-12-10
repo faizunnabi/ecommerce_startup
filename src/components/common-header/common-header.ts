@@ -13,6 +13,7 @@ import {Component, Input} from '@angular/core';
 export class CommonHeaderComponent {
 
   @Input() title: string;
+  @Input() type:string;
   constructor() {
 
   }

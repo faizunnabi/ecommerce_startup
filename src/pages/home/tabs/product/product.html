@@ -1,5 +1,5 @@
 <ion-header>
-  <common-header title="Search Products"></common-header>
+  <common-header title="Search Products" type="search"></common-header>
   <ion-toolbar color="dark">
     <ion-searchbar (input)="getItems($event)"></ion-searchbar>
   </ion-toolbar>
@@ -8,7 +8,7 @@
 <ion-list no-lines>
   <ion-list-header>
     Recent Searches
-    <button ion-button outline color="primary" item-end>Clear</button>
+    <button ion-button  color="dark" item-end>Clear</button>
   </ion-list-header>
   <ion-item style="color:#3e76ff">Oval Eggs</ion-item>
   <ion-item style="color:#3e76ff">Lakme Facewash</ion-item>
