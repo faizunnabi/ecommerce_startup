@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
 import {ShopServiceProvider} from "../../../../providers/shop-service/shop-service";
 import {Shop} from "../../../../models/shop";
+import {Geolocation} from "@ionic-native/geolocation";
 
 declare var google;
 
@@ -15,25 +16,31 @@ export class ShopPage {
   @ViewChild('map') mapContainer:ElementRef;
   map:any;
   shopList=[];
-  constructor(public navCtrl: NavController,public shopService:ShopServiceProvider) {
-    this.shopService.fetchShops().subscribe(
-      res=>{
-      this.shopList = res['shops'];
-      this.getMarkers();
-    },
-    err=>{
-      console.log('unable to find data');
-    }
-    )
+  constructor(public navCtrl: NavController,public shopService:ShopServiceProvider,private geolocation:Geolocation) {
+
   }
 
   ionViewDidLoad() {
-    this.displayGoogleMap();
+    this.geolocation.getCurrentPosition().then((resp)=>{
+      this.displayGoogleMap(resp.coords.latitude,resp.coords.longitude);
+      this.shopService.fetchShops().subscribe(
+        res=>{
+          this.shopList = res['shops'];
+          this.getMarkers();
+        },
+        err=>{
+          console.log('unable to find data');
+        }
+      )
+    }).catch((error)=>{
+      console.log('got error');
+    });
+
   }
 
-  displayGoogleMap() {
+  displayGoogleMap(la,lo) {
     this.shopList[1];
-    let latLng = new google.maps.LatLng(28.6117993, 77.2194934);
+    let latLng = new google.maps.LatLng(la, lo);
 
     let mapOptions = {
       center: latLng,
