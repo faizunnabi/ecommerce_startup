@@ -1,17 +1,29 @@
 page-product-list {
-  .segment_toolbar{
-    border-bottom: 2px #6dc065 solid !important;
-  }
+
   ion-segment{
-    margin-bottom:-16px;
+    justify-content: space-between;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+
+    ion-segment-button.segment-button {
+      flex: 1 0 100px;
+    }
+
+    ion-segment-button{
+      display: inline-block;
+      min-width: 80px;
+      float: left;
+      border:none !important;
+      border-bottom: 2px transparent solid !important;
+      border-radius: 0 !important;
+    }
 
   }
-  ion-segment-button{
-    border:none !important;
-    border-bottom: 2px transparent solid !important;
-    border-radius: 0 !important;
-  }
-
   .segment-activated{
     background: none !important;
     color:#6dc065 !important;

@@ -18,6 +18,7 @@ import {ProductListPage} from "../pages/product-list/product-list";
 import { ProductServiceProvider } from '../providers/product-service/product-service';
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { ShopServiceProvider } from '../providers/shop-service/shop-service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
-    ProductServiceProvider
+    ProductServiceProvider,
+    ShopServiceProvider
   ]
 })
 export class AppModule {}

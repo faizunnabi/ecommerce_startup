@@ -6,7 +6,7 @@
             "quantity": "1Kg",
             "picture": "products/p1.jpg",
             "tags": ["vegetables"],
-            "category": "veggies"
+            "category": "fruits & veggies"
         },
         {
             "id": "2",
@@ -15,7 +15,7 @@
             "quantity": "1Kg",
             "picture": "products/p2.jpg",
             "tags": ["vegetables"],
-            "category": "veggies"
+            "category": "fruits & veggies"
         },
         {
             "id": "3",
@@ -24,7 +24,7 @@
             "quantity": "500gm",
             "picture": "products/p3.jpg",
             "tags": ["vegetables"],
-            "category": "veggies"
+            "category": "fruits & veggies"
         },
         {
             "id": "4",
@@ -32,10 +32,8 @@
             "price": "8",
             "quantity": "1Kg",
             "picture": "products/p4.jpg",
-            "tags": [
-                "fruits"
-            ],
-            "category": "veggies"
+            "tags": ["fruits"],
+            "category": "fruits & veggies"
         },
         {
             "id": "5",
@@ -43,10 +41,8 @@
             "price": "12",
             "quantity": "1Kg",
             "picture": "products/p5.jpg",
-            "tags": [
-                "fruits"
-            ],
-            "category": "veggies"
+            "tags": ["fruits"],
+            "category": "fruits & veggies"
         },
         {
             "id": "6",
@@ -79,7 +75,7 @@
             "tags": [
                 "milk"
             ],
-            "category": "dairy&eggs"
+            "category": "dairy & eggs"
         },
         {
             "id": "9",
@@ -90,7 +86,7 @@
             "tags": [
                 "cheese"
             ],
-            "category": "dairy&eggs"
+            "category": "dairy & eggs"
         },
         {
             "id": "10",
@@ -123,7 +119,7 @@
             "tags": [
                 "eggs"
             ],
-            "category": "dairy&eggs"
+            "category": "dairy & eggs"
         },
         {
             "id": "13",
@@ -134,7 +130,7 @@
             "tags": [
                 "rice"
             ],
-            "category": "grains"
+            "category": "cereals & grains"
         },
         {
             "id": "14",
@@ -145,7 +141,7 @@
             "tags": [
                 "daal"
             ],
-            "category": "grains"
+            "category": "cereals & grains"
         },
         {
             "id": "15",
@@ -156,7 +152,7 @@
             "tags": [
                 "atta"
             ],
-            "category": "grains"
+            "category": "cereals & grains"
         },
         {
             "id": "16",
@@ -167,7 +163,7 @@
             "tags": [
                 "chicken"
             ],
-            "category": "meat"
+            "category": "meat & fish"
         },
         {
             "id": "17",
@@ -178,7 +174,7 @@
             "tags": [
                 "fish"
             ],
-            "category": "meat"
+            "category": "meat & fish"
         },
         {
             "id": "18",
@@ -211,7 +207,7 @@
             "tags": [
                 "beans"
             ],
-            "category": "cans&jars"
+            "category": "cans & jars"
         },
         {
             "id": "21",
@@ -222,7 +218,7 @@
             "tags": [
                 "sweet-corn"
             ],
-            "category": "cans&jars"
+            "category": "cans & jars"
         },
         {
             "id": "22",
@@ -266,7 +262,7 @@
             "tags": [
                 "toilet-cleaner"
             ],
-            "category": "Cleaning"
+            "category": "household care"
         },
         {
             "id": "26",
@@ -277,7 +273,7 @@
             "tags": [
                 "dishwash"
             ],
-            "category": "cleaning"
+            "category": "household care"
         },
         {
             "id": "27",
@@ -288,7 +284,7 @@
             "tags": [
                 "dettol"
             ],
-            "category": "cleaning"
+            "category": "household care"
         },
         {
             "id": "28",
@@ -299,7 +295,7 @@
             "tags": [
                 "diapers"
             ],
-            "category": "baby"
+            "category": "babycare"
         },
         {
             "id": "29",
@@ -310,7 +306,7 @@
             "tags": [
                 "milk-powder"
             ],
-            "category": "baby"
+            "category": "babycare"
         },
         {
             "id": "30",
@@ -321,7 +317,51 @@
             "tags": [
                 "cerelac"
             ],
-            "category": "baby"
+            "category": "babycare"
+        },
+        {
+            "id": "31",
+            "name": "Nivea Facewash",
+            "price": "14",
+            "quantity": "1Pc.",
+            "picture": "products/p31.jpg",
+            "tags": [
+                "facewash"
+            ],
+            "category": "beauty & Hygiene"
+        },
+        {
+            "id": "32",
+            "name": "Lux Handwash",
+            "price": "28",
+            "quantity": "1Pc.",
+            "picture": "products/p32.jpg",
+            "tags": [
+                "soap"
+            ],
+            "category": "beauty & Hygiene"
+        },
+        {
+            "id": "33",
+            "name": "Gillete Foam",
+            "price": "20",
+            "quantity": "1Pc.",
+            "picture": "products/p33.jpg",
+            "tags": [
+                "shaving"
+            ],
+            "category": "beauty & Hygiene"
+        },
+        {
+            "id": "34",
+            "name": "Enchanteur",
+            "price": "16",
+            "quantity": "1Pc.",
+            "picture": "products/p34.jpg",
+            "tags": [
+                "powder"
+            ],
+            "category": "beauty & Hygiene"
         }
     ]
 }

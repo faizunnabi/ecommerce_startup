@@ -2,7 +2,7 @@
   <common-header title="Shops" type="shop"></common-header>
 </ion-header>
 
-<ion-content>
+<ion-content no-padding>
   <!--<div class="container p-4">
     <div class="row">
       <div class="col text-center">
@@ -16,4 +16,40 @@
   <div [@changeOpacity]=toState>
     <h1 style="font-size: 5em;">Lasrge Text</h1>
   </div>-->
+  <div #map id="map"></div>
+  <ion-list text-wrap>
+    <ion-item *ngFor="let shop of shopList" no-padding>
+      <ion-card>
+        <img src="assets/imgs/baq.jpg"/>
+
+        <ion-card-content>
+          <ion-card-title>
+            {{shop.name}}
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever.
+          </p>
+        </ion-card-content>
+
+        <ion-row no-padding>
+          <ion-col col-4>
+            <button ion-button small color="primary" icon-start>
+              <ion-icon name='call'></ion-icon>
+              Call
+            </button>
+          </ion-col>
+          <ion-col col-8 text-center>
+              Ratings :
+              <ion-icon name='star' color="danger"></ion-icon>
+              <ion-icon name='star' color="danger"></ion-icon>
+              <ion-icon name='star' color="danger"></ion-icon>
+              <ion-icon name='star' color="danger"></ion-icon>
+              <ion-icon name='star' color="danger"></ion-icon>
+            ({{shop.rating}})
+          </ion-col>
+
+        </ion-row>
+      </ion-card>
+    </ion-item>
+  </ion-list>
 </ion-content>

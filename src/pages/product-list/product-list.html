@@ -1,21 +1,12 @@
 <ion-header>
   <common-header title="{{category_title}}" type="product"></common-header>
-  <ion-toolbar color="dark">
-    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
-  </ion-toolbar>
   <ion-toolbar color="dark" class="segment_toolbar">
     <ion-segment [(ngModel)]="sub_cat" color="light">
-      <ion-segment-button value="all">
+      <ion-segment-button value="">
         All
       </ion-segment-button>
-      <ion-segment-button value="fresh_herbs">
-        Fresh Herbs
-      </ion-segment-button>
-      <ion-segment-button value="fruits">
-        Fruits
-      </ion-segment-button>
-      <ion-segment-button value="veggies">
-        Veggies
+      <ion-segment-button *ngFor="let s of sub_cats;let i = index" value="{{sub_cats[i]}}" (click)="activateSegment(i)">
+        {{s | titlecase}}
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -58,10 +49,10 @@
           </p>
         </div>
         <ion-row no-padding>
-          <ion-col no-padding padding-top>
+          <ion-col no-padding padding-top col-7>
             <p style="font-weight: bold;color:green;font-size:16px;">AED {{product.price}}</p>
           </ion-col>
-          <ion-col padding-top text-right>
+          <ion-col padding-top text-right col-5>
             <p style="float:right">{{product.quantity}}</p>
           </ion-col>
         </ion-row>
