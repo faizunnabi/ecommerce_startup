@@ -17,7 +17,7 @@
     <h1 style="font-size: 5em;">Lasrge Text</h1>
   </div>-->
   <div #map id="map"></div>
-  <ion-list text-wrap>
+  <ion-list text-wrap no-lines>
     <ion-item *ngFor="let shop of shopList" no-padding>
       <ion-card>
         <img src="assets/imgs/baq.jpg"/>
@@ -25,6 +25,10 @@
         <ion-card-content>
           <ion-card-title>
             {{shop.name}}
+            <button ion-button small outline color="primary" icon-start style="float:right;margin-top:-5px;">
+              <ion-icon name='call'></ion-icon>
+              Call
+            </button>
           </ion-card-title>
           <p>
             The most popular industrial group ever.
@@ -32,19 +36,15 @@
         </ion-card-content>
 
         <ion-row no-padding>
-          <ion-col col-4>
-            <button ion-button small color="primary" icon-start>
-              <ion-icon name='call'></ion-icon>
-              Call
+          <ion-col col-6 padding>
+
+            <button ion-button small color="dark" full icon-start style="margin-top:-10px;">
+              <ion-icon name='eye'></ion-icon>
+              View Store
             </button>
           </ion-col>
-          <ion-col col-8 text-center>
-              Ratings :
-              <ion-icon name='star' color="danger"></ion-icon>
-              <ion-icon name='star' color="danger"></ion-icon>
-              <ion-icon name='star' color="danger"></ion-icon>
-              <ion-icon name='star' color="danger"></ion-icon>
-              <ion-icon name='star' color="danger"></ion-icon>
+          <ion-col col-6 text-right>
+              <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= shop.rating ? 'danger':'light'"></ion-icon>
             ({{shop.rating}})
           </ion-col>
 

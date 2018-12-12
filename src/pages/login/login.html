@@ -17,29 +17,20 @@
       </div>
       <form [formGroup]="authForm">
         <ion-list>
-          <ion-item>
-            <ion-label><ion-icon ios="ios-phone-portrait" md="md-phone-portrait"></ion-icon></ion-label>
-            <ion-input class="form_input" [ngClass]="{'error-input': mobile.errors && mobile.touched}" [(ngModel)]="regData.mobile" [formControl]="mobile" id="mobile" type="text" required placeholder="Mobile *" value="0567097825"></ion-input>
-          </ion-item>
 
           <ion-item>
             <ion-label><ion-icon ios="ios-mail" md="md-mail"></ion-icon></ion-label>
-            <ion-input class="form_input" [ngClass]="{'error-input': email.errors && email.touched}" [(ngModel)]="regData.mail" [formControl]="email" id="email" type="email" required placeholder="Email *" value="faizunnabi@alrumaithy.com"></ion-input>
+            <ion-input class="form_input" [ngClass]="{'error-input': email.errors && email.touched}" [(ngModel)]="logData.mail" [formControl]="email" id="email" type="email" required placeholder="Email *" value="faizunnabi@alrumaithy.com"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label><ion-icon ios="ios-unlock" md="md-unlock"></ion-icon></ion-label>
-            <ion-input class="form_input" [ngClass]="{'error-input':password.errors && password.touched}" [(ngModel)]="regData.pass" [formControl]="password" id="password" type="{{passwordtype}}" required placeholder="Password *" value="password"></ion-input>
+            <ion-input class="form_input" [ngClass]="{'error-input':password.errors && password.touched}" [(ngModel)]="logData.pass" [formControl]="password" id="password" type="{{passwordtype}}" required placeholder="Password *" value="password"></ion-input>
             <button ion-button clear class="eye-icon-btn" type="button" item-right (click)="managePassword()"><ion-icon name="{{passeye}}"></ion-icon></button>
           </ion-item>
 
-          <ion-item>
-            <ion-label><ion-icon ios="ios-unlock" md="md-unlock"></ion-icon></ion-label>
-            <ion-input class="form_input" [ngClass]="{'error-input':cnfpass.errors && cnfpass.touched}" [(ngModel)]="regData.cnfpass" [formControl]="cnfpass" id="cnfpass" value="password" type="{{cnfpasswordtype}}" required placeholder="Confirm Password *"></ion-input>
-            <button ion-button clear class="eye-icon-btn" type="button" item-right (click)="managecnfPassword()"><ion-icon name="{{cnfpasseye}}"></ion-icon></button>
-          </ion-item>
         </ion-list>
-        <button ion-button class="login_btn" [disabled]="!authForm.valid" (click)="doRegister(regData)">Sign up</button>
+        <button ion-button class="login_btn" [disabled]="!authForm.valid" (click)="doLogin(logData)">Sign In</button>
       </form>
       <!--<div class="sepretor-or" padding-horizontal> <p>Or</p></div>
       <div padding text-center class="form-bottom-text">
@@ -50,7 +41,8 @@
         <button ion-button class="facebook" (click)="socialLogin('facebook')"><ion-icon name="logo-facebook" style="margin-right: 12px;"></ion-icon> Facebook</button>
       </div>-->
       <div padding text-center class="form-bottom-text">
-        <label> Already have an Account? <a href="javascript:void(0);" (click)="moveToLogin()"> Sign In </a> </label>
+        <label> Forget Password ? <a href="javascript:void(0);"> Reset </a> </label><br/><br/>
+        <label> Don't have an Account? <a href="javascript:void(0);" (click)="moveToRegister()"> Sign Up </a> </label>
       </div>
     </div>
   </div>

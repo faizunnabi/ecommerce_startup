@@ -20,12 +20,15 @@ import { ProductServiceProvider } from '../providers/product-service/product-ser
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ShopServiceProvider } from '../providers/shop-service/shop-service';
+import { CartServiceProvider } from '../providers/cart-service/cart-service';
+import {RegisterationPage} from "../pages/registeration/registeration";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SplashPage,
+    RegisterationPage,
     LoginPage,
     MainPage,
     ShopPage,
@@ -46,6 +49,7 @@ import { ShopServiceProvider } from '../providers/shop-service/shop-service';
     MyApp,
     HomePage,
     SplashPage,
+    RegisterationPage,
     LoginPage,
     MainPage,
     ShopPage,
@@ -60,7 +64,8 @@ import { ShopServiceProvider } from '../providers/shop-service/shop-service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductServiceProvider,
     ShopServiceProvider,
-    Geolocation
+    Geolocation,
+    CartServiceProvider
   ]
 })
 export class AppModule {}

@@ -6,7 +6,8 @@
             "quantity": "1Kg",
             "picture": "products/p1.jpg",
             "tags": ["vegetables"],
-            "category": "fruits & veggies"
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "2",
@@ -15,7 +16,8 @@
             "quantity": "1Kg",
             "picture": "products/p2.jpg",
             "tags": ["vegetables"],
-            "category": "fruits & veggies"
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "3",
@@ -24,7 +26,8 @@
             "quantity": "500gm",
             "picture": "products/p3.jpg",
             "tags": ["vegetables"],
-            "category": "fruits & veggies"
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "4",
@@ -33,7 +36,8 @@
             "quantity": "1Kg",
             "picture": "products/p4.jpg",
             "tags": ["fruits"],
-            "category": "fruits & veggies"
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "5",
@@ -42,7 +46,8 @@
             "quantity": "1Kg",
             "picture": "products/p5.jpg",
             "tags": ["fruits"],
-            "category": "fruits & veggies"
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "6",
@@ -53,7 +58,8 @@
             "tags": [
                 "bread"
             ],
-            "category": "bakery"
+            "category": "bakery",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "7",
@@ -64,7 +70,8 @@
             "tags": [
                 "buns"
             ],
-            "category": "bakery"
+            "category": "bakery",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "8",
@@ -75,7 +82,8 @@
             "tags": [
                 "milk"
             ],
-            "category": "dairy & eggs"
+            "category": "dairy & eggs",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "9",
@@ -86,7 +94,8 @@
             "tags": [
                 "cheese"
             ],
-            "category": "dairy & eggs"
+            "category": "dairy & eggs",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "10",
@@ -97,7 +106,8 @@
             "tags": [
                 "water"
             ],
-            "category": "drinks"
+            "category": "drinks",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "11",
@@ -108,7 +118,8 @@
             "tags": [
                 "cold-drink"
             ],
-            "category": "drinks"
+            "category": "drinks",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "12",
@@ -119,7 +130,8 @@
             "tags": [
                 "eggs"
             ],
-            "category": "dairy & eggs"
+            "category": "dairy & eggs",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "13",
@@ -130,7 +142,8 @@
             "tags": [
                 "rice"
             ],
-            "category": "cereals & grains"
+            "category": "cereals & grains",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "14",
@@ -141,7 +154,8 @@
             "tags": [
                 "daal"
             ],
-            "category": "cereals & grains"
+            "category": "cereals & grains",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "15",
@@ -152,7 +166,8 @@
             "tags": [
                 "atta"
             ],
-            "category": "cereals & grains"
+            "category": "cereals & grains",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "16",
@@ -163,7 +178,8 @@
             "tags": [
                 "chicken"
             ],
-            "category": "meat & fish"
+            "category": "meat & fish",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "17",
@@ -174,7 +190,8 @@
             "tags": [
                 "fish"
             ],
-            "category": "meat & fish"
+            "category": "meat & fish",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "18",
@@ -185,7 +202,8 @@
             "tags": [
                 "chicken-nuggets"
             ],
-            "category": "frozen"
+            "category": "frozen",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "19",
@@ -196,7 +214,8 @@
             "tags": [
                 "spring-roll"
             ],
-            "category": "frozen"
+            "category": "frozen",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "20",
@@ -207,7 +226,8 @@
             "tags": [
                 "beans"
             ],
-            "category": "cans & jars"
+            "category": "cans & jars",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "21",
@@ -218,7 +238,8 @@
             "tags": [
                 "sweet-corn"
             ],
-            "category": "cans & jars"
+            "category": "cans & jars",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "22",
@@ -229,7 +250,8 @@
             "tags": [
                 "chocolates"
             ],
-            "category": "snacks"
+            "category": "snacks",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "23",
@@ -240,7 +262,8 @@
             "tags": [
                 "chocolates"
             ],
-            "category": "snacks"
+            "category": "snacks",
+            "shop_name":"Value Baqala"
         },
         {
             "id": "24",
@@ -251,7 +274,8 @@
             "tags": [
                 "chips"
             ],
-            "category": "snacks"
+            "category": "snacks",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "25",
@@ -262,7 +286,8 @@
             "tags": [
                 "toilet-cleaner"
             ],
-            "category": "household care"
+            "category": "household care",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "26",
@@ -273,7 +298,8 @@
             "tags": [
                 "dishwash"
             ],
-            "category": "household care"
+            "category": "household care",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "27",
@@ -284,7 +310,8 @@
             "tags": [
                 "dettol"
             ],
-            "category": "household care"
+            "category": "household care",
+            "shop_name":"Value Baqala"
         },
         {
             "id": "28",
@@ -295,7 +322,8 @@
             "tags": [
                 "diapers"
             ],
-            "category": "babycare"
+            "category": "babycare",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "29",
@@ -306,7 +334,8 @@
             "tags": [
                 "milk-powder"
             ],
-            "category": "babycare"
+            "category": "babycare",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "30",
@@ -317,7 +346,8 @@
             "tags": [
                 "cerelac"
             ],
-            "category": "babycare"
+            "category": "babycare",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "31",
@@ -328,7 +358,8 @@
             "tags": [
                 "facewash"
             ],
-            "category": "beauty & Hygiene"
+            "category": "beauty & Hygiene",
+            "shop_name":"Value Baqala"
         },
         {
             "id": "32",
@@ -339,7 +370,8 @@
             "tags": [
                 "soap"
             ],
-            "category": "beauty & Hygiene"
+            "category": "beauty & Hygiene",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "33",
@@ -350,7 +382,8 @@
             "tags": [
                 "shaving"
             ],
-            "category": "beauty & Hygiene"
+            "category": "beauty & Hygiene",
+            "shop_name":"Adil Baqala"
         },
         {
             "id": "34",
@@ -361,7 +394,8 @@
             "tags": [
                 "powder"
             ],
-            "category": "beauty & Hygiene"
+            "category": "beauty & Hygiene",
+            "shop_name":"Value Baqala"
         }
     ]
 }
