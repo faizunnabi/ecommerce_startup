@@ -80,7 +80,11 @@ export class ShopPage {
   addMarkersToMap(shop) {
     console.log(shop);
     var position = new google.maps.LatLng(shop['latitude'], shop['longitude']);
-    var shopMarker = new google.maps.Marker({position: position, title: shop['name'],icon:'assets/imgs/marker1.png'});
+    var infowindow = new google.maps.InfoWindow({content: shop['name']});
+    var shopMarker = new google.maps.Marker({position: position,icon:'assets/imgs/marker1.png'});
+    shopMarker.addListener('click', function() {
+      infowindow.open(this.map, shopMarker);
+    });
     this.bounds.extend(shopMarker.getPosition());
     shopMarker.setMap(this.map);
   }

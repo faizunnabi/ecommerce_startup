@@ -1,5 +1,18 @@
 page-product-list {
-
+  .header_text{
+    margin-left:-40px;
+    .main_head{
+      display: block;
+      text-align: center;
+      color:#fff;
+    }
+    .sub_head{
+      text-align: center;
+      color:#c0c0c0;
+      font-size: 11px;
+      display: block;
+    }
+  }
   ion-segment{
     justify-content: space-between;
     overflow: auto;

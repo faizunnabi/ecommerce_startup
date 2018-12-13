@@ -3,61 +3,34 @@
 </ion-header>
 
 <ion-content>
-  <ion-fab bottom center>
-    <button ion-fab color="danger"><ion-icon name="checkmark"></ion-icon></button>
-  </ion-fab>
-    <ion-card>
+
+    <ion-card *ngFor="let item of cart_items">
       <ion-card-content>
         <ion-row>
           <ion-col col-3>
-            <img src="assets/imgs/products/p1.jpg" />
+            <img src="{{'assets/imgs/'+item.product.picture}}" />
           </ion-col>
           <ion-col col-3>
-            <h3 style="font-weight: bold;">Potatoes</h3>
-            <span style="color:#a7a7a7;">AED 25</span>
+            <h3 style="font-weight: bold;">{{item.product.name}}</h3>
+            <span style="color:#a7a7a7;">AED {{item.product.price}}</span><br/>
+            <span style="color:#a7a7a7;">{{item.product.quantity}}</span>
           </ion-col>
           <ion-col col-6 text-right>
             <button ion-button clear icon-only color="dark"><ion-icon name="remove-circle"></ion-icon></button>
-            <span>2</span>
+            <span>{{item.quantity}}</span>
             <button ion-button clear icon-only color="dark"><ion-icon name="add-circle"></ion-icon></button>
           </ion-col>
         </ion-row>
       </ion-card-content>
     </ion-card>
-  <ion-card>
-    <ion-card-content>
-      <ion-row>
-        <ion-col col-3>
-          <img src="assets/imgs/products/p2.jpg" />
-        </ion-col>
-        <ion-col col-3>
-          <h3 style="font-weight: bold;">Onions</h3>
-          <span style="color:#a7a7a7;">AED 50</span>
-        </ion-col>
-        <ion-col col-6 text-right>
-          <button ion-button clear icon-only color="dark"><ion-icon name="remove-circle"></ion-icon></button>
-          <span>12</span>
-          <button ion-button clear icon-only color="dark"><ion-icon name="add-circle"></ion-icon></button>
-        </ion-col>
-      </ion-row>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content>
-      <ion-row>
-        <ion-col col-3>
-          <img src="assets/imgs/products/p5.jpg" />
-        </ion-col>
-        <ion-col col-3>
-          <h3 style="font-weight: bold;">Kiwi</h3>
-          <span style="color:#a7a7a7;">AED 25</span>
-        </ion-col>
-        <ion-col col-6 text-right>
-          <button ion-button clear icon-only color="dark"><ion-icon name="remove-circle"></ion-icon></button>
-          <span>1</span>
-          <button ion-button clear icon-only color="dark"><ion-icon name="add-circle"></ion-icon></button>
-        </ion-col>
-      </ion-row>
-    </ion-card-content>
-  </ion-card>
 </ion-content>
+<ion-footer style="background: #efefef;box-shadow:0 0 1px #c4c4c4;">
+  <ion-row>
+    <ion-col>
+      <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total}}</h3>
+    </ion-col>
+    <ion-col text-right>
+      <button ion-button color="danger" icon-end round>Checkout <ion-icon name="arrow-forward"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

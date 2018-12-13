@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {ModalController, Nav, Platform} from 'ionic-angular';
+import {ModalController, Nav, NavController, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import {SplashPage} from "../pages/splash/splash";
 import {LoginPage} from "../pages/login/login";
 import {ProductListPage} from "../pages/product-list/product-list";
+import {MainPage} from "../pages/home/tabs/main/main";
 
 @Component({
   templateUrl: 'app.html'
@@ -27,9 +28,15 @@ export class MyApp {
       splash.present();
     });
   }
-
-  logout(){
-    this.nav.setRoot(LoginPage);
+  goTo(pagename)
+  {
+    this.nav.setRoot(pagename);
   }
+
+  goToTab(pagename,index)
+  {
+    this.nav.setRoot(pagename,{index:index});
+  }
+
 }
 

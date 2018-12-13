@@ -1,5 +1,16 @@
 <ion-header>
-  <common-header title="{{category_title}}" type="product"></common-header>
+  <ion-navbar color="dark">
+    <div *ngIf="category_title.length" class="header_text">
+      <span class="main_head">{{category_title  | uppercase}}</span>
+    </div>
+    <ion-buttons right>
+      <button ion-button>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+
   <ion-toolbar color="dark" class="segment_toolbar">
     <ion-segment [(ngModel)]="sub_cat" color="light">
       <ion-segment-button value="">
@@ -56,7 +67,7 @@
             <p style="float:right">{{product.quantity}}</p>
           </ion-col>
         </ion-row>
-        <button ion-button color="dark" icon-start style="float: right;">
+        <button ion-button color="dark" icon-start style="float: right;" (click)="addToBasket(product)" >
           <ion-icon name='basket'></ion-icon> BASKET
         </button>
       </div>

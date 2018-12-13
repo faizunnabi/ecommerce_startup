@@ -22,14 +22,14 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ShopServiceProvider } from '../providers/shop-service/shop-service';
 import { CartServiceProvider } from '../providers/cart-service/cart-service';
 import {RegisterationPage} from "../pages/registeration/registeration";
+import {HomePageModule} from "../pages/home/home.module";
+import {LoginPageModule} from "../pages/login/login.module";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     SplashPage,
     RegisterationPage,
-    LoginPage,
     MainPage,
     ShopPage,
     ProductPage,
@@ -38,19 +38,24 @@ import {RegisterationPage} from "../pages/registeration/registeration";
     ProductListPage,
   ],
   imports: [
+    HomePageModule,
+    LoginPageModule,
     ComponentsModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      platforms: {
+        ios: {
+          backButtonText: ''
+        }
+      }}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     SplashPage,
     RegisterationPage,
-    LoginPage,
     MainPage,
     ShopPage,
     ProductPage,

@@ -1,6 +1,8 @@
 import {Component, Input} from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {ProductServiceProvider} from "../../providers/product-service/product-service";
+import {CartServiceProvider} from "../../providers/cart-service/cart-service";
+import {Item} from "../../models/item";
 
 @IonicPage()
 @Component({
@@ -13,10 +15,23 @@ export class ProductListPage {
   sub_cat:string;
   products :any;
   sub_cats = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams,public productService:ProductServiceProvider) {
+  loader:any;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public productService:ProductServiceProvider,
+              private cartService:CartServiceProvider,
+              public loadingCtrl:LoadingController,
+              private toastCtrl: ToastController) {
+    this.loader = this.loadingCtrl.create({
+      content: ''
+    });
+
     this.category_title = navParams.get('item');
+
+    this.loader.present();
     this.productService.fetchProducts().subscribe(
       res=>{
+        this.loader.dismiss();
         var title = this.category_title;
         this.products = res['products'].filter(function (item) {
           return item['category']== title;
@@ -35,13 +50,35 @@ export class ProductListPage {
         }
       },
       err=>{
-        console.log("error");
+        this.loader.dismiss();
+        this.toastCtrl.create({
+          message: 'We encountered error !',
+          duration: 3000,
+          showCloseButton:true
+        }).present();
       }
     );
   }
 
+  ionViewDidEnter()
+  {
+
+  }
+
   activateSegment(i){
     this.sub_cat = this.sub_cats[i];
+  }
+
+  addToBasket(product)
+  {
+    product = product;
+    let item:Item = {product:product,quantity:1}
+    this.cartService.addProduct(item);
+    this.toastCtrl.create({
+      message: 'Product added to cart',
+      duration: 3000,
+      showCloseButton:true
+    }).present();
   }
 
 }
