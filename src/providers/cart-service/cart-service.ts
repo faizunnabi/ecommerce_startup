@@ -31,8 +31,9 @@ export class CartServiceProvider {
   }
 
   removeProduct(id:number) {
-    this.Items = this.Items.filter((_item) =>  _item.product.id !== id );
-    this.cartSubject.next(<CartState>{loaded:false,products:this.Items});
+    let item = this.Items.findIndex((_item) =>  _item.product.id == id );
+    this.Items.splice(item,1);
+    this.cartSubject.next(<CartState>{loaded:true,products:this.Items});
   }
 
   getAllProducts() {

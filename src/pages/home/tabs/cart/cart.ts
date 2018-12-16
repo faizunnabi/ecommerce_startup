@@ -9,6 +9,7 @@ import {CartServiceProvider} from "../../../../providers/cart-service/cart-servi
 export class CartPage {
   cart_total:number = 0;
   cart_items:any = [];
+  edit_mode:boolean = false;
   constructor(public navCtrl: NavController,private cartService:CartServiceProvider,private toastCtrl: ToastController) {
 
   }
@@ -30,9 +31,15 @@ export class CartPage {
       }
     )
   }
+
+  ionViewDidLeave()
+  {
+    this.edit_mode = false;
+  }
+
   incQuantity(id,q)
   {
-    if(q > -1){
+    if(q >= 1){
       if(this.cartService.addQuantity(id)){
         this.toastCtrl.create({
           message: 'Product quantity updated',
@@ -45,7 +52,7 @@ export class CartPage {
   }
 
   decQuantity(id,q) {
-    if (q-1 > -1) {
+    if (q > 1) {
       if (this.cartService.minusQuantity(id)) {
         this.toastCtrl.create({
           message: 'Product quantity updated',
@@ -54,6 +61,16 @@ export class CartPage {
         }).present();
       }
     }
+  }
+
+  enterEditMode()
+  {
+    this.edit_mode === false ? this.edit_mode=true : this.edit_mode=false;
+  }
+
+  remove_item(id)
+  {
+    this.cartService.removeProduct(id);
   }
 
 }

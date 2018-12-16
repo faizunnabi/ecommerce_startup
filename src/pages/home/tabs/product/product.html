@@ -1,12 +1,27 @@
 <ion-header>
-  <common-header title="Search Products" type="search"></common-header>
+  <ion-navbar color="dark" hideBackButton>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div class="header_text">
+      <span class="main_head">SEARCH PRODUCTS</span>
+    </div>
+
+    <ion-buttons right>
+      <button ion-button >
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
   <ion-toolbar color="dark">
     <ion-searchbar (input)="getItems($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 <ion-content>
 <ion-list no-lines>
-  <ion-list-header>
+  <ion-list-header color="light">
     Recent Searches
     <button ion-button  color="dark" item-end>Clear</button>
   </ion-list-header>

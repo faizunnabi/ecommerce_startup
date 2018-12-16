@@ -1,21 +1,23 @@
 <ion-header>
-  <common-header title="Shops" type="shop"></common-header>
+  <ion-navbar color="dark" hideBackButton>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div class="header_text">
+      <span class="main_head">SHOPS</span>
+    </div>
+
+    <ion-buttons right>
+      <button ion-button >
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 <ion-content no-padding>
-  <!--<div class="container p-4">
-    <div class="row">
-      <div class="col text-center">
-        <button ion-button color="primary" (click)="changeState('state2')">Change To State 2</button>
-      </div>
-      <div class="col text-center">
-        <button ion-button (click)="changeState('state1')" color="danger">Change To State 1</button>
-      </div>
-    </div>
-  </div>
-  <div [@changeOpacity]=toState>
-    <h1 style="font-size: 5em;">Lasrge Text</h1>
-  </div>-->
   <div #map id="map"></div>
   <ion-list text-wrap no-lines>
     <ion-item *ngFor="let shop of shopList" no-padding>

@@ -1,9 +1,22 @@
 <ion-header>
-  <common-header title="My Cart" type="cart"></common-header>
+  <ion-navbar color="dark" hideBackButton>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div class="header_text">
+      <span class="main_head">MY CART</span>
+    </div>
+    <ion-buttons right>
+      <button ion-button (click)="enterEditMode()"  *ngIf="cart_items.length > 0">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
-
 <ion-content>
-
+  <div *ngIf="cart_items.length > 0">
     <ion-card *ngFor="let item of cart_items">
       <ion-card-content>
         <ion-row>
@@ -21,10 +34,21 @@
             <button ion-button clear icon-only color="dark" (click)="incQuantity(item.product.id,item.quantity)"><ion-icon name="add-circle"></ion-icon></button>
           </ion-col>
         </ion-row>
+        <button ion-button small class="remove_bt" *ngIf="edit_mode===true" (click)="remove_item(item.product.id)">Remove</button>
       </ion-card-content>
     </ion-card>
+  </div>
+  <div *ngIf="cart_items.length == 0">
+    <div style="position: absolute;width:100%;height:100%;display: flex;flex-flow: row wrap;justify-content: center;">
+      <div style="align-self: center;text-align: center;">
+        <img src="assets/imgs/empty_cart.jpg" style="max-width:50%" />
+        <h3>YOUR CART IS EMPTY</h3>
+        <button ion-button outline color="primary">Check our deals</button>
+      </div>
+    </div>
+  </div>
 </ion-content>
-<ion-footer style="background: #efefef;box-shadow:0 0 1px #c4c4c4;">
+<ion-footer style="background: #efefef;box-shadow:0 0 1px #c4c4c4;" *ngIf="cart_items.length > 0">
   <ion-row>
     <ion-col>
       <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total}}</h3>
