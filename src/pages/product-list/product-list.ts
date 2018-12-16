@@ -23,10 +23,16 @@ export class ProductListPage {
               private cartService:CartServiceProvider,
               public loadingCtrl:LoadingController,
               private toastCtrl: ToastController) {
+
+    this.category_title = navParams.get('item');
+  }
+
+  ionViewWillEnter()
+  {
     this.loader = this.loadingCtrl.create({
       content: ''
     });
-    this.category_title = navParams.get('item');
+
     this.loader.present();
 
     this.productService.fetchProducts().subscribe(
@@ -58,12 +64,6 @@ export class ProductListPage {
         }).present();
       }
     );
-
-  }
-
-  ionViewDidEnter()
-  {
-
   }
 
   activateSegment(i){

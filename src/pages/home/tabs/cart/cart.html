@@ -9,8 +9,8 @@
       <span class="main_head">MY CART</span>
     </div>
     <ion-buttons right>
-      <button ion-button (click)="enterEditMode()"  *ngIf="cart_items.length > 0">
-        <ion-icon name="trash"></ion-icon>
+      <button ion-button (click)="enterEditMode()" [color]="edit_mode ? 'danger':''"  *ngIf="cart_items.length > 0">
+        <ion-icon [name]="edit_mode ? 'done-all':'create'"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -34,27 +34,27 @@
             <button ion-button clear icon-only color="dark" (click)="incQuantity(item.product.id,item.quantity)"><ion-icon name="add-circle"></ion-icon></button>
           </ion-col>
         </ion-row>
-        <button ion-button small class="remove_bt" *ngIf="edit_mode===true" (click)="remove_item(item.product.id)">Remove</button>
+        <button ion-button small class="remove_bt" color="danger" *ngIf="edit_mode===true" (click)="remove_item(item.product.id)">Remove</button>
       </ion-card-content>
     </ion-card>
   </div>
   <div *ngIf="cart_items.length == 0">
-    <div style="position: absolute;width:100%;height:100%;display: flex;flex-flow: row wrap;justify-content: center;">
-      <div style="align-self: center;text-align: center;">
+      <div style="margin-top:40%;text-align: center;">
         <img src="assets/imgs/empty_cart.jpg" style="max-width:50%" />
         <h3>YOUR CART IS EMPTY</h3>
         <button ion-button outline color="primary">Check our deals</button>
       </div>
-    </div>
   </div>
 </ion-content>
-<ion-footer style="background: #efefef;box-shadow:0 0 1px #c4c4c4;" *ngIf="cart_items.length > 0">
-  <ion-row>
-    <ion-col>
-      <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total}}</h3>
-    </ion-col>
-    <ion-col text-right>
-      <button ion-button color="danger" icon-end round>Checkout <ion-icon name="arrow-forward"></ion-icon></button>
-    </ion-col>
-  </ion-row>
+<ion-footer style="background: #efefef;box-shadow:0 0 1px #c4c4c4;">
+  <div *ngIf="cart_items.length > 0" [@editMode]="edit_state" style="position: relative;">
+    <ion-row>
+      <ion-col>
+        <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total}}</h3>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button color="danger" icon-end round>Checkout <ion-icon name="arrow-forward"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </div>
 </ion-footer>
