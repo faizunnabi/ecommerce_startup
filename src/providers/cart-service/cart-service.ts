@@ -5,6 +5,7 @@ import {Observable} from "rxjs/Observable";
 import 'rxjs/add/observable/of';
 import {Subject} from "rxjs/Subject";
 import {CartState} from "../../models/cartstate";
+import {ReplaySubject} from "rxjs/ReplaySubject";
 
 /*
   Generated class for the CartServiceProvider provider.
@@ -19,24 +20,36 @@ export class CartServiceProvider {
 
   }
 
-  private cartSubject = new Subject<CartState>();
+  private cartSubject = new ReplaySubject<CartState>();
   Items:Item[] = [];
   CartState = this.cartSubject.asObservable();
 
 
   addProduct(_product:any) {
     this.Items.push(_product);
-    console.log(this.Items);
     this.cartSubject.next(<CartState>{loaded:true,products:this.Items});
   }
 
   removeProduct(id:number) {
-    this.Items = this.Items.filter((_item) =>  _item.product.id !== id )
+    this.Items = this.Items.filter((_item) =>  _item.product.id !== id );
     this.cartSubject.next(<CartState>{loaded:false,products:this.Items});
   }
 
-  getAllProducts() : Observable <any> {
-    return Observable.of(this.Items);
+  getAllProducts() {
+    return this.CartState;
   }
 
+  addQuantity(id:number){
+    let itemIndex = this.Items.findIndex(item=>item.product.id==id);
+    this.Items[itemIndex].quantity += 1;
+    this.cartSubject.next(<CartState>{loaded:true,products:this.Items});
+    return 1;
+  }
+
+  minusQuantity(id:number){
+    let itemIndex = this.Items.findIndex(item=>item.product.id==id);
+    this.Items[itemIndex].quantity += -1;
+    this.cartSubject.next(<CartState>{loaded:true,products:this.Items});
+    return 1;
+  }
 }

@@ -67,9 +67,7 @@
             <p style="float:right">{{product.quantity}}</p>
           </ion-col>
         </ion-row>
-        <button ion-button color="dark" icon-start style="float: right;" (click)="addToBasket(product)" >
-          <ion-icon name='basket'></ion-icon> BASKET
-        </button>
+        <cart-button [product]="product"></cart-button>
       </div>
     </ion-item>
   </ion-list>

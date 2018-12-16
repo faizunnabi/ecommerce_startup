@@ -14,6 +14,7 @@ export class ProductListPage {
   category_title: string;
   sub_cat:string;
   products :any;
+  cart_products = [];
   sub_cats = [];
   loader:any;
   constructor(public navCtrl: NavController,
@@ -25,10 +26,9 @@ export class ProductListPage {
     this.loader = this.loadingCtrl.create({
       content: ''
     });
-
     this.category_title = navParams.get('item');
-
     this.loader.present();
+
     this.productService.fetchProducts().subscribe(
       res=>{
         this.loader.dismiss();
@@ -58,6 +58,7 @@ export class ProductListPage {
         }).present();
       }
     );
+
   }
 
   ionViewDidEnter()
@@ -69,16 +70,5 @@ export class ProductListPage {
     this.sub_cat = this.sub_cats[i];
   }
 
-  addToBasket(product)
-  {
-    product = product;
-    let item:Item = {product:product,quantity:1}
-    this.cartService.addProduct(item);
-    this.toastCtrl.create({
-      message: 'Product added to cart',
-      duration: 3000,
-      showCloseButton:true
-    }).present();
-  }
 
 }

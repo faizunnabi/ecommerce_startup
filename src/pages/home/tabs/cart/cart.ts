@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {NavController, ToastController} from 'ionic-angular';
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";
 
 @Component({
@@ -7,28 +7,53 @@ import {CartServiceProvider} from "../../../../providers/cart-service/cart-servi
   templateUrl: 'cart.html'
 })
 export class CartPage {
-
-  cart_items:any;
   cart_total:number = 0;
-  constructor(public navCtrl: NavController,private cartService:CartServiceProvider) {
+  cart_items:any = [];
+  constructor(public navCtrl: NavController,private cartService:CartServiceProvider,private toastCtrl: ToastController) {
 
   }
 
-  ionViewDidEnter()
+  ionViewDidLoad()
   {
     this.cartService.getAllProducts().subscribe(
       res=>{
-        //console.log('from cart');
+        console.log('from cart');
+        this.cart_total= 0;
         console.log(res);
-        this.cart_items = res;
-        for(var i =0;i<res.length;i++)
+        this.cart_items = res['products'];
+        for(var i =0;i<res['products'].length;i++)
         {
           //console.log('from cart');
-          console.log(res[i]);
-          this.cart_total  += res[i]['product']['price'] * 1;
+          console.log(res['products'][i]);
+          this.cart_total  += res['products'][i]['product']['price'] * res['products'][i]['quantity'];
         }
       }
     )
+  }
+  incQuantity(id,q)
+  {
+    if(q > -1){
+      if(this.cartService.addQuantity(id)){
+        this.toastCtrl.create({
+          message: 'Product quantity updated',
+          duration: 3000,
+          showCloseButton:true
+        }).present();
+      }
+    }
+
+  }
+
+  decQuantity(id,q) {
+    if (q-1 > -1) {
+      if (this.cartService.minusQuantity(id)) {
+        this.toastCtrl.create({
+          message: 'Product quantity updated',
+          duration: 3000,
+          showCloseButton: true
+        }).present();
+      }
+    }
   }
 
 }
