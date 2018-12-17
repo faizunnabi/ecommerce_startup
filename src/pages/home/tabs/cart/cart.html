@@ -6,11 +6,11 @@
       </button>
     </ion-buttons>
     <div class="header_text">
-      <span class="main_head">MY CART</span>
+      <span class="main_head">{{edit_mode ? 'EDIT CART':'MY CART'}}</span>
     </div>
     <ion-buttons right>
       <button ion-button (click)="enterEditMode()" [color]="edit_mode ? 'danger':''"  *ngIf="cart_items.length > 0">
-        <ion-icon [name]="edit_mode ? 'done-all':'create'"></ion-icon>
+        <ion-icon [name]="edit_mode ? 'thumbs-up':'create'"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>

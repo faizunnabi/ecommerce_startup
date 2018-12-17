@@ -49,7 +49,7 @@ export class SearchBoxComponent {
         this.productService.fetchProducts().subscribe(
           res=>{
             this.items = res['products'].filter((item)=>{
-              return item['name'].toLowerCase().indexOf(this.searchTerm)>-1;
+              return item['name'].toLowerCase().indexOf(this.searchTerm.toLowerCase())>-1;
             });
           }
         )
@@ -58,7 +58,7 @@ export class SearchBoxComponent {
         this.shopService.fetchShops().subscribe(
           res=>{
             this.items =  res['shops'].filter((item)=>{
-              return item['name'].toLowerCase().indexOf(this.searchTerm)>-1;
+              return item['name'].toLowerCase().indexOf(this.searchTerm.toLowerCase())>-1;
             });
             console.log('yes');
           }
@@ -67,7 +67,7 @@ export class SearchBoxComponent {
         this.productService.fetchProducts().subscribe(
           res=>{
             this.items =  res['products'].filter((item)=>{
-              return item['name'].toLowerCase().indexOf(this.searchTerm)>-1;
+              return item['name'].toLowerCase().indexOf(this.searchTerm.toLowerCase())>-1;
             });
             console.log(this.items);
           }
