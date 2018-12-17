@@ -19,4 +19,5 @@ export class ProductServiceProvider {
     return this.http.get('assets/data/products.json');
   }
 
+
 }

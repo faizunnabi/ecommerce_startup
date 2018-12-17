@@ -8,6 +8,7 @@ import {SplashPage} from "../pages/splash/splash";
 import {LoginPage} from "../pages/login/login";
 import {ProductListPage} from "../pages/product-list/product-list";
 import {MainPage} from "../pages/home/tabs/main/main";
+import {StoremapPage} from "../pages/storemap/storemap";
 
 @Component({
   templateUrl: 'app.html'
@@ -15,8 +16,10 @@ import {MainPage} from "../pages/home/tabs/main/main";
 export class MyApp {
   @ViewChild(Nav)
   nav: Nav;
-
   rootPage:any = LoginPage;
+  homePage:any = HomePage;
+  storeMapPage:any = StoremapPage;
+  loginPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController) {
     platform.ready().then(() => {

@@ -15,9 +15,7 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar color="dark">
-    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
-  </ion-toolbar>
+  <search-box [searchModel]="'products'"></search-box>
 </ion-header>
 <ion-content>
 <ion-list no-lines>

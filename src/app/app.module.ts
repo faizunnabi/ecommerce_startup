@@ -22,12 +22,13 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ShopServiceProvider } from '../providers/shop-service/shop-service';
 import { CartServiceProvider } from '../providers/cart-service/cart-service';
 import {RegisterationPage} from "../pages/registeration/registeration";
-import {HomePageModule} from "../pages/home/home.module";
-import {LoginPageModule} from "../pages/login/login.module";
+import {StoremapPage} from "../pages/storemap/storemap";
 
 @NgModule({
   declarations: [
     MyApp,
+    HomePage,
+    LoginPage,
     SplashPage,
     RegisterationPage,
     MainPage,
@@ -36,10 +37,9 @@ import {LoginPageModule} from "../pages/login/login.module";
     DealsPage,
     CartPage,
     ProductListPage,
+    StoremapPage
   ],
   imports: [
-    HomePageModule,
-    LoginPageModule,
     ComponentsModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -55,13 +55,16 @@ import {LoginPageModule} from "../pages/login/login.module";
   entryComponents: [
     MyApp,
     SplashPage,
+    HomePage,
+    LoginPage,
     RegisterationPage,
     MainPage,
     ShopPage,
     ProductPage,
     DealsPage,
     CartPage,
-    ProductListPage
+    ProductListPage,
+    StoremapPage
   ],
   providers: [
     StatusBar,

@@ -2,9 +2,8 @@ import {Component, Input} from '@angular/core';
 import {IonicPage, LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {ProductServiceProvider} from "../../providers/product-service/product-service";
 import {CartServiceProvider} from "../../providers/cart-service/cart-service";
-import {Item} from "../../models/item";
 
-@IonicPage()
+
 @Component({
   selector: 'page-product-list',
   templateUrl: 'product-list.html',

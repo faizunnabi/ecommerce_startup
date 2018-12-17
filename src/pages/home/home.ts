@@ -7,7 +7,6 @@ import {DealsPage} from "./tabs/deals/deals";
 import {CartPage} from "./tabs/cart/cart";
 import {CartServiceProvider} from "../../providers/cart-service/cart-service";
 
-@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
