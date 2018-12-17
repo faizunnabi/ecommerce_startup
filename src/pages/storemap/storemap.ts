@@ -72,6 +72,17 @@ export class StoremapPage {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     this.map = new google.maps.Map(this.mapContainer.nativeElement, mapOptions);
+    var position = latLng;
+    var infowindow = new google.maps.InfoWindow({content: 'You are here'});
+    var myMarker = new google.maps.Marker({
+      position: position,
+      icon: 'assets/imgs/man_marker.png'
+    });
+    myMarker.addListener('click', function() {
+      infowindow.open(this.map, myMarker);
+    });
+    this.bounds.extend(myMarker.getPosition());
+    myMarker.setMap(this.map);
   }
 
   getMarkers() {
