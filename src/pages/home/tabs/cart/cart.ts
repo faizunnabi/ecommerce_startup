@@ -24,7 +24,7 @@ export class CartPage {
   cart_total:number = 0;
   cart_items:any = [];
   edit_mode:boolean = false;
-  edit_state = 'edit_inactive';
+  //edit_state = 'edit_inactive';
   constructor(public navCtrl: NavController,private cartService:CartServiceProvider,private toastCtrl: ToastController) {
 
   }
@@ -77,7 +77,7 @@ export class CartPage {
   enterEditMode()
   {
     this.edit_mode === false ? this.edit_mode=true : this.edit_mode=false;
-    this.edit_state = this.edit_state == 'edit_active' ? 'edit_inactive':'edit_active';
+    //this.edit_state = this.edit_state == 'edit_active' ? 'edit_inactive':'edit_active';
   }
 
   remove_item(id)
