@@ -50,7 +50,7 @@
   <div *ngIf="cart_items.length > 0 && !edit_mode" style="position: relative;">
     <ion-row>
       <ion-col>
-        <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total}}</h3>
+        <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total|number:'0.2-2'}}</h3>
       </ion-col>
       <ion-col text-right>
         <button ion-button color="danger" icon-end round>Checkout <ion-icon name="arrow-forward"></ion-icon></button>
