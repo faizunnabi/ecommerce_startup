@@ -6,9 +6,24 @@ page-main{
   .pr2{
     padding-right:2px !important;
   }
+  .heading{
+    position: relative;
+    font-size: 15px;
+  }
+  .heading ion-icon{
+    background: #f1f1f1;
+    color:#000 !important;
+    width:24px;
+    height:24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+  }
   .category_grid{
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
+    margin:3px;
     box-shadow: 0px 0px 2px #dfdfdf;
     transition-duration:0.4s ;
     transition-timing-function: ease-out;
@@ -25,7 +40,7 @@ page-main{
       color:#fff;
       font-weight: 300;
       text-transform: uppercase;
-      font-size: 16px;
+      font-size: 11px;
       padding:5px;
       text-shadow: 0 0 1px #000;
       transition-duration:0.1s ;
@@ -37,6 +52,15 @@ page-main{
     opacity: 0.7;
     transition-duration:0.4s ;
     transition-timing-function: ease-out;
+  }
+
+  .old_price{
+    font-weight: normal;
+    font-size:12px;
+    position: absolute;
+    top:0px;
+    color:#999;
+    text-decoration: line-through !important;
   }
 
 }

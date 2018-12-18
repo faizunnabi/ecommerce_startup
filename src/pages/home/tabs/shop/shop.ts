@@ -1,9 +1,10 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import {LoadingController, NavController, ToastController} from 'ionic-angular';
+import {LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
 import {ShopServiceProvider} from "../../../../providers/shop-service/shop-service";
 import {Shop} from "../../../../models/shop";
 import {Geolocation} from "@ionic-native/geolocation";
+import {ProductListPage} from "../../../product-list/product-list";
 
 declare var google;
 
@@ -16,7 +17,8 @@ export class ShopPage {
   shopList=[];
   loader:any;
   toast:any;
-  constructor(public navCtrl: NavController,public shopService:ShopServiceProvider,private geolocation:Geolocation,public loadingCtrl:LoadingController,private toastCtrl: ToastController) {
+  category:string;
+  constructor(public navParams: NavParams,public navCtrl: NavController,public shopService:ShopServiceProvider,private geolocation:Geolocation,public loadingCtrl:LoadingController,private toastCtrl: ToastController) {
     this.loader = this.loadingCtrl.create({
       content: 'Fetching shops around you !'
     });
@@ -25,6 +27,7 @@ export class ShopPage {
       duration: 3000,
       showCloseButton:true
     });
+    this.category = navParams.get('item') !=null?navParams.get('item'):'';
   }
 
   ionViewDidLoad() {
@@ -41,6 +44,16 @@ export class ShopPage {
           console.log('unable to find data');
         }
     )
+  }
+
+  goToProduct()
+  {
+    if(this.category != '')
+    {
+      this.navCtrl.push(ProductListPage,{
+        item:this.category
+      });
+    }
   }
 
 }

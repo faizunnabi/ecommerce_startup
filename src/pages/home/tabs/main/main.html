@@ -36,90 +36,348 @@
         </ion-slides>
 
     </ion-row>
-    <h3>Nearest Store Products</h3>
+    <h3 class="heading"><ion-icon name="apps"></ion-icon> Popular Categories</h3>
     <ion-row>
-      <ion-col no-padding class="pr2">
-        <div class="category_grid" (click)="goToProducts($event,'bakery')">
+      <ion-col no-padding>
+        <div class="category_grid" (click)="goToShop($event,'bakery')">
           <img src="assets/imgs/bakery.jpg" />
           <span>Bakery</span>
         </div>
       </ion-col>
-      <ion-col no-padding class="pl2">
-        <div class="category_grid" (click)="goToProducts($event,'fruits & veggies')">
+      <ion-col no-padding>
+        <div class="category_grid" (click)="goToShop($event,'fruits & veggies')">
           <img src="assets/imgs/veg.jpg" />
           <span>Fruits & Veggies</span>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col no-padding class="pr2">
-        <div class="category_grid" (click)="goToProducts($event,'drinks')">
+      <ion-col no-padding>
+        <div class="category_grid" (click)="goToShop($event,'drinks')">
           <img src="assets/imgs/drinks.jpg" />
           <span>Drinks</span>
         </div>
       </ion-col>
-      <ion-col no-padding class="pl2">
-        <div class="category_grid" (click)="goToProducts($event,'dairy & eggs')">
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding>
+        <div class="category_grid" (click)="goToShop($event,'dairy & eggs')">
           <img src="assets/imgs/eggs_dairy.jpg" />
           <span>Dairy & Eggs</span>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col no-padding class="pr2">
-        <div class="category_grid" (click)="goToProducts($event,'cereals & grains')">
+      <ion-col no-padding >
+        <div class="category_grid" (click)="goToShop($event,'cereals & grains')">
           <img src="assets/imgs/grains.jpg" />
           <span>Cereals & Grains</span>
         </div>
       </ion-col>
-      <ion-col no-padding class="pl2">
-        <div class="category_grid" (click)="goToProducts($event,'meat & fish')">
+      <ion-col no-padding>
+        <div class="category_grid" (click)="goToShop($event,'meat & fish')">
           <img src="assets/imgs/meat.jpg" />
           <span>Meat & Fish</span>
         </div>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col no-padding class="pr2">
-        <div class="category_grid" (click)="goToProducts($event,'frozen')">
+      <ion-col no-padding >
+        <div class="category_grid" (click)="goToShop($event,'frozen')">
           <img src="assets/imgs/frozen.jpg" />
           <span>Frozen</span>
         </div>
       </ion-col>
-      <ion-col no-padding class="pl2">
-        <div class="category_grid" (click)="goToProducts($event,'cans & jars')">
+      <ion-col no-padding >
+        <div class="category_grid" (click)="goToShop($event,'cans & jars')">
           <img src="assets/imgs/canned.jpg" />
           <span>Cans & Jars</span>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col no-padding class="pr2">
-        <div class="category_grid" (click)="goToProducts($event,'snacks')">
+      <ion-col no-padding >
+        <div class="category_grid" (click)="goToShop($event,'snacks')">
           <img src="assets/imgs/snacks1.jpg" />
           <span>Snacks</span>
         </div>
       </ion-col>
-      <ion-col no-padding class="pl2">
-        <div class="category_grid" (click)="goToProducts($event,'household care')">
+    </ion-row>
+    <ion-row>
+      <ion-col no-padding >
+        <div class="category_grid" (click)="goToShop($event,'household care')">
           <img src="assets/imgs/homecare.jpg" />
           <span>Household Care</span>
         </div>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col no-padding class="pr2">
-        <div class="category_grid" (click)="goToProducts($event,'beauty & Hygiene')">
+      <ion-col no-padding >
+        <div class="category_grid" (click)="goToShop($event,'beauty & Hygiene')">
           <img src="assets/imgs/beauty.jpg" />
           <span>Beauty & Hygiene</span>
         </div>
       </ion-col>
-      <ion-col no-padding class="pl2">
-        <div class="category_grid" (click)="goToProducts($event,'babycare')">
+      <ion-col no-padding >
+        <div class="category_grid" (click)="goToShop($event,'babycare')">
           <img src="assets/imgs/baby.jpg" />
           <span>Baby Care</span>
         </div>
       </ion-col>
+    </ion-row>
+    <h3 class="heading"><ion-icon name="flash"></ion-icon> Deals of the Week</h3>
+    <ion-row>
+      <ion-slides slidesPerView="2" spaceBetween="10px">
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p1.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p2.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p3.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p4.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p5.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+      </ion-slides>
+    </ion-row>
+    <h3 class="heading"><ion-icon name="refresh"></ion-icon> Recommended Products</h3>
+    <ion-row>
+      <ion-slides slidesPerView="2" spaceBetween="10px">
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p1.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p2.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p3.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p4.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-card>
+            <img src="assets/imgs/products/p5.jpg"/>
+            <ion-card-content>
+              <p style="font-weight: bold;font-size:14px;">
+                Potatoes
+              </p>
+              <p style="font-size: 12px;">
+                <ion-icon name="pin"></ion-icon> Adil Baqala
+              </p>
+              <ion-row no-padding>
+                <ion-col no-padding padding-top col-7>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                </ion-col>
+                <ion-col padding-top text-right col-5>
+                  <p style="float:right">1 Kg</p>
+                </ion-col>
+              </ion-row>
+              <button ion-button color="dark" small icon-start style="">
+                <ion-icon name='basket'></ion-icon> BASKET
+              </button>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+
+
+      </ion-slides>
     </ion-row>
   </ion-grid>
 </ion-content>
