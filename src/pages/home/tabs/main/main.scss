@@ -8,16 +8,15 @@ page-main{
   }
   .heading{
     position: relative;
-    font-size: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color:#666;
+    margin-left:6px;
   }
   .heading ion-icon{
-    background: #f1f1f1;
     color:#000 !important;
-    width:24px;
-    height:24px;
-    line-height: 24px;
-    text-align: center;
-    border-radius: 50%;
+    font-size:15px !important;
+    font-weight: bold;
   }
   .category_grid{
     position: relative;
@@ -61,6 +60,19 @@ page-main{
     top:0px;
     color:#999;
     text-decoration: line-through !important;
+  }
+
+  .product_slides {
+    padding: 0px;
+    margin:0px;
+    ion-card {
+      padding:0px;
+      margin:4px;
+    }
+
+    ion-card img{
+      padding:3px;
+    }
   }
 
 }

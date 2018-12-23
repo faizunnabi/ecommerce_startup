@@ -2,18 +2,28 @@ import {Component, Input} from '@angular/core';
 import {IonicPage, LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {ProductServiceProvider} from "../../providers/product-service/product-service";
 import {CartServiceProvider} from "../../providers/cart-service/cart-service";
+import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
 
 
 @Component({
   selector: 'page-product-list',
   templateUrl: 'product-list.html',
+  animations:[
+    trigger('showProducts',[
+      transition('* => *',animate('1s ease-in', keyframes([
+            style({opacity: 0, transform: 'translateY(-5%)', offset: 0}),
+            style({opacity: .5, transform: 'translateY(5px)',  offset: 0.3}),
+            style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
+          ])))
+    ])
+  ]
 })
 export class ProductListPage {
 
   category_title: string;
   sub_cat:string;
   products :any;
-  cart_products = [];
+  original_product_list : any;
   sub_cats = [];
   loader:any;
   constructor(public navCtrl: NavController,
@@ -41,6 +51,7 @@ export class ProductListPage {
         this.products = res['products'].filter(function (item) {
           return item['category']== title;
         });
+        this.original_product_list = this.products;
         for(var i=0;i<this.products.length;i++)
         {
           for(var j=0;j<this.products[i]['tags'].length;j++){
@@ -66,7 +77,16 @@ export class ProductListPage {
   }
 
   activateSegment(i){
-    this.sub_cat = this.sub_cats[i];
+    this.products = this.original_product_list;
+    if(i != null){
+      this.sub_cat = this.sub_cats[i];
+      var sc = this.sub_cat;
+      this.products = this.products.filter(function (item) {
+        return item['tags'].includes(sc);
+      });
+    }
+
+    console.log(this.sub_cat);
   }
 
 

@@ -20,7 +20,7 @@
 
       #comp_name {
         opacity: 0;
-        animation: 1s 2.5s ease fadeIn;
+        animation: 1s 2.5s ease fadeInLeft;
         animation-fill-mode: forwards;
       }
 
@@ -53,9 +53,10 @@
 
 }
 
-@keyframes fadeIn {
+@keyframes fadeInLeft {
 
   100% {
+    transform:translateX(178.334px) translateY(705.5703px);
     opacity: 1;
   }
 

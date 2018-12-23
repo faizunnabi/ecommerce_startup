@@ -13,7 +13,7 @@
 
   <ion-toolbar color="dark" class="segment_toolbar">
     <ion-segment [(ngModel)]="sub_cat" color="light">
-      <ion-segment-button value="">
+      <ion-segment-button value="" (click)="activateSegment()">
         All
       </ion-segment-button>
       <ion-segment-button *ngFor="let s of sub_cats;let i = index" value="{{sub_cats[i]}}" (click)="activateSegment(i)">
@@ -26,7 +26,7 @@
 <ion-content>
   <ion-list no-lines text-wrap>
     <ion-item *ngFor="let product of products"  style="box-shadow:0px 0px 1px #dfdfdf;width:48%;display: inline;float:left;">
-      <div class="pro_card">
+      <div class="pro_card" [@showProducts]=products.length>
         <img src="{{'assets/imgs/'+product.picture}}" style="width:100%;"/>
         <div class="card-content">
           <div class="card-title">
