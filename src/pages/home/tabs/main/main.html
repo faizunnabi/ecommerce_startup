@@ -36,7 +36,7 @@
         </ion-slides>
 
     </ion-row>
-    <h3 class="heading">Popular Categories</h3>
+    <h3 class="heading">BROWSE BY CATEGORY</h3>
     <ion-row>
       <ion-col no-padding>
         <div class="category_grid" (click)="goToShop($event,'bakery')">
@@ -119,10 +119,10 @@
     </ion-row>
     <h3 class="heading">Deals of the Week</h3>
     <ion-row>
-      <ion-slides slidesPerView="2" class="product_slides">
+      <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
 
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p1.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -147,11 +147,11 @@
         </ion-slide>
 
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p2.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
-                Potatoes
+                Onions
               </p>
               <p style="font-size: 12px;">
                 <ion-icon name="pin"></ion-icon> Peacock Baqala
@@ -172,7 +172,7 @@
         </ion-slide>
 
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p24.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -196,7 +196,7 @@
           </ion-card>
         </ion-slide>
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p28.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -210,7 +210,7 @@
                   <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
-                  <p style="float:right">1 Pkt.</p>
+                  <p style="float:right">1 Pkt</p>
                 </ion-col>
               </ion-row>
               <button ion-button color="dark" small icon-start style="">
@@ -220,7 +220,7 @@
           </ion-card>
         </ion-slide>
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p29.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -247,10 +247,10 @@
     </ion-row>
     <h3 class="heading">Popular Shops</h3>
     <ion-row>
-      <ion-slides slidesPerView="2" class="product_slides">
+      <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
 
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/baq.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -258,18 +258,22 @@
               </p>
               <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= 4 ? 'danger':'light'"></ion-icon>(4)
               <ion-row no-padding>
-                <ion-col col-6>
-                  <button ion-button color="light" small><ion-icon name="call"></ion-icon></button>
-                </ion-col>
-                <ion-col col-6>
-                  <button ion-button color="light" small><ion-icon name="search"></ion-icon></button>
-                </ion-col>
+                <div col-12>
+                  <div class="button_strip">
+                    <button ion-button small>
+                      <ion-icon name="call" small></ion-icon>
+                    </button>
+                    <button ion-button small>
+                      <ion-icon name="search" small></ion-icon>
+                    </button>
+                  </div>
+                </div>
               </ion-row>
             </ion-card-content>
           </ion-card>
         </ion-slide>
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/baq.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -277,31 +281,39 @@
               </p>
               <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= 3 ? 'danger':'light'"></ion-icon>(3)
               <ion-row no-padding>
-                <ion-col col-6>
-                  <button ion-button color="light" small><ion-icon name="call"></ion-icon></button>
-                </ion-col>
-                <ion-col col-6>
-                  <button ion-button color="light" small><ion-icon name="search"></ion-icon></button>
-                </ion-col>
+                <div col-12>
+                  <div class="button_strip">
+                    <button ion-button small>
+                      <ion-icon name="call" small></ion-icon>
+                    </button>
+                    <button ion-button small>
+                      <ion-icon name="search" small></ion-icon>
+                    </button>
+                  </div>
+                </div>
               </ion-row>
             </ion-card-content>
           </ion-card>
         </ion-slide>
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/baq.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
-                Peacock Baqala
+                Value Baqala
               </p>
               <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= 3 ? 'danger':'light'"></ion-icon>(3)
               <ion-row no-padding>
-                <ion-col col-6>
-                  <button ion-button color="light" small><ion-icon name="call"></ion-icon></button>
-                </ion-col>
-                <ion-col col-6>
-                  <button ion-button color="light" small><ion-icon name="search"></ion-icon></button>
-                </ion-col>
+                <div col-12>
+                  <div class="button_strip">
+                    <button ion-button small>
+                      <ion-icon name="call" small></ion-icon>
+                    </button>
+                    <button ion-button small>
+                      <ion-icon name="search" small></ion-icon>
+                    </button>
+                  </div>
+                </div>
               </ion-row>
             </ion-card-content>
           </ion-card>
@@ -311,21 +323,21 @@
     </ion-row>
     <h3 class="heading">Recommended FOR YOU</h3>
     <ion-row>
-      <ion-slides slidesPerView="2" class="product_slides">
+      <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
 
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p3.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
-                Potatoes
+                Brinjal
               </p>
               <p style="font-size: 12px;">
                 <ion-icon name="pin"></ion-icon> Adil Baqala
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 8</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Kg</p>
@@ -338,18 +350,18 @@
           </ion-card>
         </ion-slide>
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p4.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
-                Potatoes
+                Apple
               </p>
               <p style="font-size: 12px;">
                 <ion-icon name="pin"></ion-icon> Adil Baqala
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 12</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Kg</p>
@@ -363,18 +375,18 @@
         </ion-slide>
 
         <ion-slide>
-          <ion-card>
+          <ion-card style="width:95% !important;">
             <img src="assets/imgs/products/p5.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
-                Potatoes
+                Kiwi
               </p>
               <p style="font-size: 12px;">
                 <ion-icon name="pin"></ion-icon> Adil Baqala
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 15</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Kg</p>

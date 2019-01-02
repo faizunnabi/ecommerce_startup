@@ -9,6 +9,7 @@ import {LoginPage} from "../pages/login/login";
 import {ProductListPage} from "../pages/product-list/product-list";
 import {MainPage} from "../pages/home/tabs/main/main";
 import {StoremapPage} from "../pages/storemap/storemap";
+import {Keyboard} from "@ionic-native/keyboard";
 
 @Component({
   templateUrl: 'app.html'
@@ -21,11 +22,14 @@ export class MyApp {
   storeMapPage:any = StoremapPage;
   loginPage:any = LoginPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,keyboard:Keyboard) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      //keyboard.setResizeMode('body')
+
       statusBar.styleDefault();
+      statusBar.overlaysWebView(false);
       //splashScreen.hide();
       let splash = modalCtrl.create(SplashPage);
       splash.present();

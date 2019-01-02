@@ -24,8 +24,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-list no-lines text-wrap>
-    <ion-item *ngFor="let product of products"  style="box-shadow:0px 0px 1px #dfdfdf;width:48%;display: inline;float:left;">
+  <ion-list no-lines text-wrap style="padding:3px;">
+    <ion-item *ngFor="let product of products;let i=index"  class="pro_grid" ngClass="{{i%2 == 0 ? 'grid_right' : 'grid_left'}}">
       <div class="pro_card" [@showProducts]=products.length>
         <img src="{{'assets/imgs/'+product.picture}}" style="width:100%;"/>
         <div class="card-content">

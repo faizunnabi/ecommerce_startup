@@ -22,6 +22,7 @@ import { ShopServiceProvider } from '../providers/shop-service/shop-service';
 import { CartServiceProvider } from '../providers/cart-service/cart-service';
 import {RegisterationPage} from "../pages/registeration/registeration";
 import {StoremapPage} from "../pages/storemap/storemap";
+import {Keyboard} from "@ionic-native/keyboard";
 
 @NgModule({
   declarations: [
@@ -44,6 +45,8 @@ import {StoremapPage} from "../pages/storemap/storemap";
     BrowserAnimationsModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp,{
+      scrollAssist: false,
+      autoFocusAssist: false,
       platforms: {
         ios: {
           backButtonText: ''
@@ -72,6 +75,7 @@ import {StoremapPage} from "../pages/storemap/storemap";
     ProductServiceProvider,
     ShopServiceProvider,
     Geolocation,
+    Keyboard,
     CartServiceProvider
   ]
 })
