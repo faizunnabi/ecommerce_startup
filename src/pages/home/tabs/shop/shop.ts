@@ -20,7 +20,7 @@ export class ShopPage {
   category:string;
   constructor(public navParams: NavParams,public navCtrl: NavController,public shopService:ShopServiceProvider,private geolocation:Geolocation,public loadingCtrl:LoadingController,private toastCtrl: ToastController) {
     this.loader = this.loadingCtrl.create({
-      content: 'Fetching shops around you !'
+      content: ''
     });
     this.toast = this.toastCtrl.create({
       message: 'We encountered error',

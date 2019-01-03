@@ -9,7 +9,7 @@ import {Component, Input} from '@angular/core';
 @Component({
   selector: 'rating',
   template: `
-    <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= rate_count ? 'danger':'light'"></ion-icon>
+    <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= rate_count ? 'accent':'light'"></ion-icon>
     ({{rate_count}})
   `,
   styles:[]

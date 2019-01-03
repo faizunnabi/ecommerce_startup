@@ -3,6 +3,7 @@
             "id": "1",
             "name": "Potatoes",
             "price": "2.5",
+            "offer":"0",
             "quantity": "1Kg",
             "picture": "products/p1.jpg",
             "tags": ["vegetables"],
@@ -13,6 +14,7 @@
             "id": "2",
             "name": "Onions",
             "price": "1.98",
+            "offer":"0",
             "quantity": "1Kg",
             "picture": "products/p2.jpg",
             "tags": ["vegetables"],
@@ -23,6 +25,7 @@
             "id": "3",
             "name": "Brinjal",
             "price": "4.5",
+            "offer":"3.5",
             "quantity": "500gm",
             "picture": "products/p3.jpg",
             "tags": ["vegetables"],
@@ -33,6 +36,7 @@
             "id": "4",
             "name": "Apple",
             "price": "8",
+            "offer":"0",
             "quantity": "1Kg",
             "picture": "products/p4.jpg",
             "tags": ["fruits"],
@@ -43,6 +47,7 @@
             "id": "5",
             "name": "Kiwi",
             "price": "12",
+            "offer":"0",
             "quantity": "1Kg",
             "picture": "products/p5.jpg",
             "tags": ["fruits"],
@@ -53,6 +58,7 @@
             "id": "6",
             "name": "Lusine Bread",
             "price": "7.8",
+            "offer":"7",
             "quantity": "1Pkt",
             "picture": "products/p6.jpg",
             "tags": [
@@ -65,6 +71,7 @@
             "id": "7",
             "name": "Burger Buns",
             "price": "3",
+            "offer":"0",
             "quantity": "1Pkt",
             "picture": "products/p7.jpg",
             "tags": [
@@ -77,6 +84,7 @@
             "id": "8",
             "name": "Almarai Milk",
             "price": "14",
+            "offer":"12",
             "quantity": "1Ltr",
             "picture": "products/p8.jpg",
             "tags": [
@@ -89,6 +97,7 @@
             "id": "9",
             "name": "AlmaraI Cheese",
             "price": "12",
+            "offer":"0",
             "quantity": "1Pkt",
             "picture": "products/p9.jpg",
             "tags": [
@@ -101,6 +110,7 @@
             "id": "10",
             "name": "Al Ain Zero",
             "price": "20",
+            "offer":"0",
             "quantity": "1Pkt.",
             "picture": "products/p10.jpg",
             "tags": [
@@ -113,6 +123,7 @@
             "id": "11",
             "name": "Thumbs Up",
             "price": "2.25",
+            "offer":"0",
             "quantity": "1Pc.",
             "picture": "products/p11.jpg",
             "tags": [
@@ -124,7 +135,8 @@
         {
             "id": "12",
             "name": "Al Ain Eggs",
-            "price": "1.98",
+            "price": "18",
+            "offer":"16",
             "quantity": "1Pkt.",
             "picture": "products/p12.jpg",
             "tags": [
@@ -137,6 +149,7 @@
             "id": "13",
             "name": "India Gate",
             "price": "65",
+            "offer":"0",
             "quantity": "5Kg",
             "picture": "products/p13.jpg",
             "tags": [
@@ -149,6 +162,7 @@
             "id": "14",
             "name": "Chana Daal",
             "price": "5",
+            "offer":"0",
             "quantity": "500gm",
             "picture": "products/p14.jpg",
             "tags": [
@@ -161,6 +175,7 @@
             "id": "15",
             "name": "AlBaker atta",
             "price": "6",
+            "offer":"0",
             "quantity": "2Kg",
             "picture": "products/p15.jpg",
             "tags": [
@@ -173,6 +188,7 @@
             "id": "16",
             "name": "AlKhazna Chicken",
             "price": "14",
+            "offer":"0",
             "quantity": "900gm",
             "picture": "products/p16.jpg",
             "tags": [
@@ -185,6 +201,7 @@
             "id": "17",
             "name": "Rohu Fish",
             "price": "15",
+            "offer":"0",
             "quantity": "1Kg.",
             "picture": "products/p17.jpg",
             "tags": [
@@ -197,6 +214,7 @@
             "id": "18",
             "name": "Chicken Nuggets",
             "price": "11",
+            "offer":"0",
             "quantity": "1Pkt.",
             "picture": "products/p18.jpg",
             "tags": [
@@ -209,6 +227,7 @@
             "id": "19",
             "name": "Spring Roll",
             "price": "8",
+            "offer":"0",
             "quantity": "1Pkt.",
             "picture": "products/p19.jpg",
             "tags": [
@@ -221,6 +240,7 @@
             "id": "20",
             "name": "Baked beans",
             "price": "4.5",
+            "offer":"0",
             "quantity": "1Pkt.",
             "picture": "products/p20.jpg",
             "tags": [
@@ -233,6 +253,7 @@
             "id": "21",
             "name": "Sweet Corn",
             "price": "10",
+            "offer":"0",
             "quantity": "1Pkt.",
             "picture": "products/p21.jpg",
             "tags": [
@@ -245,6 +266,7 @@
             "id": "22",
             "name": "Ferrero Rocher",
             "price": "24",
+            "offer":"0",
             "quantity": "12 Pcs.",
             "picture": "products/p22.jpg",
             "tags": [
@@ -257,6 +279,7 @@
             "id": "23",
             "name": "Jewels",
             "price": "18",
+            "offer":"15",
             "quantity": "1Pkt.",
             "picture": "products/p23.jpg",
             "tags": [
@@ -269,6 +292,7 @@
             "id": "24",
             "name": "Oman Chips",
             "price": "1.98",
+            "offer":"0",
             "quantity": "1Pkt.",
             "picture": "products/p24.jpg",
             "tags": [
@@ -281,6 +305,7 @@
             "id": "25",
             "name": "Harpic",
             "price": "12",
+            "offer":"0",
             "quantity": "500ml",
             "picture": "products/p25.jpg",
             "tags": [
@@ -293,6 +318,7 @@
             "id": "26",
             "name": "Lux Sunlight",
             "price": "7",
+            "offer":"0",
             "quantity": "400ml",
             "picture": "products/p26.jpg",
             "tags": [
@@ -305,6 +331,7 @@
             "id": "27",
             "name": "Dettol",
             "price": "16",
+            "offer":"0",
             "quantity": "400ml",
             "picture": "products/p27.jpg",
             "tags": [
@@ -317,6 +344,7 @@
             "id": "28",
             "name": "Bambi Diapers",
             "price": "34",
+            "offer":"0",
             "quantity": "1Pkt.",
             "picture": "products/p28.jpg",
             "tags": [
@@ -329,6 +357,7 @@
             "id": "29",
             "name": "Bebelac",
             "price": "22",
+            "offer":"0",
             "quantity": "1Kg",
             "picture": "products/p29.jpg",
             "tags": [
@@ -341,6 +370,7 @@
             "id": "30",
             "name": "Cerelac",
             "price": "28",
+            "offer":"0",
             "quantity": "1Kg",
             "picture": "products/p30.jpg",
             "tags": [
@@ -353,6 +383,7 @@
             "id": "31",
             "name": "Nivea Facewash",
             "price": "14",
+            "offer":"0",
             "quantity": "1Pc.",
             "picture": "products/p31.jpg",
             "tags": [
@@ -365,6 +396,7 @@
             "id": "32",
             "name": "Lux Handwash",
             "price": "28",
+            "offer":"25",
             "quantity": "1Pc.",
             "picture": "products/p32.jpg",
             "tags": [
@@ -377,6 +409,7 @@
             "id": "33",
             "name": "Gillete Foam",
             "price": "20",
+            "offer":"0",
             "quantity": "1Pc.",
             "picture": "products/p33.jpg",
             "tags": [
@@ -389,6 +422,7 @@
             "id": "34",
             "name": "Enchanteur",
             "price": "16",
+            "offer":"15",
             "quantity": "1Pc.",
             "picture": "products/p34.jpg",
             "tags": [

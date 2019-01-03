@@ -10,6 +10,7 @@ import {ProductListPage} from "../pages/product-list/product-list";
 import {MainPage} from "../pages/home/tabs/main/main";
 import {StoremapPage} from "../pages/storemap/storemap";
 import {Keyboard} from "@ionic-native/keyboard";
+import {ProductServiceProvider} from "../providers/product-service/product-service";
 
 @Component({
   templateUrl: 'app.html'
@@ -21,8 +22,9 @@ export class MyApp {
   homePage:any = HomePage;
   storeMapPage:any = StoremapPage;
   loginPage:any = LoginPage;
+  dealsCount:number;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,keyboard:Keyboard) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,keyboard:Keyboard,private productService:ProductServiceProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -33,6 +35,7 @@ export class MyApp {
       //splashScreen.hide();
       let splash = modalCtrl.create(SplashPage);
       splash.present();
+      this.loadDeals();
     });
   }
   goTo(pagename)
@@ -43,6 +46,22 @@ export class MyApp {
   goToTab(pagename,index)
   {
     this.nav.setRoot(pagename,{index:index});
+  }
+
+  loadDeals()
+  {
+    this.productService.fetchProducts().subscribe(
+      res=>{
+        if(res){
+          this.dealsCount = res['products'].filter(function (item) {
+            return item['offer'] > 0;
+          }).length;
+        }
+      },
+      err=>{
+        console.log('error');
+      }
+    );
   }
 
 }

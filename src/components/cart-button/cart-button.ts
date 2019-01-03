@@ -13,7 +13,7 @@ import {ToastController} from "ionic-angular";
               </button>
             `,
   styles:[
-    'button{float: right;}',
+
   ]
 })
 

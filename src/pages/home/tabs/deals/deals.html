@@ -19,4 +19,30 @@
 
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list no-lines text-wrap style="padding:3px;">
+    <ion-item *ngFor="let product of products;let i=index"  class="pro_grid" ngClass="{{i%2 == 0 ? 'grid_right' : 'grid_left'}}">
+      <div class="pro_card">
+        <offer-tag *ngIf="product.offer > 0" discount="{{((product.price - product.offer)/product.price)*100 | number:'1.0-0' }}"></offer-tag>
+        <img src="{{'assets/imgs/'+product.picture}}" style="width:100%;"/>
+        <div class="card-content">
+          <div class="card-title">
+            <span style="font-weight: bold;font-size:14px;">{{product.name}}</span>
+          </div>
+          <p style="font-size: 12px;">
+            <ion-icon name="pin"></ion-icon> {{product.shop_name}}
+          </p>
+        </div>
+        <ion-row no-padding>
+          <ion-col no-padding padding-top col-7>
+            <p style="font-weight: bold;color:green;font-size:16px;">AED {{product.offer > 0 ? product.offer : product.price }}</p>
+          </ion-col>
+          <ion-col padding-top text-right col-5>
+            <p style="float:right">{{product.quantity}}</p>
+          </ion-col>
+        </ion-row>
+        <cart-button [product]="product" style="float: right;"></cart-button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

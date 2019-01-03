@@ -37,7 +37,12 @@ export class CartPage {
         this.cart_items = res['products'];
         for(var i =0;i<res['products'].length;i++)
         {
-          this.cart_total  += res['products'][i]['product']['price'] * res['products'][i]['quantity'];
+          if(res['products'][i]['product']['offer'] > 0)
+          {
+            this.cart_total  += res['products'][i]['product']['offer'] * res['products'][i]['quantity'];
+          }else{
+            this.cart_total  += res['products'][i]['product']['price'] * res['products'][i]['quantity'];
+          }
         }
       }
     )

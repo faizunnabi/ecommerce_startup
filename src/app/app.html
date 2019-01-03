@@ -4,13 +4,13 @@
     <ion-list>
       <ion-list-header style="background: #0f7b3e !important;color:#fff !important;">
         <div class="user_profile_card" padding>
-          <img src="assets/imgs/default.jpg" />
+          <img src="assets/imgs/user.png" />
           <span id="pf_name">Syed Faizunnabi</span>
           <span id="pf_location">Al Dhafrah,Abu Dhabi</span>
         </div>
       </ion-list-header>
       <button ion-item detail-none no-lines menuClose (click)="goTo(homePage)"><ion-icon name="home" item-start></ion-icon> Home</button>
-      <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,4)"><ion-icon name="flame" item-start></ion-icon> Hot Deals <ion-badge item-end color="danger">3</ion-badge></button>
+      <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,4)"><ion-icon name="flame" item-start></ion-icon> Hot Deals <ion-badge item-end color="danger">{{dealsCount}}</ion-badge></button>
       <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,1)"><ion-icon name="search" item-start></ion-icon> Search Products</button>
       <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,2)"><ion-icon name="aperture" item-start></ion-icon> Shops</button>
       <button ion-item detail-none no-lines menuClose (click)="goTo(storeMapPage)"><ion-icon name="pin" item-start></ion-icon> Locate Shops</button>
