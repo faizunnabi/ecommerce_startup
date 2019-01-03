@@ -50,14 +50,7 @@ page-main {
         transition-duration: 0.4s;
         transition-timing-function: ease-out;
     }
-    .old_price {
-        font-weight: normal;
-        font-size: 12px;
-        position: absolute;
-        top: 0px;
-        color: #999;
-        text-decoration: line-through !important;
-    }
+
     .product_slides {
         padding: 0px;
         margin: 0px;
@@ -90,4 +83,5 @@ page-main {
       background: transparent !important;
       color:#666 !important;
     }
+
 }

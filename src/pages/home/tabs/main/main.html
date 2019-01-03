@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="dark" hideBackButton>
+  <ion-navbar color="primary" hideBackButton>
     <ion-buttons left>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -123,6 +123,7 @@
 
         <ion-slide>
           <ion-card style="width:95% !important;">
+            <offer-tag discount="{{5}}"></offer-tag>
             <img src="assets/imgs/products/p1.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -133,7 +134,7 @@
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Kg</p>
@@ -148,6 +149,7 @@
 
         <ion-slide>
           <ion-card style="width:95% !important;">
+            <offer-tag discount="{{16}}"></offer-tag>
             <img src="assets/imgs/products/p2.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -158,7 +160,7 @@
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Kg</p>
@@ -173,6 +175,7 @@
 
         <ion-slide>
           <ion-card style="width:95% !important;">
+            <offer-tag discount="{{10}}"></offer-tag>
             <img src="assets/imgs/products/p24.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -183,7 +186,7 @@
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Pkt</p>
@@ -197,6 +200,7 @@
         </ion-slide>
         <ion-slide>
           <ion-card style="width:95% !important;">
+            <offer-tag discount="{{15}}"></offer-tag>
             <img src="assets/imgs/products/p28.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -207,7 +211,7 @@
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Pkt</p>
@@ -221,6 +225,7 @@
         </ion-slide>
         <ion-slide>
           <ion-card style="width:95% !important;">
+            <offer-tag discount="{{33}}"></offer-tag>
             <img src="assets/imgs/products/p29.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -231,7 +236,7 @@
               </p>
               <ion-row no-padding>
                 <ion-col no-padding padding-top col-7>
-                  <p style="font-weight: bold;color:green;font-size:16px;"><span class="old_price">AED 22</span>AED 20</p>
+                  <p style="font-weight: bold;color:green;font-size:16px;">AED 20</p>
                 </ion-col>
                 <ion-col padding-top text-right col-5>
                   <p style="float:right">1 Kg</p>
@@ -256,7 +261,7 @@
               <p style="font-weight: bold;font-size:14px;">
                 Adil Baqala
               </p>
-              <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= 4 ? 'danger':'light'"></ion-icon>(4)
+              <rating [rate_counter]="4"></rating>
               <ion-row no-padding>
                 <div col-12>
                   <div class="button_strip">
@@ -279,7 +284,7 @@
               <p style="font-weight: bold;font-size:14px;">
                 Shaan Baqala
               </p>
-              <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= 3 ? 'danger':'light'"></ion-icon>(3)
+              <rating [rate_counter]="3"></rating>
               <ion-row no-padding>
                 <div col-12>
                   <div class="button_strip">
@@ -302,7 +307,7 @@
               <p style="font-weight: bold;font-size:14px;">
                 Value Baqala
               </p>
-              <ion-icon *ngFor="let n of [1,2,3,4,5]" name='star' [color]="n <= 3 ? 'danger':'light'"></ion-icon>(3)
+              <rating [rate_counter]="3"></rating>
               <ion-row no-padding>
                 <div col-12>
                   <div class="button_strip">
@@ -327,6 +332,7 @@
 
         <ion-slide>
           <ion-card style="width:95% !important;">
+
             <img src="assets/imgs/products/p3.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
@@ -351,6 +357,7 @@
         </ion-slide>
         <ion-slide>
           <ion-card style="width:95% !important;">
+            <offer-tag discount="{{33}}"></offer-tag>
             <img src="assets/imgs/products/p4.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">

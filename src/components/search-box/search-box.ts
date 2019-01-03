@@ -5,7 +5,7 @@ import {ShopServiceProvider} from "../../providers/shop-service/shop-service";
 @Component({
   selector: 'search-box',
   template: `
-              <ion-toolbar color="dark">
+              <ion-toolbar color="primary">
                 <ion-searchbar [(ngModel)]="searchTerm" (input)="filterItems()" placeholder="Search your {{searchIn}}"></ion-searchbar>
               </ion-toolbar>
               <div class="result_container" *ngIf="searchTerm > ''">

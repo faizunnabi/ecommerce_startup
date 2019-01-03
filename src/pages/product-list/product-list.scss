@@ -28,6 +28,7 @@ page-product-list {
             display: inline-block;
             min-width: 80px;
             float: left;
+            margin-top: 19px;
             border: none !important;
             border-bottom: 2px transparent solid !important;
             border-radius: 0 !important;
@@ -35,12 +36,12 @@ page-product-list {
     }
     .segment-activated {
         background: none !important;
-        color: #6dc065 !important;
-        border-bottom-color: #6dc065 !important;
+        color: #cedc2a !important;
+        border-bottom-color: #cedc2a !important;
     }
     .pro_grid{
       background:#fff !important;
-      box-shadow:0px 0px 1px #dfdfdf;
+      border:1px #dfdfdf solid !important;
       width:49.5%;
       margin-top:0.5%;
       margin-bottom:0.5%;

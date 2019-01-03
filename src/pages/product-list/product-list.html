@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="dark">
+  <ion-navbar color="primary">
     <div *ngIf="category_title.length" class="header_text">
       <span class="main_head">{{category_title  | uppercase}}</span>
     </div>
@@ -11,7 +11,7 @@
   </ion-navbar>
 
 
-  <ion-toolbar color="dark" class="segment_toolbar">
+  <ion-toolbar color="primary" class="segment_toolbar">
     <ion-segment [(ngModel)]="sub_cat" color="light">
       <ion-segment-button value="" (click)="activateSegment()">
         All

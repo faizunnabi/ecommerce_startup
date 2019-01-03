@@ -2,11 +2,14 @@
 .ios, .md {
 
   page-splash {
-
+    .ion-content{
+      background: #0f7b3e !important;
+    }
     .scroll-content {
       display: flex;
       justify-content: center;
       align-items: center;
+      background: #0f7b3e !important;
     }
 
     #logo {
