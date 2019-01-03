@@ -5,6 +5,7 @@ import {ShopPage} from "../shop/shop";
 import {Product} from "../../../../models/product";
 import {ProductServiceProvider} from "../../../../providers/product-service/product-service";
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";
+import {ShopServiceProvider} from "../../../../providers/shop-service/shop-service";
 
 @Component({
   selector: 'page-main',
@@ -14,9 +15,11 @@ export class MainPage {
   loader:any;
   deals = [];
   recommended = [];
+  shops = [];
   random_nums = [];
   constructor(public navCtrl: NavController,
               public productService:ProductServiceProvider,
+              public shopService:ShopServiceProvider,
               private cartService:CartServiceProvider,
               public loadingCtrl:LoadingController,
               private toastCtrl: ToastController) {
@@ -61,5 +64,16 @@ export class MainPage {
         }).present();
       }
     );
+    this.shopService.fetchShops().subscribe(
+      res=>{
+        this.shops = res['shops'].sort(function(a,b){
+          var x = a['rating']; var y = b['rating'];
+          return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        }).slice(1,4);
+      },
+      err=>{
+        console.log('unable to find data');
+      }
+    )
   }
 }

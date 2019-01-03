@@ -149,60 +149,14 @@
     <ion-row>
       <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
 
-        <ion-slide>
+        <ion-slide *ngFor="let s of shops">
           <ion-card style="width:95% !important;">
             <img src="assets/imgs/baq.jpg"/>
             <ion-card-content>
               <p style="font-weight: bold;font-size:14px;">
-                Adil Baqala
+                {{s.name}}
               </p>
-              <rating [rate_counter]="4"></rating>
-              <ion-row no-padding>
-                <div col-12>
-                  <div class="button_strip">
-                    <button ion-button small>
-                      <ion-icon name="call" small></ion-icon>
-                    </button>
-                    <button ion-button small>
-                      <ion-icon name="search" small></ion-icon>
-                    </button>
-                  </div>
-                </div>
-              </ion-row>
-            </ion-card-content>
-          </ion-card>
-        </ion-slide>
-        <ion-slide>
-          <ion-card style="width:95% !important;">
-            <img src="assets/imgs/baq.jpg"/>
-            <ion-card-content>
-              <p style="font-weight: bold;font-size:14px;">
-                Shaan Baqala
-              </p>
-              <rating [rate_counter]="3"></rating>
-              <ion-row no-padding>
-                <div col-12>
-                  <div class="button_strip">
-                    <button ion-button small>
-                      <ion-icon name="call" small></ion-icon>
-                    </button>
-                    <button ion-button small>
-                      <ion-icon name="search" small></ion-icon>
-                    </button>
-                  </div>
-                </div>
-              </ion-row>
-            </ion-card-content>
-          </ion-card>
-        </ion-slide>
-        <ion-slide>
-          <ion-card style="width:95% !important;">
-            <img src="assets/imgs/baq.jpg"/>
-            <ion-card-content>
-              <p style="font-weight: bold;font-size:14px;">
-                Value Baqala
-              </p>
-              <rating [rate_counter]="3"></rating>
+              <rating [rate_counter]="s.rating"></rating>
               <ion-row no-padding>
                 <div col-12>
                   <div class="button_strip">
