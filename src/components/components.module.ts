@@ -6,15 +6,18 @@ import { CartButtonComponent } from './cart-button/cart-button';
 import { SearchBoxComponent } from './search-box/search-box';
 import { OfferTagComponent } from './offer-tag/offer-tag';
 import { RatingComponent } from './rating/rating';
+import { ShrinkingHeaderComponent } from './shrinking-header/shrinking-header';
 @NgModule({
 	declarations: [CartButtonComponent,
     SearchBoxComponent,
     OfferTagComponent,
-    RatingComponent],
+    RatingComponent,
+    ShrinkingHeaderComponent],
 	imports: [BrowserModule,IonicModule.forRoot(MyApp),],
 	exports: [CartButtonComponent,
     SearchBoxComponent,
     OfferTagComponent,
-    RatingComponent]
+    RatingComponent,
+    ShrinkingHeaderComponent]
 })
 export class ComponentsModule {}

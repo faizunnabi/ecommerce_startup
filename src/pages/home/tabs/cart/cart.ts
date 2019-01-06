@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {NavController, ToastController} from 'ionic-angular';
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";
 import {animate, state, style, transition, trigger} from "@angular/animations";
+import {HomePage} from "../../home";
 
 @Component({
   selector: 'page-cart',
@@ -24,6 +25,7 @@ export class CartPage {
   cart_total:number = 0;
   cart_items:any = [];
   edit_mode:boolean = false;
+  homePage:any = HomePage;
   //edit_state = 'edit_inactive';
   constructor(public navCtrl: NavController,private cartService:CartServiceProvider,private toastCtrl: ToastController) {
 
@@ -46,6 +48,11 @@ export class CartPage {
         }
       }
     )
+  }
+
+  goToTab(pagename,index)
+  {
+    this.navCtrl.push(pagename,{index:index});
   }
 
   ionViewDidLeave()

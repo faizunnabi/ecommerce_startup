@@ -23,6 +23,7 @@ import { CartServiceProvider } from '../providers/cart-service/cart-service';
 import {RegisterationPage} from "../pages/registeration/registeration";
 import {StoremapPage} from "../pages/storemap/storemap";
 import {Keyboard} from "@ionic-native/keyboard";
+import {SingleShopPage} from "../pages/single-shop/single-shop";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {Keyboard} from "@ionic-native/keyboard";
     DealsPage,
     CartPage,
     ProductListPage,
-    StoremapPage
+    StoremapPage,
+    SingleShopPage
   ],
   imports: [
     ComponentsModule,
@@ -66,7 +68,8 @@ import {Keyboard} from "@ionic-native/keyboard";
     DealsPage,
     CartPage,
     ProductListPage,
-    StoremapPage
+    StoremapPage,
+    SingleShopPage
   ],
   providers: [
     StatusBar,

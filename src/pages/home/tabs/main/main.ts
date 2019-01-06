@@ -6,6 +6,7 @@ import {Product} from "../../../../models/product";
 import {ProductServiceProvider} from "../../../../providers/product-service/product-service";
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";
 import {ShopServiceProvider} from "../../../../providers/shop-service/shop-service";
+import {SingleShopPage} from "../../../single-shop/single-shop";
 
 @Component({
   selector: 'page-main',
@@ -33,6 +34,12 @@ export class MainPage {
   {
     this.navCtrl.push(ShopPage,{
       item:item
+    });
+  }
+
+  public shopSingle(s){
+    this.navCtrl.push(SingleShopPage,{
+      shop:s
     });
   }
 

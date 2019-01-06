@@ -5,8 +5,8 @@ import {ShopServiceProvider} from "../../../../providers/shop-service/shop-servi
 import {Shop} from "../../../../models/shop";
 import {Geolocation} from "@ionic-native/geolocation";
 import {ProductListPage} from "../../../product-list/product-list";
+import {SingleShopPage} from "../../../single-shop/single-shop";
 
-declare var google;
 
 @Component({
   selector: 'page-shop',
@@ -46,12 +46,16 @@ export class ShopPage {
     )
   }
 
-  goToProduct()
+  shopSingle(shop)
   {
     if(this.category != '')
     {
       this.navCtrl.push(ProductListPage,{
         item:this.category
+      });
+    }else{
+      this.navCtrl.push(SingleShopPage,{
+        shop:shop
       });
     }
   }

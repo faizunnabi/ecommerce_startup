@@ -8,7 +8,7 @@ import {ToastController} from "ionic-angular";
 @Component({
   selector: 'cart-button',
   template: `
-              <button ion-button color="dark" small icon-start style="" (click)="addToBasket(product)" [disabled]="cart_products.indexOf(product.id)>-1">
+              <button ion-button color="dark" small icon-start (click)="addToBasket(product)" [disabled]="cart_products.indexOf(product.id)>-1">
                 <ion-icon name='basket'></ion-icon> BASKET
               </button>
             `,

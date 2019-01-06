@@ -1,0 +1,101 @@
+page-single-shop {
+  shrinking-header{
+    position: relative;
+    color: #fff;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-property: height;
+    transition-timing-function:ease-in-out;
+    transition-duration: 0.2s;
+
+    .shrink-content{
+      position: absolute;
+      z-index: 10;
+      color: #fff;
+      bottom: 10px;
+      left:20px;
+    }
+  }
+
+  shrinking-header:after{
+      content: '';
+      position: absolute;
+      width:100%;
+      height:100%;
+      background: rgba(0,0,0,0.5);
+      left:0;
+      top:0;
+  }
+
+
+
+
+  .pl2 {
+    padding-left: 2px !important;
+  }
+  .pr2 {
+    padding-right: 2px !important;
+  }
+
+  .heading {
+    position: relative;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #666;
+    margin-left: 6px;
+  }
+  .category_grid {
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    text-align: center;
+    padding:10px;
+    box-shadow: 0px 0px 1px #dfdfdf;
+    img{
+      display: block;
+      width:45px;
+      height: 45px;
+      margin: auto;
+    }
+    span {
+      font-size:11px;
+      font-weight: bold;
+      color:#0f7b3e;
+    }
+  }
+
+  .category_grid:hover,
+  .category_grid:focus {
+    opacity: 0.7;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+  }
+  .product_slides {
+    padding: 0px;
+    margin: 0px;
+    ion-card {
+      padding: 0px;
+      margin: 4px;
+    }
+    ion-card img {
+      max-width: 100% !important;
+      height: 100px !important;
+      margin:auto;
+      margin-top:3px;
+    }
+
+    cart-button button{
+      position: relative;
+      width:75%;
+    }
+    cart-button .button-inner{
+      position: absolute !important;
+      display: block !important;
+      top:8px !important;
+      left:0px;
+    }
+
+  }
+}

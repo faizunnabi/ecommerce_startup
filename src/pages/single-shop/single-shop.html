@@ -1,0 +1,162 @@
+<!--
+  Generated template for the SingleShopPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+
+-->
+<ion-header>
+    <ion-navbar color="primary">
+      <div class="header_text">
+        <span class="main_head">SHOPS</span>
+      </div>
+    </ion-navbar>
+    <shrinking-header [scrollArea]="myContent" headerHeight="150" style="background-image: url(assets/imgs/baq.jpg);">
+
+      <div class="shrink-content">
+        <h3>{{shop.name}}</h3>
+        <span>
+          Al Dhafra Street,Abu Dhabi
+          <br/>
+          <rating [rate_counter]="shop.rating"></rating>
+        </span>
+      </div>
+    </shrinking-header>
+
+</ion-header>
+
+
+<ion-content fullscreen #myContent padding-top>
+
+  <h3 class="heading">SHOP CATEGORIES</h3>
+  <ion-row>
+    <ion-col no-padding>
+      <div class="category_grid" (click)="goToShop($event,'bakery')">
+        <img src="assets/imgs/bread.png" />
+        <span>Bakery</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding>
+      <div class="category_grid" (click)="goToShop($event,'fruits & veggies')">
+        <img src="assets/imgs/fruits.png" />
+        <span>Fruits & Veggies</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding>
+      <div class="category_grid" (click)="goToShop($event,'drinks')">
+        <img src="assets/imgs/drinks.png" />
+        <span>Drinks</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col no-padding>
+      <div class="category_grid" (click)="goToShop($event,'dairy & eggs')">
+        <img src="assets/imgs/milk.png" />
+        <span>Dairy & Eggs</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding >
+      <div class="category_grid" (click)="goToShop($event,'cereals & grains')">
+        <img src="assets/imgs/rice.png" />
+        <span>Cereals & Grains</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding>
+      <div class="category_grid" (click)="goToShop($event,'meat & fish')">
+        <img src="assets/imgs/fish.png" />
+        <span>Meat & Fish</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col no-padding >
+      <div class="category_grid" (click)="goToShop($event,'frozen')">
+        <img src="assets/imgs/frozen-food.png" />
+        <span>Frozen</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding >
+      <div class="category_grid" (click)="goToShop($event,'cans & jars')">
+        <img src="assets/imgs/canned-vegetables.png" />
+        <span>Cans & Jars</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding >
+      <div class="category_grid" (click)="goToShop($event,'snacks')">
+        <img src="assets/imgs/sweets.png" />
+        <span>Snacks</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col no-padding >
+      <div class="category_grid" (click)="goToShop($event,'household care')">
+        <img src="assets/imgs/hygienic-items.png" />
+        <span>Household Care</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding >
+      <div class="category_grid" (click)="goToShop($event,'beauty & Hygiene')">
+        <img src="assets/imgs/lotion.png" />
+        <span>Beauty & Hygiene</span>
+      </div>
+    </ion-col>
+    <ion-col no-padding >
+      <div class="category_grid" (click)="goToShop($event,'babycare')">
+        <img src="assets/imgs/baby-changing.png" />
+        <span>Baby Care</span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <h3 class="heading">Popular Products</h3>
+  <ion-row>
+    <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
+      <ion-slide *ngFor="let r of  recommended">
+        <ion-card style="width:95% !important;">
+          <offer-tag *ngIf="r.offer > 0" discount="{{((r.price - r.offer)/r.price)*100 | number:'1.0-0' }}"></offer-tag>
+          <img src="assets/imgs/{{r.picture}}"/>
+          <ion-card-content>
+            <p style="font-weight: bold;font-size:14px;">
+              {{r.name}}
+            </p>
+            <ion-row no-padding>
+              <ion-col no-padding padding-top col-7>
+                <p style="font-weight: bold;color:green;font-size:16px;">AED {{r.offer > 0 ? r.offer : r.price }}</p>
+              </ion-col>
+              <ion-col padding-top text-right col-5>
+                <p style="float:right">{{r.quantity}}</p>
+              </ion-col>
+            </ion-row>
+            <cart-button [product]="r"></cart-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+  <h3 class="heading">Best Deals</h3>
+  <ion-row>
+    <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
+      <ion-slide *ngFor="let d of  deals">
+        <ion-card style="width:95% !important;">
+          <offer-tag discount="{{((d.price - d.offer)/d.price)*100 | number:'1.0-0' }}"></offer-tag>
+          <img src="assets/imgs/{{d.picture}}"/>
+          <ion-card-content>
+            <p style="font-weight: bold;font-size:14px;">
+              {{d.name}}
+            </p>
+            <ion-row no-padding>
+              <ion-col no-padding padding-top col-7>
+                <p style="font-weight: bold;color:green;font-size:16px;">AED {{d.offer > 0 ? d.offer : d.price }}</p>
+              </ion-col>
+              <ion-col padding-top text-right col-5>
+                <p style="float:right">{{d.quantity}}</p>
+              </ion-col>
+            </ion-row>
+            <cart-button [product]="d"></cart-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
+</ion-content>
