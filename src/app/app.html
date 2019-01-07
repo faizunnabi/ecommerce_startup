@@ -14,8 +14,7 @@
       <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,1)"><ion-icon name="search" item-start color="primary"></ion-icon> Search Products</button>
       <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,2)"><ion-icon name="aperture" item-start color="primary"></ion-icon> Shops</button>
       <button ion-item detail-none no-lines menuClose (click)="goTo(storeMapPage)"><ion-icon name="pin" item-start color="primary"></ion-icon> Locate Shops</button>
-      <button ion-item detail-none no-lines><ion-icon name="calendar" item-start color="primary"></ion-icon> Order History</button>
-      <button ion-item detail-none no-lines><ion-icon name="contact" item-start color="primary"></ion-icon> Profile</button>
+      <button ion-item detail-none no-lines menuClose (click)="goTo(profilePage)"><ion-icon name="contact" item-start color="primary"></ion-icon> Profile</button>
       <button ion-item detail-none no-lines menuClose (click)="goTo(loginPage)"><ion-icon name="log-out" item-start color="primary"></ion-icon> LogOut</button>
     </ion-list>
   </ion-content>

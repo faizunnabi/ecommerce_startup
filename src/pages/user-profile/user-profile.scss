@@ -1,0 +1,37 @@
+page-user-profile {
+  shrinking-header {
+    position: relative;
+    color: #fff;
+    background: #0f7b3e;
+    transition-timing-function:linear;
+    transition-duration: 0.1s;
+
+    .shrink-content{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      bottom: 20px;
+    }
+
+    img {
+      display: block;
+      border-radius: 50%;
+      width: 90px;
+      height: auto;
+      margin: auto;
+    }
+    span{
+      display: block;
+      margin-top:-10px !important;
+    }
+
+  }
+  .heading {
+    position: relative;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #666;
+    margin-left: 6px;
+  }
+}

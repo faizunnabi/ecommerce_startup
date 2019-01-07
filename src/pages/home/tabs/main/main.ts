@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import {Content, LoadingController, NavController, ToastController} from 'ionic-angular';
 import {ProductListPage} from "../../../product-list/product-list";
-import {ShopPage} from "../shop/shop";
+import {ShopPage} from "../../../shop/shop";
 import {Product} from "../../../../models/product";
 import {ProductServiceProvider} from "../../../../providers/product-service/product-service";
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";

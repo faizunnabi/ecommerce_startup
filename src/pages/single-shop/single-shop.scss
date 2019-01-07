@@ -5,9 +5,8 @@ page-single-shop {
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
-    transition-property: height;
-    transition-timing-function:ease-in-out;
-    transition-duration: 0.2s;
+    transition-timing-function:linear;
+    transition-duration: 0.1s;
 
     .shrink-content{
       position: absolute;
@@ -28,8 +27,17 @@ page-single-shop {
       top:0;
   }
 
+  .options_strip{
+    position: absolute;
+    right:1%;
+    top:1%;
+    z-index: 10;
+  }
 
-
+  .options_strip button ion-icon{
+    font-size: 20px;
+    color: #fff;
+  }
 
   .pl2 {
     padding-left: 2px !important;

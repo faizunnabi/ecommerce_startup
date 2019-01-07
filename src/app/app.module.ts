@@ -9,7 +9,7 @@ import { HomePage } from '../pages/home/home';
 import {SplashPage} from "../pages/splash/splash";
 import {LoginPage} from "../pages/login/login";
 import {MainPage} from "../pages/home/tabs/main/main";
-import {ShopPage} from "../pages/home/tabs/shop/shop";
+import {ShopPage} from "../pages/shop/shop";
 import {ProductPage} from "../pages/home/tabs/product/product";
 import {DealsPage} from "../pages/home/tabs/deals/deals";
 import {CartPage} from "../pages/home/tabs/cart/cart";
@@ -24,6 +24,8 @@ import {RegisterationPage} from "../pages/registeration/registeration";
 import {StoremapPage} from "../pages/storemap/storemap";
 import {Keyboard} from "@ionic-native/keyboard";
 import {SingleShopPage} from "../pages/single-shop/single-shop";
+import {ShopListPage} from "../pages/home/tabs/shop-list/shop-list";
+import {UserProfilePage} from "../pages/user-profile/user-profile";
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import {SingleShopPage} from "../pages/single-shop/single-shop";
     CartPage,
     ProductListPage,
     StoremapPage,
-    SingleShopPage
+    SingleShopPage,
+    ShopListPage,
+    UserProfilePage
   ],
   imports: [
     ComponentsModule,
@@ -69,7 +73,9 @@ import {SingleShopPage} from "../pages/single-shop/single-shop";
     CartPage,
     ProductListPage,
     StoremapPage,
-    SingleShopPage
+    SingleShopPage,
+    ShopListPage,
+    UserProfilePage
   ],
   providers: [
     StatusBar,

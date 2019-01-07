@@ -11,6 +11,7 @@ import {MainPage} from "../pages/home/tabs/main/main";
 import {StoremapPage} from "../pages/storemap/storemap";
 import {Keyboard} from "@ionic-native/keyboard";
 import {ProductServiceProvider} from "../providers/product-service/product-service";
+import {UserProfilePage} from "../pages/user-profile/user-profile";
 
 @Component({
   templateUrl: 'app.html'
@@ -21,6 +22,7 @@ export class MyApp {
   rootPage:any = LoginPage;
   homePage:any = HomePage;
   storeMapPage:any = StoremapPage;
+  profilePage:any = UserProfilePage;
   loginPage:any = LoginPage;
   dealsCount:number;
 
@@ -29,7 +31,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       //keyboard.setResizeMode('body')
-
+      keyboard.hideFormAccessoryBar(true);
       statusBar.styleDefault();
       statusBar.overlaysWebView(false);
       //splashScreen.hide();

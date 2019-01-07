@@ -1,11 +1,11 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
-import {ShopServiceProvider} from "../../../../providers/shop-service/shop-service";
-import {Shop} from "../../../../models/shop";
+import {ShopServiceProvider} from "../../providers/shop-service/shop-service";
+import {Shop} from "../../models/shop";
 import {Geolocation} from "@ionic-native/geolocation";
-import {ProductListPage} from "../../../product-list/product-list";
-import {SingleShopPage} from "../../../single-shop/single-shop";
+import {ProductListPage} from "../product-list/product-list";
+import {SingleShopPage} from "../single-shop/single-shop";
 
 
 @Component({

@@ -14,6 +14,7 @@ export class ShrinkingHeaderComponent {
 
   @Input('scrollArea') scrollArea: any;
   @Input('headerHeight') headerHeight: number;
+  @Input('offset') offset: number;
 
   newHeaderHeight: any;
 
@@ -24,6 +25,7 @@ export class ShrinkingHeaderComponent {
   ngAfterViewInit(){
 
     this.renderer.setStyle(this.element.nativeElement, 'height', this.headerHeight + 'px');
+    this.renderer.setStyle(this.element.nativeElement, 'z-index', '2');
 
     this.scrollArea.ionScroll.subscribe((ev) => {
       this.resizeHeader(ev);
@@ -37,11 +39,12 @@ export class ShrinkingHeaderComponent {
 
       this.newHeaderHeight = this.headerHeight - ev.scrollTop;
 
-      if(this.newHeaderHeight < 100){
-        this.newHeaderHeight = 100;
+      if(this.newHeaderHeight < this.offset){
+        this.newHeaderHeight = this.offset;
       }
 
       this.renderer.setStyle(this.element.nativeElement, 'height', this.newHeaderHeight + 'px');
+      this.renderer.setStyle(this.element.nativeElement, 'z-index', '-1');
 
     });
 

@@ -1,6 +1,5 @@
 shrinking-header {
   display: block;
-  transition-property: height;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
 }
