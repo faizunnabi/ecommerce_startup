@@ -31,10 +31,10 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       //keyboard.setResizeMode('body')
-      keyboard.hideFormAccessoryBar(true);
-      statusBar.styleDefault();
-      statusBar.overlaysWebView(false);
+      //statusBar.styleDefault();
+      //statusBar.overlaysWebView(false);
       //splashScreen.hide();
+      keyboard.hideFormAccessoryBar(false);
       let splash = modalCtrl.create(SplashPage);
       splash.present();
       this.loadDeals();

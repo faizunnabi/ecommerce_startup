@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.alrumaithy.ezbaqala" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>EZBaqala</name>
     <description>Integrating with your daily needs.</description>
     <author email="faizunnabi@alrumaithy.com" href="http://alrumaithyest.com/">Al Rumaithy Est. Team</author>
@@ -13,7 +13,7 @@
     <allow-intent href="geo:*" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="KeyboardResize" value="false" />
-    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="FadeSplashScreen" value="false" />

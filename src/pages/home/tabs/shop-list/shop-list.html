@@ -22,16 +22,25 @@
 <ion-content>
   <ion-list>
     <ion-item-sliding *ngFor="let shop of shopList">
-      <ion-item no-lines padding-bottom detail-push (click)="shopSingle(shop)">
+      <ion-item (click)="shopSingle(shop)" no-lines text-wrap>
         <ion-thumbnail item-start>
           <img src="assets/imgs/baq.jpg">
         </ion-thumbnail>
         <h2>{{shop.name}}</h2>
         <p>The most popular industrial group ever.</p>
-        <rating [rate_counter]="shop.rating"></rating>
+        <div class="inline_options">
+          <button ion-button icon-only clear>
+            <ion-icon name="share"></ion-icon>
+          </button>
+          <button ion-button icon-only clear>
+            <ion-icon name="heart"></ion-icon>
+          </button>
+          <rating [rate_counter]="shop.rating"></rating>
+        </div>
+
 
       </ion-item>
-      <ion-item-options side="right">
+      <ion-item-options>
         <button ion-button color="secondary">
           <ion-icon name="map"></ion-icon>
           Map

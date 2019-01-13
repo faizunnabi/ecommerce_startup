@@ -1,3 +1,29 @@
 page-shop-list {
 
+  ion-item {
+    border-bottom: 1px solid #dfdfdf !important;
+    img{
+      width: auto !important;
+      height:80px !important;
+    }
+    .inline_options .button-inner ion-icon{
+      color: #a7a7a7 !important;
+      font-size: 18px !important;
+    }
+  }
+  .inline_options button{
+    display: block;
+    float: left;
+    padding: 3px;
+    margin-right:10px;
+  }
+  rating{
+    display: block;
+    font-size: 14px !important;
+    float: left;
+    padding: 3px;
+    margin-top:3px;
+
+  }
+
 }
