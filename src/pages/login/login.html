@@ -41,7 +41,7 @@
         <button ion-button class="facebook" (click)="socialLogin('facebook')"><ion-icon name="logo-facebook" style="margin-right: 12px;"></ion-icon> Facebook</button>
       </div>-->
       <div padding text-center class="form-bottom-text">
-        <label> Forget Password ? <a href="javascript:void(0);"> Reset </a> </label><br/><br/>
+        <label> Forget Password ? <a href="javascript:void(0);" (click)="forgotPassword()"> Reset </a> </label><br/><br/>
         <label> Don't have an Account? <a href="javascript:void(0);" (click)="moveToRegister()"> Sign Up </a> </label>
       </div>
     </div>

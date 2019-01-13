@@ -31,6 +31,7 @@ scroll-content {
             max-width: 80px;
             display: block;
             margin: auto;
+            border:6px rgba(24,200,101,0.3) solid;
             border-radius: 50%;
         }
         #pf_name {
@@ -71,4 +72,35 @@ ion-item {
 ion-card{
   box-shadow: none !important;
   border: 1px #dfdfdf solid;
+}
+
+.prompt_form{
+  .alert-wrapper{
+    max-width: 90% !important;
+    min-width: 85% !important;
+    height: 30% !important;
+    border-radius: 0px !important;
+  }
+
+  .alert-head{
+    background: #0f7b3e !important;
+    color:#fff;
+  }
+
+  .alert-button-group{
+    margin-top: 20px;
+  }
+
+  .alert-button{
+    border:none !important;
+  }
+
+  .primary{
+    background: #0f7b3e;
+    color:#fff;
+  }
+
+  .secondary{
+    background: #dfdfdf;
+  }
 }

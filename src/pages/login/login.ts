@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ActionSheetController, IonicPage, NavController, NavParams, Platform} from 'ionic-angular';
+import {ActionSheetController, AlertController, IonicPage, NavController, NavParams, Platform} from 'ionic-angular';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HomePage} from "../home/home";
 import {RegisterationPage} from "../registeration/registeration";
@@ -23,7 +23,7 @@ export class LoginPage {
   passwordtype:string='password';
 
   passeye:string ='eye';
-  constructor(public platform: Platform,public fb: FormBuilder, public navCtrl: NavController, public navParams: NavParams){
+  constructor(public platform: Platform,public fb: FormBuilder, public navCtrl: NavController, public navParams: NavParams,public alertCtrl:AlertController){
     this.authForm = this.fb.group({
       'email': [null, Validators.compose([Validators.required])],
       'password': [null, Validators.compose([Validators.required])]
@@ -50,6 +50,42 @@ export class LoginPage {
       this.passwordtype='password';
       this.passeye = 'eye';
     }
+  }
+
+  forgotPassword() {
+    let alert = this.alertCtrl.create({
+      title: 'Forgot Your Password',
+      cssClass:'prompt_form',
+      inputs: [
+        {
+          name: 'email',
+          placeholder: 'Email Address'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          cssClass:'secondary',
+          role: 'cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Send',
+          cssClass:'primary',
+          handler: data => {
+            if (data.email) {
+              // logged in!
+            } else {
+              // invalid login
+              return false;
+            }
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }

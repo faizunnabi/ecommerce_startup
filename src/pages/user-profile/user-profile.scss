@@ -16,10 +16,11 @@ page-user-profile {
 
     img {
       display: block;
-      border-radius: 50%;
-      width: 90px;
+      width: 100px;
       height: auto;
       margin: auto;
+      border:6px rgba(24,200,101,0.3) solid;
+      border-radius: 50%;
     }
     span{
       display: block;
