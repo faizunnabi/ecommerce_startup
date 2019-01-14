@@ -1,0 +1,435 @@
+{
+    "products": [{
+            "id": "1",
+            "name": "Potatoes",
+            "price": "2.5",
+            "offer":"0",
+            "quantity": "1Kg",
+            "picture": "products/p1.jpg",
+            "tags": ["vegetables"],
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "2",
+            "name": "Onions",
+            "price": "1.98",
+            "offer":"0",
+            "quantity": "1Kg",
+            "picture": "products/p2.jpg",
+            "tags": ["vegetables"],
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "3",
+            "name": "Brinjal",
+            "price": "4.5",
+            "offer":"3.5",
+            "quantity": "500gm",
+            "picture": "products/p3.jpg",
+            "tags": ["vegetables"],
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "4",
+            "name": "Apple",
+            "price": "8",
+            "offer":"0",
+            "quantity": "1Kg",
+            "picture": "products/p4.jpg",
+            "tags": ["fruits"],
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "5",
+            "name": "Kiwi",
+            "price": "12",
+            "offer":"0",
+            "quantity": "1Kg",
+            "picture": "products/p5.jpg",
+            "tags": ["fruits"],
+            "category": "fruits & veggies",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "6",
+            "name": "Lusine Bread",
+            "price": "7.8",
+            "offer":"7",
+            "quantity": "1Pkt",
+            "picture": "products/p6.jpg",
+            "tags": [
+                "bread"
+            ],
+            "category": "bakery",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "7",
+            "name": "Burger Buns",
+            "price": "3",
+            "offer":"0",
+            "quantity": "1Pkt",
+            "picture": "products/p7.jpg",
+            "tags": [
+                "buns"
+            ],
+            "category": "bakery",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "8",
+            "name": "Almarai Milk",
+            "price": "14",
+            "offer":"12",
+            "quantity": "1Ltr",
+            "picture": "products/p8.jpg",
+            "tags": [
+                "milk"
+            ],
+            "category": "dairy & eggs",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "9",
+            "name": "AlmaraI Cheese",
+            "price": "12",
+            "offer":"0",
+            "quantity": "1Pkt",
+            "picture": "products/p9.jpg",
+            "tags": [
+                "cheese"
+            ],
+            "category": "dairy & eggs",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "10",
+            "name": "Al Ain Zero",
+            "price": "20",
+            "offer":"0",
+            "quantity": "1Pkt.",
+            "picture": "products/p10.jpg",
+            "tags": [
+                "water"
+            ],
+            "category": "drinks",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "11",
+            "name": "Thumbs Up",
+            "price": "2.25",
+            "offer":"0",
+            "quantity": "1Pc.",
+            "picture": "products/p11.jpg",
+            "tags": [
+                "cold-drink"
+            ],
+            "category": "drinks",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "12",
+            "name": "Al Ain Eggs",
+            "price": "18",
+            "offer":"16",
+            "quantity": "1Pkt.",
+            "picture": "products/p12.jpg",
+            "tags": [
+                "eggs"
+            ],
+            "category": "dairy & eggs",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "13",
+            "name": "India Gate",
+            "price": "65",
+            "offer":"0",
+            "quantity": "5Kg",
+            "picture": "products/p13.jpg",
+            "tags": [
+                "rice"
+            ],
+            "category": "cereals & grains",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "14",
+            "name": "Chana Daal",
+            "price": "5",
+            "offer":"0",
+            "quantity": "500gm",
+            "picture": "products/p14.jpg",
+            "tags": [
+                "daal"
+            ],
+            "category": "cereals & grains",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "15",
+            "name": "AlBaker atta",
+            "price": "6",
+            "offer":"0",
+            "quantity": "2Kg",
+            "picture": "products/p15.jpg",
+            "tags": [
+                "atta"
+            ],
+            "category": "cereals & grains",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "16",
+            "name": "AlKhazna Chicken",
+            "price": "14",
+            "offer":"0",
+            "quantity": "900gm",
+            "picture": "products/p16.jpg",
+            "tags": [
+                "chicken"
+            ],
+            "category": "meat & fish",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "17",
+            "name": "Rohu Fish",
+            "price": "15",
+            "offer":"0",
+            "quantity": "1Kg.",
+            "picture": "products/p17.jpg",
+            "tags": [
+                "fish"
+            ],
+            "category": "meat & fish",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "18",
+            "name": "Chicken Nuggets",
+            "price": "11",
+            "offer":"0",
+            "quantity": "1Pkt.",
+            "picture": "products/p18.jpg",
+            "tags": [
+                "chicken-nuggets"
+            ],
+            "category": "frozen",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "19",
+            "name": "Spring Roll",
+            "price": "8",
+            "offer":"0",
+            "quantity": "1Pkt.",
+            "picture": "products/p19.jpg",
+            "tags": [
+                "spring-roll"
+            ],
+            "category": "frozen",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "20",
+            "name": "Baked beans",
+            "price": "4.5",
+            "offer":"0",
+            "quantity": "1Pkt.",
+            "picture": "products/p20.jpg",
+            "tags": [
+                "beans"
+            ],
+            "category": "cans & jars",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "21",
+            "name": "Sweet Corn",
+            "price": "10",
+            "offer":"0",
+            "quantity": "1Pkt.",
+            "picture": "products/p21.jpg",
+            "tags": [
+                "sweet-corn"
+            ],
+            "category": "cans & jars",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "22",
+            "name": "Ferrero Rocher",
+            "price": "24",
+            "offer":"0",
+            "quantity": "12 Pcs.",
+            "picture": "products/p22.jpg",
+            "tags": [
+                "chocolates"
+            ],
+            "category": "snacks",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "23",
+            "name": "Jewels",
+            "price": "18",
+            "offer":"15",
+            "quantity": "1Pkt.",
+            "picture": "products/p23.jpg",
+            "tags": [
+                "chocolates"
+            ],
+            "category": "snacks",
+            "shop_name":"Value Baqala"
+        },
+        {
+            "id": "24",
+            "name": "Oman Chips",
+            "price": "1.98",
+            "offer":"0",
+            "quantity": "1Pkt.",
+            "picture": "products/p24.jpg",
+            "tags": [
+                "chips"
+            ],
+            "category": "snacks",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "25",
+            "name": "Harpic",
+            "price": "12",
+            "offer":"0",
+            "quantity": "500ml",
+            "picture": "products/p25.jpg",
+            "tags": [
+                "toilet-cleaner"
+            ],
+            "category": "household care",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "26",
+            "name": "Lux Sunlight",
+            "price": "7",
+            "offer":"0",
+            "quantity": "400ml",
+            "picture": "products/p26.jpg",
+            "tags": [
+                "dishwash"
+            ],
+            "category": "household care",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "27",
+            "name": "Dettol",
+            "price": "16",
+            "offer":"0",
+            "quantity": "400ml",
+            "picture": "products/p27.jpg",
+            "tags": [
+                "hygiene"
+            ],
+            "category": "household care",
+            "shop_name":"Value Baqala"
+        },
+        {
+            "id": "28",
+            "name": "Bambi Diapers",
+            "price": "34",
+            "offer":"0",
+            "quantity": "1Pkt.",
+            "picture": "products/p28.jpg",
+            "tags": [
+                "diapers"
+            ],
+            "category": "babycare",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "29",
+            "name": "Bebelac",
+            "price": "22",
+            "offer":"0",
+            "quantity": "1Kg",
+            "picture": "products/p29.jpg",
+            "tags": [
+                "milk-powder"
+            ],
+            "category": "babycare",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "30",
+            "name": "Cerelac",
+            "price": "28",
+            "offer":"0",
+            "quantity": "1Kg",
+            "picture": "products/p30.jpg",
+            "tags": [
+                "cerelac"
+            ],
+            "category": "babycare",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "31",
+            "name": "Nivea Facewash",
+            "price": "14",
+            "offer":"0",
+            "quantity": "1Pc.",
+            "picture": "products/p31.jpg",
+            "tags": [
+                "facewash"
+            ],
+            "category": "beauty & Hygiene",
+            "shop_name":"Value Baqala"
+        },
+        {
+            "id": "32",
+            "name": "Lux Handwash",
+            "price": "28",
+            "offer":"25",
+            "quantity": "1Pc.",
+            "picture": "products/p32.jpg",
+            "tags": [
+                "soap"
+            ],
+            "category": "beauty & Hygiene",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "33",
+            "name": "Gillete Foam",
+            "price": "20",
+            "offer":"0",
+            "quantity": "1Pc.",
+            "picture": "products/p33.jpg",
+            "tags": [
+                "shaving"
+            ],
+            "category": "beauty & Hygiene",
+            "shop_name":"Adil Baqala"
+        },
+        {
+            "id": "34",
+            "name": "Enchanteur",
+            "price": "16",
+            "offer":"15",
+            "quantity": "1Pc.",
+            "picture": "products/p34.jpg",
+            "tags": [
+                "powder"
+            ],
+            "category": "beauty & Hygiene",
+            "shop_name":"Value Baqala"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div class="header_text">
+      <span class="main_head">SEARCH PRODUCTS</span>
+    </div>
+
+    <ion-buttons right>
+      <button ion-button >
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <search-box [searchModel]="'products'"></search-box>
+</ion-header>
+<ion-content>
+<ion-list no-lines>
+  <ion-list-header color="light">
+    Recent Searches
+    <button ion-button  color="dark" item-end>Clear</button>
+  </ion-list-header>
+  <ion-item style="color:#3e76ff">Oval Eggs</ion-item>
+  <ion-item style="color:#3e76ff">Lakme Facewash</ion-item>
+  <ion-item style="color:#3e76ff">Al Rawabi Curd</ion-item>
+  <ion-item style="color:#3e76ff">Comb</ion-item>
+  <ion-item style="color:#3e76ff">Orange Juice</ion-item>
+  <ion-item style="color:#3e76ff">Cadbury Silk</ion-item>
+</ion-list>
+</ion-content>

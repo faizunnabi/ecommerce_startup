@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div class="header_text">
+      <span class="main_head">{{edit_mode ? 'EDIT CART':'MY CART'}}</span>
+    </div>
+    <ion-buttons right>
+      <button ion-button (click)="enterEditMode()" [color]="edit_mode ? 'danger':''"  *ngIf="cart_items.length > 0">
+        <ion-icon [name]="edit_mode ? 'thumbs-up':'create'"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="cart_items.length > 0">
+    <ion-card *ngFor="let item of cart_items">
+      <ion-card-content>
+        <ion-row>
+          <ion-col col-3>
+            <img src="{{'assets/imgs/'+item.product.picture}}" />
+          </ion-col>
+          <ion-col col-3>
+            <h3 style="font-weight: bold;">{{item.product.name}}</h3>
+            <span style="color:#a7a7a7;">AED {{item.product.offer > 0 ? item.product.offer : item.product.price}}</span><br/>
+            <span style="color:#a7a7a7;">{{item.product.quantity}}</span>
+          </ion-col>
+          <ion-col col-6 text-right>
+            <button ion-button clear icon-only color="primary" (click)="decQuantity(item.product.id,item.quantity)"><ion-icon name="remove-circle"></ion-icon></button>
+            <span style="font-weight: bold;">{{item.quantity}}</span>
+            <button ion-button clear icon-only color="primary" (click)="incQuantity(item.product.id,item.quantity)"><ion-icon name="add-circle"></ion-icon></button>
+          </ion-col>
+        </ion-row>
+        <button ion-button small class="remove_bt" color="danger" *ngIf="edit_mode===true" (click)="remove_item(item.product.id)">Remove</button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="cart_items.length == 0">
+      <div style="margin-top:40%;text-align: center;">
+        <img src="assets/imgs/empty_cart.jpg" style="max-width:50%" />
+        <h3>YOUR CART IS EMPTY</h3>
+        <button ion-button round color="secondary" (click)="goToTab(homePage,4)">Check our deals</button>
+      </div>
+  </div>
+</ion-content>
+<ion-footer style="background: #efefef;box-shadow:0 0 1px #c4c4c4;">
+  <div *ngIf="cart_items.length > 0 && !edit_mode" style="position: relative;">
+    <ion-row>
+      <ion-col>
+        <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total|number:'0.2-2'}}</h3>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button color="danger" icon-end round>Checkout <ion-icon name="arrow-forward"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-footer>

@@ -1,0 +1,13 @@
+page-cart {
+    ion-content {
+        background: #fff !important;
+    }
+    ion-card-content {
+        position: relative;
+    }
+    .remove_bt {
+        position: absolute;
+        right: 10%;
+        bottom: 8%;
+    }
+}

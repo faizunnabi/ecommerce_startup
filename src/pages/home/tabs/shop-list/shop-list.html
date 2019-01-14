@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <div class="header_text">
+      <span class="main_head">ALL SHOPS</span>
+    </div>
+
+    <ion-buttons right>
+      <button ion-button >
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <search-box [searchModel]="'shops'"></search-box>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let shop of shopList">
+      <ion-item (click)="shopSingle(shop)" no-lines text-wrap>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/baq.jpg">
+        </ion-thumbnail>
+        <h2>{{shop.name}}</h2>
+        <p>The most popular industrial group ever.</p>
+        <div class="inline_options">
+          <button ion-button icon-only clear>
+            <ion-icon name="share"></ion-icon>
+          </button>
+          <button ion-button icon-only clear>
+            <ion-icon name="heart"></ion-icon>
+          </button>
+          <rating [rate_counter]="shop.rating"></rating>
+        </div>
+
+
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="secondary">
+          <ion-icon name="map"></ion-icon>
+          Map
+        </button>
+        <button ion-button color="danger">
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

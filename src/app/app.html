@@ -1,0 +1,23 @@
+<ion-menu [content]="content" persistent="true" class="menu" type="overlay" [swipeEnabled]="false">
+
+  <ion-content class="menu-left" style="">
+    <ion-list>
+      <ion-list-header style="background: #0f7b3e !important;color:#fff !important;">
+        <div class="user_profile_card" padding>
+          <img src="assets/imgs/user.png" />
+          <span id="pf_name">Syed Faizunnabi</span>
+          <span id="pf_location">Al Dhafrah,Abu Dhabi</span>
+        </div>
+      </ion-list-header>
+      <button ion-item detail-none no-lines menuClose (click)="goTo(homePage)"><ion-icon name="home" item-start color="primary"></ion-icon> Home</button>
+      <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,4)"><ion-icon name="flame" item-start color="primary"></ion-icon> Hot Deals <ion-badge item-end color="danger">{{dealsCount}}</ion-badge></button>
+      <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,1)"><ion-icon name="search" item-start color="primary"></ion-icon> Search Products</button>
+      <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,2)"><ion-icon name="aperture" item-start color="primary"></ion-icon> Shops</button>
+      <button ion-item detail-none no-lines menuClose (click)="goTo(storeMapPage)"><ion-icon name="pin" item-start color="primary"></ion-icon> Locate Shops</button>
+      <button ion-item detail-none no-lines menuClose (click)="goTo(profilePage)"><ion-icon name="contact" item-start color="primary"></ion-icon> Profile</button>
+      <button ion-item detail-none no-lines menuClose (click)="goTo(loginPage)"><ion-icon name="log-out" item-start color="primary"></ion-icon> LogOut</button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

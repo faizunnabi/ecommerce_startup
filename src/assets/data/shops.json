@@ -1,0 +1,54 @@
+{
+  "shops": [
+    {
+      "shop_id":"1",
+      "name": "Adil Baqala",
+      "contact":"567097824",
+      "rating" : "4",
+      "latitude": 24.4460792,
+      "longitude": 54.726802
+    },
+    {
+      "shop_id":"2",
+      "name": "Peacock Baqala",
+      "contact":"567097828",
+      "rating" : "3",
+      "latitude": 24.4442519,
+      "longitude": 54.7213231
+    },
+    {
+      "shop_id":"3",
+      "name": "Value Baqala",
+      "contact":"567097820",
+      "rating" : "2",
+      "latitude": 24.4468313,
+      "longitude": 54.7422788
+    },
+    {
+      "shop_id":"4",
+      "name": "Shaan Baqala",
+      "contact":"567097829",
+      "rating" : "4",
+      "latitude": 24.4527526,
+      "longitude": 54.7229238
+
+    },
+    {
+      "shop_id":"5",
+      "name": "OnTime Baqala",
+      "contact":"567097821",
+      "rating" : "3",
+      "latitude": 24.4295265,
+      "longitude": 54.726931
+    },
+    {
+      "shop_id":"6",
+      "name": "Super Baqala",
+      "contact":"567097823",
+      "rating" : "4",
+      "latitude": 24.4190636,
+      "longitude": 54.723153
+
+    }
+  ]
+}
