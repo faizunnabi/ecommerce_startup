@@ -1,0 +1,45 @@
+<!--
+  Generated template for the SingleProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <div class="header_text">
+      <span class="main_head">{{product.name}}</span>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <div style="position: relative;">
+    <img src="assets/imgs/{{product.picture}}" width="100%" style="height: 50vh"/>
+    <span class="single_discount" *ngIf="product.offer > 0">{{((product.price - product.offer)/product.price)*100 | number:'1.0-0' }}% Off</span>
+  </div>
+  <div padding>
+    <h1 style="color:#6cbd45;">
+      {{product.name}}
+      <span style="float: right;font-weight: bold;font-size: 18px;color: #f53d3d;">
+        AED {{product.offer > 0 ? product.offer : product.price }} / {{product.quantity}}
+      </span>
+    </h1>
+    <rating [rate_counter]="4"></rating>
+    <span style="float: right;color:#666;">
+      <ion-icon name="pin"></ion-icon> Adil Baqala
+    </span>
+    <h4 style="font-size: 16px;font-weight: bold;">Description</h4>
+    <p> You have variety of ready made ecommerce pages to create your mobile app.</p>
+    <h4 style="font-size: 16px;font-weight: bold;">Other Sellers</h4>
+    <a href="#">Shaan Baqala</a>,
+    <a href="#">Peacock Baqala</a>
+  </div>
+
+</ion-content>
+<ion-footer style="background: #efefef;box-shadow:0 0 1px #c4c4c4;">
+  <button ion-button full color="danger" icon-start (click)="addToBasket(product)" [disabled]="cart_products.indexOf(product.id)>-1">
+    <ion-icon name="basket"></ion-icon> ADD TO CART
+  </button>
+</ion-footer>

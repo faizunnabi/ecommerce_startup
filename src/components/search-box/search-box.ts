@@ -1,6 +1,9 @@
 import {Component, Input} from '@angular/core';
 import {ProductServiceProvider} from "../../providers/product-service/product-service";
 import {ShopServiceProvider} from "../../providers/shop-service/shop-service";
+import {SingleProductPage} from "../../pages/single-product/single-product";
+import {NavController} from "ionic-angular";
+import {SingleShopPage} from "../../pages/single-shop/single-shop";
 
 @Component({
   selector: 'search-box',
@@ -10,7 +13,7 @@ import {ShopServiceProvider} from "../../providers/shop-service/shop-service";
               </ion-toolbar>
               <div class="result_container" *ngIf="searchTerm > ''">
                 <ion-list #searchList >
-                  <ion-item *ngFor="let item of items|slice:0:10" style="color:#3e76ff">
+                  <ion-item *ngFor="let item of items|slice:0:10" style="color:#3e76ff" (click)="goToPage(item)">
                     {{item.name}}
                   </ion-item>
                   <ion-item *ngIf="items==''">
@@ -37,7 +40,7 @@ export class SearchBoxComponent {
     return this.searchIn;
   }
 
-  constructor(private productService:ProductServiceProvider,private shopService:ShopServiceProvider) {
+  constructor(private productService:ProductServiceProvider,private shopService:ShopServiceProvider,public navCtrl:NavController) {
 
   }
 
@@ -73,6 +76,22 @@ export class SearchBoxComponent {
           }
         )
       }
+    }
+
+    goToPage(item)
+    {
+      if(this.searchIn=='products')
+      {
+        this.navCtrl.push(SingleProductPage,{
+          product:item
+        });
+      }else if(this.searchIn=='shops')
+      {
+        this.navCtrl.push(SingleShopPage,{
+          shop:item
+        });
+      }
+
     }
 
 

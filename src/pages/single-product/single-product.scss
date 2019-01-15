@@ -1,0 +1,36 @@
+page-single-product {
+  .single_discount{
+    display: block;
+    position: absolute;
+    bottom:15px;
+    left:0px;
+    background: #6cbd45;
+    color:#fff;
+    font-size: 16px;
+    width:100px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .single_discount:after{
+    content: '';
+    position: absolute;
+    width:0px;
+    height:0px;
+    border:20px #6cbd45 solid;
+    border-right-color: transparent;
+    left:80px;
+  }
+
+  .single_discount:before{
+    content: '';
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index: 5;
+    width:15%;
+    height:100%;
+    background-image: linear-gradient(to right,black, transparent);
+    opacity: 0.2;
+  }
+}

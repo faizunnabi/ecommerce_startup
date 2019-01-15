@@ -3,6 +3,7 @@ import {IonicPage, LoadingController, NavController, NavParams, ToastController}
 import {ProductServiceProvider} from "../../providers/product-service/product-service";
 import {CartServiceProvider} from "../../providers/cart-service/cart-service";
 import {animate, keyframes, state, style, transition, trigger} from "@angular/animations";
+import {SingleProductPage} from "../single-product/single-product";
 
 
 @Component({
@@ -87,6 +88,12 @@ export class ProductListPage {
     }
 
     console.log(this.sub_cat);
+  }
+
+  showProduct(p){
+    this.navCtrl.push(SingleProductPage,{
+      product:p
+    });
   }
 
 
