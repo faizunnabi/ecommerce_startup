@@ -27,7 +27,7 @@ export class StoremapPage {
   toast:any;
   constructor(public navCtrl: NavController,public shopService:ShopServiceProvider,private geolocation:Geolocation,public loadingCtrl:LoadingController,private toastCtrl: ToastController) {
     this.loader = this.loadingCtrl.create({
-      content: 'Fetching shops around you !'
+      content: 'Fetching shops !'
     });
     this.toast = this.toastCtrl.create({
       message: 'We encountered error in loading map.',

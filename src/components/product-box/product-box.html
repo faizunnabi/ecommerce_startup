@@ -1,0 +1,21 @@
+<ion-card style="width:95% !important;">
+  <offer-tag *ngIf="product.offer > 0" discount="{{((product.price - product.offer)/product.price)*100 | number:'1.0-0' }}"></offer-tag>
+  <img src="assets/imgs/{{product.picture}}" (click)="goToProduct(product)"/>
+  <ion-card-content>
+    <p style="font-weight: bold;font-size:14px;">
+      {{product.name}}
+    </p>
+    <p style="font-size: 12px;">
+      <ion-icon name="pin"></ion-icon> {{ product.shop_name }}
+    </p>
+    <ion-row no-padding padding-top>
+      <ion-col no-padding col-7>
+        <p style="font-weight: bold;color:green;font-size:15px;">AED {{product.offer > 0 ? product.offer : product.price }}</p>
+      </ion-col>
+      <ion-col no-padding col-5>
+        <p style="font-size: 11px;color:#666;text-align: right;margin-top:4px;">{{product.quantity}}</p>
+      </ion-col>
+    </ion-row>
+    <cart-button [product]="product"></cart-button>
+  </ion-card-content>
+</ion-card>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {ProductServiceProvider} from "../../../../providers/product-service/product-service";
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";
+import {SingleProductPage} from "../../../single-product/single-product";
 
 @Component({
   selector: 'page-deals',
@@ -42,6 +43,12 @@ export class DealsPage {
         }).present();
       }
     );
+  }
+
+  showProduct(p){
+    this.navCtrl.push(SingleProductPage,{
+      product:p
+    });
   }
 
 }

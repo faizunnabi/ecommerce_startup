@@ -120,24 +120,7 @@
   <ion-row>
     <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
       <ion-slide *ngFor="let r of  recommended">
-        <ion-card style="width:95% !important;">
-          <offer-tag *ngIf="r.offer > 0" discount="{{((r.price - r.offer)/r.price)*100 | number:'1.0-0' }}"></offer-tag>
-          <img src="assets/imgs/{{r.picture}}"/>
-          <ion-card-content>
-            <p style="font-weight: bold;font-size:14px;">
-              {{r.name}}
-            </p>
-            <ion-row no-padding>
-              <ion-col no-padding padding-top col-7>
-                <p style="font-weight: bold;color:green;font-size:16px;">AED {{r.offer > 0 ? r.offer : r.price }}</p>
-              </ion-col>
-              <ion-col padding-top text-right col-5>
-                <p style="float:right">{{r.quantity}}</p>
-              </ion-col>
-            </ion-row>
-            <cart-button [product]="r"></cart-button>
-          </ion-card-content>
-        </ion-card>
+        <product-box [product]="r"></product-box>
       </ion-slide>
     </ion-slides>
   </ion-row>
@@ -145,24 +128,7 @@
   <ion-row>
     <ion-slides slidesPerView="2.25" class="product_slides" spaceBetween="0">
       <ion-slide *ngFor="let d of  deals">
-        <ion-card style="width:95% !important;">
-          <offer-tag discount="{{((d.price - d.offer)/d.price)*100 | number:'1.0-0' }}"></offer-tag>
-          <img src="assets/imgs/{{d.picture}}"/>
-          <ion-card-content>
-            <p style="font-weight: bold;font-size:14px;">
-              {{d.name}}
-            </p>
-            <ion-row no-padding>
-              <ion-col no-padding padding-top col-7>
-                <p style="font-weight: bold;color:green;font-size:16px;">AED {{d.offer > 0 ? d.offer : d.price }}</p>
-              </ion-col>
-              <ion-col padding-top text-right col-5>
-                <p style="float:right">{{d.quantity}}</p>
-              </ion-col>
-            </ion-row>
-            <cart-button [product]="d"></cart-button>
-          </ion-card-content>
-        </ion-card>
+        <product-box [product]="d"></product-box>
       </ion-slide>
     </ion-slides>
   </ion-row>

@@ -24,7 +24,7 @@
     <ion-item *ngFor="let product of products;let i=index"  class="pro_grid" ngClass="{{i%2 == 0 ? 'grid_right' : 'grid_left'}}">
       <div class="pro_card">
         <offer-tag *ngIf="product.offer > 0" discount="{{((product.price - product.offer)/product.price)*100 | number:'1.0-0' }}"></offer-tag>
-        <img src="{{'assets/imgs/'+product.picture}}" style="width:100%;"/>
+        <img src="{{'assets/imgs/'+product.picture}}" style="width:100%;" (click)="showProduct(product)"/>
         <div class="card-content">
           <div class="card-title">
             <span style="font-weight: bold;font-size:14px;">{{product.name}}</span>

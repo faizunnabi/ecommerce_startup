@@ -1,0 +1,24 @@
+<ion-card style="width:95% !important;">
+  <img src="assets/imgs/baq.jpg" (click)="shopSingle(shop)"/>
+  <ion-card-content>
+    <p style="font-weight: bold;font-size:14px;">
+      {{shop.name}}
+    </p>
+    <rating [rate_counter]="shop.rating"></rating>
+    <ion-row no-padding>
+      <div col-12>
+        <div class="button_strip">
+          <button ion-button small>
+            <ion-icon name="call" small></ion-icon>
+          </button>
+          <button ion-button small >
+            <ion-icon name="share" small ></ion-icon>
+          </button>
+          <button ion-button small >
+            <ion-icon name="heart" small ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

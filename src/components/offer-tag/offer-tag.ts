@@ -8,9 +8,9 @@ import {Component, Input} from '@angular/core';
  */
 @Component({
   selector: 'offer-tag',
-  template: `<span class="offer_tag">{{offer}}% Off</span>`,
+  template: `<span>{{offer}}% Off</span>`,
   styles:[
-    '.offer_tag {\n' +
+    'span {\n' +
     '        font-weight: normal;\n' +
     '        font-size: 12px;\n' +
     '        position: absolute;\n' +

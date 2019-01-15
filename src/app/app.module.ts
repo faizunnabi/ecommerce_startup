@@ -26,6 +26,7 @@ import {Keyboard} from "@ionic-native/keyboard";
 import {SingleShopPage} from "../pages/single-shop/single-shop";
 import {ShopListPage} from "../pages/home/tabs/shop-list/shop-list";
 import {UserProfilePage} from "../pages/user-profile/user-profile";
+import {SingleProductPage} from "../pages/single-product/single-product";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {UserProfilePage} from "../pages/user-profile/user-profile";
     StoremapPage,
     SingleShopPage,
     ShopListPage,
-    UserProfilePage
+    UserProfilePage,
+    SingleProductPage
   ],
   imports: [
     ComponentsModule,
@@ -75,7 +77,8 @@ import {UserProfilePage} from "../pages/user-profile/user-profile";
     StoremapPage,
     SingleShopPage,
     ShopListPage,
-    UserProfilePage
+    UserProfilePage,
+    SingleProductPage
   ],
   providers: [
     StatusBar,
