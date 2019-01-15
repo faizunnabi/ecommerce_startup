@@ -37,11 +37,6 @@ export class MainPage {
     });
   }
 
-  public shopSingle(s){
-    this.navCtrl.push(SingleShopPage,{
-      shop:s
-    });
-  }
 
   ionViewWillEnter()
   {

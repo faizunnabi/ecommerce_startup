@@ -16,7 +16,7 @@
 
 <ion-content no-padding>
   <div style="position: relative;">
-    <img src="assets/imgs/{{product.picture}}" width="100%" style="height: 50vh"/>
+    <img src="assets/imgs/{{product.picture}}" width="100%" style="display:block;background:#fff;padding:20px;height: 50vh"/>
     <span class="single_discount" *ngIf="product.offer > 0">{{((product.price - product.offer)/product.price)*100 | number:'1.0-0' }}% Off</span>
   </div>
   <div padding>
