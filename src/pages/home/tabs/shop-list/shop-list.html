@@ -22,23 +22,14 @@
 <ion-content>
   <ion-list>
     <ion-item-sliding *ngFor="let shop of shopList">
-      <ion-item no-lines text-wrap>
-        <ion-thumbnail item-start (click)="shopSingle(shop)">
-          <img src="assets/imgs/baq.jpg">
+      <ion-item no-lines text-wrap (click)="shopSingle(shop)">
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/{{shop.image}}">
         </ion-thumbnail>
-        <h2 style="color:#6cbd45;">{{shop.name}}</h2>
-        <p style="font-size: 12px;"> You have variety of ready made ecommerce pages to create.</p>
-        <div class="inline_options">
-          <button ion-button icon-only clear>
-            <ion-icon name="share"></ion-icon>
-          </button>
-          <button ion-button icon-only clear>
-            <ion-icon name="heart"></ion-icon>
-          </button>
-          <rating [rate_counter]="shop.rating"></rating>
-        </div>
-
-
+        <h2 style="color:#6cbd45;font-size: 16px;">{{shop.name}}</h2>
+        <rating [rate_counter]="shop.rating"></rating>
+        <p style="font-size: 10px;"> You have variety of ready made ecommerce pages to create.</p>
+        <span class="dist_text">Distance: 500m</span>
       </ion-item>
       <ion-item-options>
         <button ion-button color="secondary">

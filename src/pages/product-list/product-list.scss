@@ -38,9 +38,11 @@ page-product-list {
 
     }
     .pro_grid{
+      position: relative;
       background:#fff !important;
       border:1px #dfdfdf solid !important;
       width:49.5%;
+      height:230px;
       margin-top:0.5%;
       margin-bottom:0.5%;
       display: inline-block;
@@ -54,4 +56,42 @@ page-product-list {
       margin-right:1%;
       margin-left:auto;
     }
+  .pro_card{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    left:0px;
+    top:0px;
+  }
+  .pro_card-inner{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    z-index: 2;
+  }
+  cart-button{
+    position: absolute;
+    z-index: 3;
+    bottom:5px;
+    left:10px;
+  }
+  offer-tag span{
+    text-align: center;
+    z-index: 3;
+  }
+  .card-content{
+    padding:10px;
+  }
+  product-options{
+    position: absolute;
+    left:0px;
+    bottom:2px;
+    width:100%;
+    height:30px;
+    z-index: 5;
+  }
+
+
 }

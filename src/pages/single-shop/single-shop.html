@@ -25,6 +25,7 @@
         <span style="font-weight: bold;">
           Al Dhafra Street,Abu Dhabi
           <br/>
+          <span class="dist_text">Distance: 500m , </span>
           <rating [rate_counter]="shop.rating"></rating>
         </span>
       </div>
@@ -34,7 +35,9 @@
 
 
 <ion-content fullscreen #myContent padding-top>
-
+  <ion-fab bottom right>
+    <button ion-fab color="danger"><ion-icon name="call"></ion-icon></button>
+  </ion-fab>
   <h3 class="heading">SHOP CATEGORIES</h3>
   <ion-row>
     <ion-col no-padding>

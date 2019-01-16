@@ -1,0 +1,11 @@
+<div class="button_strip">
+  <button ion-button small (click)="addToBasket(product)" [disabled]="cart_products.indexOf(product.id)>-1">
+    <ion-icon name="cart" small></ion-icon>
+  </button>
+  <button ion-button small >
+    <ion-icon name="share" small ></ion-icon>
+  </button>
+  <button ion-button small >
+    <ion-icon name="heart" small ></ion-icon>
+  </button>
+</div>
