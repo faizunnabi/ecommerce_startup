@@ -80,30 +80,11 @@ page-single-shop {
     transition-duration: 0.4s;
     transition-timing-function: ease-out;
   }
-  .product_slides {
-    padding: 0px;
-    margin: 0px;
-    ion-card {
-      padding: 0px;
-      margin: 4px;
-    }
-    ion-card img {
-      max-width: 100% !important;
-      height: 100px !important;
-      margin:auto;
-      margin-top:3px;
-    }
 
-    cart-button button{
-      position: relative;
-      width:75%;
-    }
-    cart-button .button-inner{
-      position: absolute !important;
-      display: block !important;
-      top:8px !important;
-      left:0px;
-    }
-
+  .dist_text{
+    font-weight: normal;
+    font-size: 11px;
+    color:#dfdfdf;
   }
+
 }

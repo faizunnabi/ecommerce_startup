@@ -33,34 +33,26 @@
   <ion-list text-wrap no-lines>
     <ion-item *ngFor="let shop of shopList" >
       <ion-card>
-        <img src="assets/imgs/baq.jpg"/>
-
-        <ion-card-content>
-          <ion-card-title style="font-size: 18px;font-weight: bold;">
+        <img src="assets/imgs/{{shop.image}}"/>
+        <div class="card-title">
             {{shop.name}}
-            <button ion-button small round color="secondary" icon-start style="float:right;margin-top:-5px;">
-              <ion-icon name='call'></ion-icon>
-              Call
-            </button>
-          </ion-card-title>
-          <p>
-            You have variety of ready made ecommerce pages to create.
-          </p>
-        </ion-card-content>
-
-        <ion-row no-padding>
-          <ion-col col-6 padding>
-
-            <button ion-button small color="dark" icon-start style="margin-top:-10px;" round (click)="shopSingle(shop)">
-              <ion-icon name='checkmark'></ion-icon>
-              Select
-            </button>
-          </ion-col>
-          <ion-col col-6 text-right>
-              <rating [rate_counter]="shop.rating"></rating>
-          </ion-col>
-
-        </ion-row>
+        </div>
+        <div class="card-subtitle">500m away</div>
+        <rating [rate_counter]="shop.rating" style="float: right"></rating>
+        <div class="options_strip">
+          <button ion-button small color="dark" icon-only clear (click)="shopSingle(shop)">
+            <ion-icon name='checkmark'></ion-icon>
+          </button>
+          <button ion-button small color="secondary" icon-only clear>
+            <ion-icon name='call'></ion-icon>
+          </button>
+          <button ion-button small color="secondary" icon-only clear>
+            <ion-icon name='share'></ion-icon>
+          </button>
+          <button ion-button small color="secondary" icon-only clear>
+            <ion-icon name='heart'></ion-icon>
+          </button>
+        </div>
       </ion-card>
     </ion-item>
   </ion-list>

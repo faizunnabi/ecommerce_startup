@@ -10,16 +10,31 @@ import {Component, Input} from '@angular/core';
   selector: 'offer-tag',
   template: `<span>{{offer}}% Off</span>`,
   styles:[
-    'span {\n' +
-    '        font-weight: normal;\n' +
-    '        font-size: 12px;\n' +
-    '        position: absolute;\n' +
-    '        right:5px;\n' +
-    '        top:1px;\n' +
-    '        background: #6cbd45;\n' +
-    '        color:#fff;\n' +
-    '        padding:3px;\n' +
-    '    }',
+    `span { 
+            display: block;
+            width:60px;
+            height: 20px;
+            font-weight: normal;
+            font-size: 12px;
+            position: absolute;
+            right:0px;
+            top:110px;
+            background: #6cbd45;
+            color:#fff;
+            line-height: 20px;
+        }
+    span:before{
+      content:'';
+      position: absolute;
+      width:40%;
+      height:100%;
+      top:0px;
+      right:0px;
+      background-image: linear-gradient(to right,transparent, black);
+      opacity: 0.2;
+    }
+    
+    `
   ]
 })
 export class OfferTagComponent {

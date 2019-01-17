@@ -9,6 +9,7 @@ import { RatingComponent } from './rating/rating';
 import { ShrinkingHeaderComponent } from './shrinking-header/shrinking-header';
 import { ProductBoxComponent } from './product-box/product-box';
 import { ShopBoxComponent } from './shop-box/shop-box';
+import { ProductOptionsComponent } from './product-options/product-options';
 @NgModule({
 	declarations: [CartButtonComponent,
     SearchBoxComponent,
@@ -16,7 +17,8 @@ import { ShopBoxComponent } from './shop-box/shop-box';
     RatingComponent,
     ShrinkingHeaderComponent,
     ProductBoxComponent,
-    ShopBoxComponent],
+    ShopBoxComponent,
+    ProductOptionsComponent],
 	imports: [BrowserModule,IonicModule.forRoot(MyApp),],
 	exports: [CartButtonComponent,
     SearchBoxComponent,
@@ -24,6 +26,7 @@ import { ShopBoxComponent } from './shop-box/shop-box';
     RatingComponent,
     ShrinkingHeaderComponent,
     ProductBoxComponent,
-    ShopBoxComponent]
+    ShopBoxComponent,
+    ProductOptionsComponent]
 })
 export class ComponentsModule {}
