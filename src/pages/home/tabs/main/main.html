@@ -5,10 +5,10 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <div class="header_text">
-      <span class="main_head">Welcome, Faizunnabi !</span>
+    <div class="header_text" *ngIf="user_info">
+      <span class="main_head">Welcome, {{user_info.name}} !</span>
       <span class="sub_head">
-       15 Street,Al Dhafrah,Abu Dhabi
+       {{user_info.addresses.address}}
     </span>
     </div>
     <ion-buttons right>

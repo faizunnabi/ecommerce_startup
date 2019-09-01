@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {NavController} from "ionic-angular";
 import {SingleProductPage} from "../../pages/single-product/single-product";
+import {ShopServiceProvider} from "../../providers/shop-service/shop-service";
 
 /**
  * Generated class for the ProductBoxComponent component.
@@ -15,9 +16,13 @@ import {SingleProductPage} from "../../pages/single-product/single-product";
 export class ProductBoxComponent {
 
   @Input() product: any;
+  shop_name:string;
+  constructor(public navCtrl:NavController,private shopService:ShopServiceProvider) {
 
-  constructor(public navCtrl:NavController) {
+  }
 
+  ngOnInit(){
+    this.show_name(this.product.shop_id);
   }
 
   goToProduct(p)
@@ -27,5 +32,15 @@ export class ProductBoxComponent {
     })
   }
 
+  show_name(id)
+  {
+    let rr:any;
+    this.shopService.fetchShops().subscribe(
+      data=>{
+
+        this.shop_name = data['shops'].filter((_item)=>_item.shop_id == "1")[0].name;
+      }
+    );
+  }
 
 }

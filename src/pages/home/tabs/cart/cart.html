@@ -53,7 +53,7 @@
         <h3 style="font-weight: bold;font-size: 20px;">Total : AED {{cart_total|number:'0.2-2'}}</h3>
       </ion-col>
       <ion-col text-right>
-        <button ion-button color="danger" icon-end round>Checkout <ion-icon name="arrow-forward"></ion-icon></button>
+        <button ion-button color="danger" icon-end round (click)="checkout(cart_items)">Checkout <ion-icon name="arrow-forward"></ion-icon></button>
       </ion-col>
     </ion-row>
   </div>

@@ -27,6 +27,11 @@ import {SingleShopPage} from "../pages/single-shop/single-shop";
 import {ShopListPage} from "../pages/home/tabs/shop-list/shop-list";
 import {UserProfilePage} from "../pages/user-profile/user-profile";
 import {SingleProductPage} from "../pages/single-product/single-product";
+import {SocketIoConfig, SocketIoModule} from "ng-socket-io";
+import { UserServiceProvider } from '../providers/user-service/user-service';
+import {NativeStorage} from "@ionic-native/native-storage";
+
+const config:SocketIoConfig = { url:'http://localhost:3001',options:{} };
 
 @NgModule({
   declarations: [
@@ -52,6 +57,8 @@ import {SingleProductPage} from "../pages/single-product/single-product";
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+
+    SocketIoModule.forRoot(config),
     IonicModule.forRoot(MyApp,{
       scrollAssist: false,
       autoFocusAssist: false,
@@ -88,7 +95,9 @@ import {SingleProductPage} from "../pages/single-product/single-product";
     ShopServiceProvider,
     Geolocation,
     Keyboard,
-    CartServiceProvider
+    NativeStorage,
+    CartServiceProvider,
+    UserServiceProvider
   ]
 })
 export class AppModule {}

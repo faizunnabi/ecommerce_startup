@@ -3,6 +3,9 @@ import {ActionSheetController, AlertController, IonicPage, NavController, NavPar
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HomePage} from "../home/home";
 import {RegisterationPage} from "../registeration/registeration";
+import {Socket} from "ng-socket-io";
+import {UserServiceProvider} from "../../providers/user-service/user-service";
+import {NativeStorage} from "@ionic-native/native-storage";
 
 /**
  * Generated class for the LoginPage page.
@@ -23,7 +26,7 @@ export class LoginPage {
   passwordtype:string='password';
 
   passeye:string ='eye';
-  constructor(public platform: Platform,public fb: FormBuilder, public navCtrl: NavController, public navParams: NavParams,public alertCtrl:AlertController){
+  constructor(public platform: Platform,public fb: FormBuilder, public navCtrl: NavController, public navParams: NavParams,public alertCtrl:AlertController,private socket:Socket,private userService:UserServiceProvider,private nativeStorage:NativeStorage){
     this.authForm = this.fb.group({
       'email': [null, Validators.compose([Validators.required])],
       'password': [null, Validators.compose([Validators.required])]
@@ -34,7 +37,21 @@ export class LoginPage {
   }
 
   doLogin(logData){
-    this.navCtrl.push(HomePage);
+    let user = this.userService.auth(logData.mail,logData.pass);
+    if(user){
+      this.nativeStorage.setItem('user',user).then(
+        data=>{
+          console.log('user saved');
+          this.socket.connect();
+          this.socket.emit('set-user',{name:this.logData.mail,type:1});
+          this.navCtrl.setRoot(HomePage);
+        }
+      )
+
+    }else{
+      console.log('wrong login');
+    }
+
   }
 
   moveToRegister()

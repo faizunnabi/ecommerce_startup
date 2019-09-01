@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {ModalController, Nav, NavController, Platform} from 'ionic-angular';
+import {AlertController, ModalController, Nav, NavController, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -12,6 +12,9 @@ import {StoremapPage} from "../pages/storemap/storemap";
 import {Keyboard} from "@ionic-native/keyboard";
 import {ProductServiceProvider} from "../providers/product-service/product-service";
 import {UserProfilePage} from "../pages/user-profile/user-profile";
+import {Socket} from "ng-socket-io";
+import {UserServiceProvider} from "../providers/user-service/user-service";
+import {NativeStorage} from "@ionic-native/native-storage";
 
 @Component({
   templateUrl: 'app.html'
@@ -24,9 +27,10 @@ export class MyApp {
   storeMapPage:any = StoremapPage;
   profilePage:any = UserProfilePage;
   loginPage:any = LoginPage;
+  userInfo:any;
   dealsCount:number;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,keyboard:Keyboard,private productService:ProductServiceProvider) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,modalCtrl: ModalController,keyboard:Keyboard,private productService:ProductServiceProvider,private userService:UserServiceProvider,private nativeStorage:NativeStorage,private alertCtrl:AlertController) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -38,6 +42,14 @@ export class MyApp {
       let splash = modalCtrl.create(SplashPage);
       splash.present();
       this.loadDeals();
+      this.userService.getUser().subscribe(
+        data=>{
+          this.userInfo = {
+            name:data.name,
+            addresses: data.addresses.filter((_item)=>_item.is_default==1)[0]
+          };
+        }
+      )
     });
   }
   goTo(pagename)
@@ -48,6 +60,30 @@ export class MyApp {
   goToTab(pagename,index)
   {
     this.nav.setRoot(pagename,{index:index});
+  }
+
+  logOut(){
+    let confirm = this.alertCtrl.create({
+      title: 'Exit Application?',
+      message: 'Do you want to exit this application?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {}
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            this.userService.logOut().subscribe(
+              data=>{
+                navigator['app'].exitApp();
+              }
+            )
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   loadDeals()

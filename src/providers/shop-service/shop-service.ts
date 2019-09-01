@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Shop} from "../../models/shop";
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
 
 /*
   Generated class for the ShopServiceProvider provider.
@@ -18,5 +20,7 @@ export class ShopServiceProvider {
   fetchShops(){
     return this.http.get<Shop>('assets/data/shops.json');
   }
+
+
 
 }

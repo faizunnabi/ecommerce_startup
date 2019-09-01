@@ -1,8 +1,21 @@
 import { Component } from '@angular/core';
-import {NavController, ToastController} from 'ionic-angular';
+import {DateTime, NavController, ToastController} from 'ionic-angular';
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {HomePage} from "../../home";
+import {Socket} from "ng-socket-io";
+import {Order} from "../../../../models/order";
+import {UserServiceProvider} from "../../../../providers/user-service/user-service";
+import {NativeStorage} from "@ionic-native/native-storage";
+
+
+export interface OrderProduct {
+  product_id:number;
+  product_name:string;
+  product_pic:string;
+  product_quantity:number;
+}
+
 
 @Component({
   selector: 'page-cart',
@@ -21,13 +34,14 @@ import {HomePage} from "../../home";
     ])
   ]
 })
+
 export class CartPage {
   cart_total:number = 0;
   cart_items:any = [];
   edit_mode:boolean = false;
   homePage:any = HomePage;
   //edit_state = 'edit_inactive';
-  constructor(public navCtrl: NavController,private cartService:CartServiceProvider,private toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController,private cartService:CartServiceProvider,private toastCtrl: ToastController,private socket:Socket,private userService:UserServiceProvider) {
 
   }
 
@@ -95,6 +109,87 @@ export class CartPage {
   remove_item(id)
   {
     this.cartService.removeProduct(id);
+  }
+
+  checkout(c)
+  {
+    let orders : Array<Order> = [];
+    this.userService.getUser().subscribe(
+        data => {
+            console.log(data);
+            let order_user = {name:data.name,
+                        email:data.email,
+                        contact:data.contact,
+                        addresses: data.addresses.filter((_item)=>_item.is_default==1)[0]
+            };
+          let d = new Date();
+          let datetime = this.format_date(d);
+          let order_products:Array<OrderProduct> = [];
+          for(var i=0;i < c.length;i++) {
+            if(orders.length > 0){
+              let ind = orders.findIndex((_item)=>_item.shop_id == c[i].product.shop_id)
+              if(ind > -1){
+                orders[ind].products.push({
+                  product_id:c[i].product.id,
+                  product_name:c[i].product.name,
+                  product_pic:c[i].product.picture,
+                  product_quantity:c[i].quantity
+                });
+              }else{
+                orders.push({
+                  id:this.get_uniqid(),
+                  shop_id:c[i].product.shop_id,
+                  user:order_user,
+                  products:[{
+                    product_id:c[i].product.id,
+                    product_name:c[i].product.name,
+                    product_pic:c[i].product.picture,
+                    product_quantity:c[i].quantity
+                  }],
+                  type:'cash',
+                  amount:this.cart_total,
+                  datetime:datetime
+                });
+              }
+
+            }else{
+              orders.push({
+                id:this.get_uniqid(),
+                shop_id:c[i].product.shop_id,
+                user:order_user,
+                products:[{
+                  product_id:c[i].product.id,
+                  product_name:c[i].product.name,
+                  product_pic:c[i].product.picture,
+                  product_quantity:c[i].quantity
+                }],
+                type:'cash',
+                amount:this.cart_total,
+                datetime:datetime
+              });
+            }
+          }
+          console.log(orders);
+          this.socket.emit('new_order',orders);
+          this.cartService.emptyCart();
+        },
+        error => console.error(error)
+
+    );
+
+  }
+
+  format_date(d)
+  {
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var strTime = hours+':'+minutes;
+    return d.getMonth()+1 + "/" + d.getDate() + "/" + d.getFullYear() + "  " + strTime;
+  }
+
+  get_uniqid()
+  {
+    return '_'+Math.random().toString(36).substr(2,9);
   }
 
 }

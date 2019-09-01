@@ -3,10 +3,10 @@
   <ion-content class="menu-left" style="">
     <ion-list>
       <ion-list-header style="background: #0f7b3e !important;color:#fff !important;">
-        <div class="user_profile_card" padding>
+        <div class="user_profile_card" padding *ngIf="userInfo">
           <img src="assets/imgs/user.png" />
-          <span id="pf_name">Syed Faizunnabi</span>
-          <span id="pf_location">Al Dhafrah,Abu Dhabi</span>
+          <span id="pf_name">{{userInfo.name}}</span>
+          <span id="pf_location" text-wrap>{{userInfo.addresses.address}}</span>
         </div>
       </ion-list-header>
       <button ion-item detail-none no-lines menuClose (click)="goTo(homePage)"><ion-icon name="home" item-start color="primary"></ion-icon> Home</button>
@@ -15,7 +15,7 @@
       <button ion-item detail-none no-lines menuClose (click)="goToTab(homePage,2)"><ion-icon name="aperture" item-start color="primary"></ion-icon> Shops</button>
       <button ion-item detail-none no-lines menuClose (click)="goTo(storeMapPage)"><ion-icon name="pin" item-start color="primary"></ion-icon> Locate Shops</button>
       <button ion-item detail-none no-lines menuClose (click)="goTo(profilePage)"><ion-icon name="contact" item-start color="primary"></ion-icon> Profile</button>
-      <button ion-item detail-none no-lines menuClose (click)="goTo(loginPage)"><ion-icon name="log-out" item-start color="primary"></ion-icon> LogOut</button>
+      <button ion-item detail-none no-lines menuClose (click)="logOut()"><ion-icon name="log-out" item-start color="primary"></ion-icon> LogOut</button>
     </ion-list>
   </ion-content>
 

@@ -7,6 +7,7 @@ import {ProductServiceProvider} from "../../../../providers/product-service/prod
 import {CartServiceProvider} from "../../../../providers/cart-service/cart-service";
 import {ShopServiceProvider} from "../../../../providers/shop-service/shop-service";
 import {SingleShopPage} from "../../../single-shop/single-shop";
+import {UserServiceProvider} from "../../../../providers/user-service/user-service";
 
 @Component({
   selector: 'page-main',
@@ -18,16 +19,27 @@ export class MainPage {
   recommended = [];
   shops = [];
   random_nums = [];
+  user_info:any;
   constructor(public navCtrl: NavController,
               public productService:ProductServiceProvider,
               public shopService:ShopServiceProvider,
               private cartService:CartServiceProvider,
               public loadingCtrl:LoadingController,
+              public userService:UserServiceProvider,
               private toastCtrl: ToastController) {
     while(this.random_nums.length < 5){
       var r = Math.floor(Math.random()*30) + 1;
       if(this.random_nums.indexOf(r) === -1) this.random_nums.push(r);
     }
+    this.userService.getUser().subscribe(
+      data=>{
+          console.log(data);
+          this.user_info = {
+            name:data.name,
+            addresses: data.addresses.filter((_item)=>_item.is_default==1)[0]
+          };
+      }
+    )
   }
 
   public goToShop(event,item)

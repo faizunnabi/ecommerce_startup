@@ -1,5 +1,5 @@
 export interface Shop {
-  id:number;
+  shop_id:string;
   name:string;
   contact:string;
   rating:number;

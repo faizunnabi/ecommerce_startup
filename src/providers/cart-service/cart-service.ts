@@ -36,6 +36,11 @@ export class CartServiceProvider {
     this.cartSubject.next(<CartState>{loaded:true,products:this.Items});
   }
 
+  emptyCart(){
+    this.Items.length = 0;
+    this.cartSubject.next(<CartState>{loaded:true,products:this.Items});
+  }
+
   getAllProducts() {
     return this.CartState;
   }
